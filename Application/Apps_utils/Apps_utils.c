@@ -56,11 +56,11 @@ stse_ReturnCode_t get_curve_id_key_type(stsafea_ecc_curve_id_t curve_id, stse_ec
 	*pKey_type = STSE_ECC_KT_INVALID;
 
 	/* Compare slot curve ID against each known curve ID to set the key type */
-	for(curve_id_index=STSE_ECC_KT_NIST_P_256; curve_id_index<STSAFEA_ECC_NUMBER_OF_CURVES; curve_id_index++)
+	for(curve_id_index=STSE_ECC_KT_NIST_P_256; curve_id_index<STSE_ECC_NUMBER_OF_CURVES; curve_id_index++)
 	{
-		diff = memcmp((PLAT_UI8*)&stsafea_ecc_info_table[curve_id_index].curve_id,
+		diff = memcmp((PLAT_UI8*)&stse_ecc_info_table[curve_id_index].curve_id,
 						(PLAT_UI8*)&curve_id,
-						stsafea_ecc_info_table[curve_id_index].curve_id_total_length);
+						stse_ecc_info_table[curve_id_index].curve_id_total_length);
 		if(diff == 0)
 		{
 			*pKey_type = curve_id_index;
@@ -68,7 +68,7 @@ stse_ReturnCode_t get_curve_id_key_type(stsafea_ecc_curve_id_t curve_id, stse_ec
 		}
 	}
 	/* If the comparison loop reach the end and pKey_type is always as initialized return error */
-	if((curve_id_index+1) == STSAFEA_ECC_NUMBER_OF_CURVES
+	if((curve_id_index+1) == STSE_ECC_NUMBER_OF_CURVES
 	&& *pKey_type==STSE_ECC_KT_INVALID)
 	{
 		return STSE_UNEXPECTED_ERROR;
