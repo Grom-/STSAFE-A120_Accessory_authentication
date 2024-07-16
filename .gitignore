@@ -5,13 +5,6 @@
 .settings/
 .vscode/
 /.metadata/
-__html/
-__latex/
-__xml/
-__out/
-__rtf/
-__docman
-__docbook
 *.chm
 *.exe
 *.bak
@@ -21,4 +14,3 @@ __docbook
 .vscode/
 *.xml
 /.metadata/
-inline_umlgraph_cache_all.pu
