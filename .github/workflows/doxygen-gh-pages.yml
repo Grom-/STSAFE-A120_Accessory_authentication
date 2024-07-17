@@ -15,5 +15,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
           folder: Documentation
-          target_folder : html/
           config_file: Documentation/resources/STSAFE-Axxx_Software_Package.doxyfile
