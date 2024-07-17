@@ -51,7 +51,7 @@ PROJECT_BRIEF          = Documentation
 # pixels and the maximum width should not exceed 200 pixels. Doxygen will copy
 # the logo to the output directory.
 
-PROJECT_LOGO           = ./logo.png
+PROJECT_LOGO           = Documentation/resources/logo.png
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) path
 # into which the generated documentation will be written. If a relative path is
@@ -819,7 +819,7 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = . ../../Application/Projects ../../Middleware/STSELib/
+INPUT                  = Application/Projects Middleware/STSELib/
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
@@ -894,7 +894,7 @@ EXCLUDE_SYMBOLS        =
 # that contain example code fragments that are included (see the \include
 # command).
 
-EXAMPLE_PATH           = ../../Middleware/STSELib/doc/dox_files ./dox_files
+EXAMPLE_PATH           = Middleware/STSELib/doc/dox_files Documentation/resources/dox_files
 
 # If the value of the EXAMPLE_PATH tag contains directories, you can use the
 # EXAMPLE_PATTERNS tag to specify one or more wildcard pattern (like *.cpp and
@@ -914,7 +914,7 @@ EXAMPLE_RECURSIVE      = NO
 # that contain images that are to be included in the documentation (see the
 # \image command).
 
-IMAGE_PATH             = ./Markdown/ ../../Middleware/STSELib/doc/pictures
+IMAGE_PATH             = Documentation/resources/Markdown/ Middleware/STSELib/doc/pictures
 
 # The INPUT_FILTER tag can be used to specify a program that doxygen should
 # invoke to filter for each input file. Doxygen will invoke the filter program
@@ -1340,7 +1340,7 @@ GENERATE_HTMLHELP      = NO
 # written to the html output directory.
 # This tag requires that the tag GENERATE_HTMLHELP is set to YES.
 
-CHM_FILE               = ../../../STSAFE-Axxx_software_package.chm
+CHM_FILE               = 
 
 # The HHC_LOCATION tag can be used to specify the location (absolute path
 # including file name) of the HTML help compiler (hhc.exe). If non-empty,
@@ -1348,7 +1348,7 @@ CHM_FILE               = ../../../STSAFE-Axxx_software_package.chm
 # The file has to be specified with full path.
 # This tag requires that the tag GENERATE_HTMLHELP is set to YES.
 
-HHC_LOCATION           = "C:\Program Files (x86)\HTML Help Workshop\hhc.exe"
+HHC_LOCATION           = 
 
 # The GENERATE_CHI flag controls if a separate .chi index file is generated
 # (YES) or that it should be included in the master .chm file (NO).
@@ -2442,17 +2442,17 @@ DIAFILE_DIRS           =
 # generate a warning when it encounters a \startuml command in this case and
 # will not generate output for the diagram.
 
-PLANTUML_JAR_PATH      = ./plantuml/plantuml.jar
+PLANTUML_JAR_PATH      = Documentation/resources/plantuml/plantuml.jar
 
 # When using plantuml, the PLANTUML_CFG_FILE tag can be used to specify a
 # configuration file for plantuml.
 
-PLANTUML_CFG_FILE      = ./plantuml/puml-theme-st-cs.puml
+PLANTUML_CFG_FILE      = Documentation/resources/plantuml/puml-theme-st-cs.puml
 
 # When using plantuml, the specified paths are searched for files specified by
 # the !include statement in a plantuml block.
 
-PLANTUML_INCLUDE_PATH  = ./plantuml/
+PLANTUML_INCLUDE_PATH  = Documentation/resources/plantuml/
 
 # The DOT_GRAPH_MAX_NODES tag can be used to set the maximum number of nodes
 # that will be shown in the graph. If the number of nodes in a graph becomes
