@@ -1,3 +1,0 @@
-[submodule "Middleware/STSELib"]
-	path = Middleware/STSELib
-	url = git@github.com:STMicroelectronics/STSELib.git
