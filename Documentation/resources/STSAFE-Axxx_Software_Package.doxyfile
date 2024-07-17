@@ -32,7 +32,7 @@ DOXYFILE_ENCODING      = UTF-8
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
 
-PROJECT_NAME           = STSAFE-Axxx_software_package
+PROJECT_NAME           = STSAFE-A120_Accessory_authentication
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. This
 # could be handy for archiving the generated documentation or if some version
@@ -2452,7 +2452,7 @@ PLANTUML_CFG_FILE      = ./plantuml/puml-theme-st-cs.puml
 # When using plantuml, the specified paths are searched for files specified by
 # the !include statement in a plantuml block.
 
-PLANTUML_INCLUDE_PATH  =
+PLANTUML_INCLUDE_PATH  = ./plantuml/
 
 # The DOT_GRAPH_MAX_NODES tag can be used to set the maximum number of nodes
 # that will be shown in the graph. If the number of nodes in a graph becomes
