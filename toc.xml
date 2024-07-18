@@ -1,21 +1,21 @@
 <toc label="STSAFE-A120_Accessory_authentication" topic="index.html">
-  <topic label="STSAFE-A120 Accessory Authentication project" href="d7/dd4/a00968.html">
-    <topic label="Project Architecture" href="d7/dd4/a00968.html#autotoc_md1"/>
+  <topic label="STSAFE-A120 Accessory Authentication project" href="index.html">
+    <topic label="Project Architecture" href="index.html#autotoc_md1"/>
   </topic>
-  <topic label="SOFTWARE PACKAGE LICENSE AGREEMENT" href="d7/dfd/a00969.html">
-    <topic label="SOFTWARE BILL OF MATERIALS" href="d7/dfd/a00969.html#autotoc_md3"/>
-    <topic label="ANNEX 1 - SLA0044" href="d7/dfd/a00969.html#autotoc_md4"/>
+  <topic label="SOFTWARE PACKAGE LICENSE AGREEMENT" href="d7/dd4/a00968.html">
+    <topic label="SOFTWARE BILL OF MATERIALS" href="d7/dd4/a00968.html#autotoc_md3"/>
+    <topic label="ANNEX 1 - SLA0044" href="d7/dd4/a00968.html#autotoc_md4"/>
   </topic>
-  <topic label="Release Note" href="d0/daf/a00970.html">
-    <topic label="V1.0.0 - July 24" href="d0/daf/a00970.html#autotoc_md6"/>
+  <topic label="Release Note" href="d7/dfd/a00969.html">
+    <topic label="V1.0.0 - July 24" href="d7/dfd/a00969.html#autotoc_md6"/>
   </topic>
-  <topic label="Getting Started" href="d0/d3c/a00971.html">
-    <topic label="Prerequisites" href="d0/d3c/a00971.html#autotoc_md8"/>
-    <topic label="Hardware Setup" href="d0/d3c/a00971.html#autotoc_md9"/>
-    <topic label="Software Setup" href="d0/d3c/a00971.html#autotoc_md10"/>
+  <topic label="Getting Started" href="d0/daf/a00970.html">
+    <topic label="Prerequisites" href="d0/daf/a00970.html#autotoc_md8"/>
+    <topic label="Hardware Setup" href="d0/daf/a00970.html#autotoc_md9"/>
+    <topic label="Software Setup" href="d0/daf/a00970.html#autotoc_md10"/>
   </topic>
-  <topic label="Known issues" href="de/d4e/a00972.html">
-    <topic label="1 - Linker options STM32 CubeIDE / GCC toolcahin" href="de/d4e/a00972.html#autotoc_md12"/>
+  <topic label="Known issues" href="d0/d3c/a00971.html">
+    <topic label="1 - Linker options STM32 CubeIDE / GCC toolcahin" href="d0/d3c/a00971.html#autotoc_md12"/>
   </topic>
   <topic label="Modules" href="modules.html">
     <topic label="Asymmetric key slots" href="d9/dea/a00478.html">

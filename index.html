@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>STSAFE-A120_Accessory_authentication: Main Page</title>
+<title>STSAFE-A120_Accessory_authentication: STSAFE-A120 Accessory Authentication project</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -51,19 +51,34 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
-<div class="header">
+<div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">STSAFE-A120_Accessory_authentication Documentation</div>  </div>
+<div class="title">STSAFE-A120 Accessory Authentication project </div>  </div>
 </div><!--header-->
 <div class="contents">
-<ul><li><a href="index.html"><span>Main&#160;Page</span></a>
-</li><li><a href="pages.html"><span>Related&#160;Pages</span></a>
-</li><li><a href="modules.html"><span>Modules</span></a>
-</li><li><a href="annotated.html"><span>Data&#160;Structures</span></a>
-<ul><li><a href="annotated.html"><span>Data&#160;Structures</span></a>
-</li><li><a href="functions.html"><span>Data&#160;Fields</span></a>
-</li></ul>
-</li></ul>
+<div class="textblock"><p><a class="anchor" id="md_Documentation_resources_Markdown_00_Introduction_00_introduction"></a></p>
+<p>This project illustrate how to use the STSAFE-A120 SE and the STSELib provided by STMicroelectronics to protect an accessory .</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Project Architecture</h1>
+<p><img src="Software_package_architecture.png" alt="" class="inline"/></p>
+<ul>
+<li><b>Application Layer</b></li>
+</ul>
+<p>This layer contains the project use cases examples illustrating the use of STSAFE-A120 Secure Elements devices on the different hardware development platforms provided by STMicroelectronics.</p>
+<ul>
+<li><b>Middleware Layer</b><ul>
+<li><p class="startli"><b>STM32 Cryptographics library (CMOX)</b></p>
+<p class="startli">The STM32 cryptographic library (CMOX) includes all the major security algorithms for encryption, hashing, message authentication, and digital signing.</p>
+</li>
+<li><p class="startli"><b>STSecureElement library (STSELib)</b></p>
+<p class="startli">STMicroelectronics Secure Element library providing a complete set of high-level APIs and core services to interface with STMicroelectronics Secure Element device family.</p>
+</li>
+</ul>
+</li>
+<li><b>Platforms</b></li>
+</ul>
+<p>Optimized integrated peripheral drivers for STM32 MCUs. Can be used as reference for porting the framework on other platforms. </p>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

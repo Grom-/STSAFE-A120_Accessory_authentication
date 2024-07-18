@@ -25,23 +25,23 @@
 var NAVTREE =
 [
   [ "STSAFE-A120_Accessory_authentication", "index.html", [
-    [ "STSAFE-A120 Accessory Authentication project", "d7/dd4/a00968.html", [
-      [ "Project Architecture", "d7/dd4/a00968.html#autotoc_md1", null ]
+    [ "STSAFE-A120 Accessory Authentication project", "index.html", [
+      [ "Project Architecture", "index.html#autotoc_md1", null ]
     ] ],
-    [ "SOFTWARE PACKAGE LICENSE AGREEMENT", "d7/dfd/a00969.html", [
-      [ "SOFTWARE BILL OF MATERIALS", "d7/dfd/a00969.html#autotoc_md3", null ],
-      [ "ANNEX 1 - SLA0044", "d7/dfd/a00969.html#autotoc_md4", null ]
+    [ "SOFTWARE PACKAGE LICENSE AGREEMENT", "d7/dd4/a00968.html", [
+      [ "SOFTWARE BILL OF MATERIALS", "d7/dd4/a00968.html#autotoc_md3", null ],
+      [ "ANNEX 1 - SLA0044", "d7/dd4/a00968.html#autotoc_md4", null ]
     ] ],
-    [ "Release Note", "d0/daf/a00970.html", [
-      [ "V1.0.0 - July 24", "d0/daf/a00970.html#autotoc_md6", null ]
+    [ "Release Note", "d7/dfd/a00969.html", [
+      [ "V1.0.0 - July 24", "d7/dfd/a00969.html#autotoc_md6", null ]
     ] ],
-    [ "Getting Started", "d0/d3c/a00971.html", [
-      [ "Prerequisites", "d0/d3c/a00971.html#autotoc_md8", null ],
-      [ "Hardware Setup", "d0/d3c/a00971.html#autotoc_md9", null ],
-      [ "Software Setup", "d0/d3c/a00971.html#autotoc_md10", null ]
+    [ "Getting Started", "d0/daf/a00970.html", [
+      [ "Prerequisites", "d0/daf/a00970.html#autotoc_md8", null ],
+      [ "Hardware Setup", "d0/daf/a00970.html#autotoc_md9", null ],
+      [ "Software Setup", "d0/daf/a00970.html#autotoc_md10", null ]
     ] ],
-    [ "Known issues", "de/d4e/a00972.html", [
-      [ "1 - Linker options STM32 CubeIDE / GCC toolcahin", "de/d4e/a00972.html#autotoc_md12", null ]
+    [ "Known issues", "d0/d3c/a00971.html", [
+      [ "1 - Linker options STM32 CubeIDE / GCC toolcahin", "d0/d3c/a00971.html#autotoc_md12", null ]
     ] ],
     [ "Modules", "modules.html", "modules" ],
     [ "Data Structures", "annotated.html", [
@@ -58,7 +58,7 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d9/d34/a00476.html#gga6e312aa8b8cd38421ce8b85215e4b16fa22c24b27f48e0474ede196c4833aacf6",
-"de/dcb/a00462.html#ga507fa72e3cf5a66874746fc78638f323"
+"de/dcb/a00462.html#ga93575e9fa3d032a94ef0d7dd8159610a"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

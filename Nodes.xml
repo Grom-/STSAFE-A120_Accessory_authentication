@@ -7,70 +7,70 @@
       <Subnodes>
        <Node>
         <Name>STSAFE-A120 Accessory Authentication project</Name>
-        <Path>d7/dd4/a00968.html</Path>
+        <Path>index.html</Path>
         <Subnodes>
          <Node>
           <Name>Project Architecture</Name>
-          <Path>d7/dd4/a00968.html</Path>
+          <Path>index.html</Path>
           <Anchor>autotoc_md1</Anchor>
          </Node>
         </Subnodes>
        </Node>
        <Node>
         <Name>SOFTWARE PACKAGE LICENSE AGREEMENT</Name>
-        <Path>d7/dfd/a00969.html</Path>
+        <Path>d7/dd4/a00968.html</Path>
         <Subnodes>
          <Node>
           <Name>SOFTWARE BILL OF MATERIALS</Name>
-          <Path>d7/dfd/a00969.html</Path>
+          <Path>d7/dd4/a00968.html</Path>
           <Anchor>autotoc_md3</Anchor>
          </Node>
          <Node>
           <Name>ANNEX 1 - SLA0044</Name>
-          <Path>d7/dfd/a00969.html</Path>
+          <Path>d7/dd4/a00968.html</Path>
           <Anchor>autotoc_md4</Anchor>
          </Node>
         </Subnodes>
        </Node>
        <Node>
         <Name>Release Note</Name>
-        <Path>d0/daf/a00970.html</Path>
+        <Path>d7/dfd/a00969.html</Path>
         <Subnodes>
          <Node>
           <Name>V1.0.0 - July 24</Name>
-          <Path>d0/daf/a00970.html</Path>
+          <Path>d7/dfd/a00969.html</Path>
           <Anchor>autotoc_md6</Anchor>
          </Node>
         </Subnodes>
        </Node>
        <Node>
         <Name>Getting Started</Name>
-        <Path>d0/d3c/a00971.html</Path>
+        <Path>d0/daf/a00970.html</Path>
         <Subnodes>
          <Node>
           <Name>Prerequisites</Name>
-          <Path>d0/d3c/a00971.html</Path>
+          <Path>d0/daf/a00970.html</Path>
           <Anchor>autotoc_md8</Anchor>
          </Node>
          <Node>
           <Name>Hardware Setup</Name>
-          <Path>d0/d3c/a00971.html</Path>
+          <Path>d0/daf/a00970.html</Path>
           <Anchor>autotoc_md9</Anchor>
          </Node>
          <Node>
           <Name>Software Setup</Name>
-          <Path>d0/d3c/a00971.html</Path>
+          <Path>d0/daf/a00970.html</Path>
           <Anchor>autotoc_md10</Anchor>
          </Node>
         </Subnodes>
        </Node>
        <Node>
         <Name>Known issues</Name>
-        <Path>de/d4e/a00972.html</Path>
+        <Path>d0/d3c/a00971.html</Path>
         <Subnodes>
          <Node>
           <Name>1 - Linker options STM32 CubeIDE / GCC toolcahin</Name>
-          <Path>de/d4e/a00972.html</Path>
+          <Path>d0/d3c/a00971.html</Path>
           <Anchor>autotoc_md12</Anchor>
          </Node>
         </Subnodes>

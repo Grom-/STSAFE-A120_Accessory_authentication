@@ -2,38 +2,31 @@
 <Tokens version="1.0">
   <Token>
     <TokenIdentifier>
-      <Name>md_Documentation_resources_Markdown_00_Introduction_00_introduction</Name>
+      <Name>md_Documentation_resources_Markdown_01_SLA0088_01_SLA0088</Name>
       <APILanguage>markdown</APILanguage>
     </TokenIdentifier>
     <Path>d7/dd4/a00968.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>md_Documentation_resources_Markdown_01_SLA0088_01_SLA0088</Name>
+      <Name>md_Documentation_resources_Markdown_02_Release_note_02_Release_Note</Name>
       <APILanguage>markdown</APILanguage>
     </TokenIdentifier>
     <Path>d7/dfd/a00969.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>md_Documentation_resources_Markdown_02_Release_note_02_Release_Note</Name>
+      <Name>md_Documentation_resources_Markdown_03_Getting_started_03_Getting_started</Name>
       <APILanguage>markdown</APILanguage>
     </TokenIdentifier>
     <Path>d0/daf/a00970.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>md_Documentation_resources_Markdown_03_Getting_started_03_Getting_started</Name>
-      <APILanguage>markdown</APILanguage>
-    </TokenIdentifier>
-    <Path>d0/d3c/a00971.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>md_Documentation_resources_Markdown_04_Known_issues_Konwn_issues</Name>
       <APILanguage>markdown</APILanguage>
     </TokenIdentifier>
-    <Path>de/d4e/a00972.html</Path>
+    <Path>d0/d3c/a00971.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
