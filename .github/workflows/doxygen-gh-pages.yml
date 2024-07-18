@@ -15,5 +15,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
           folder: Documentation
-          output_folder: ./
           config_file: Documentation/resources/STSAFE-A120_Accessory_authentication.doxyfile
