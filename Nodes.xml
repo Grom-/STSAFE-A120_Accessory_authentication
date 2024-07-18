@@ -6,6 +6,186 @@
       <Path>index.html</Path>
       <Subnodes>
        <Node>
+        <Name>STSAFE-A120 Accessory Authentication project</Name>
+        <Path>d5/d4c/a01058.html</Path>
+        <Subnodes>
+         <Node>
+          <Name>Project Architecture</Name>
+          <Path>d5/d4c/a01058.html</Path>
+          <Anchor>autotoc_md1</Anchor>
+         </Node>
+        </Subnodes>
+       </Node>
+       <Node>
+        <Name>SOFTWARE PACKAGE LICENSE AGREEMENT</Name>
+        <Path>d0/d90/a01059.html</Path>
+        <Subnodes>
+         <Node>
+          <Name>SOFTWARE BILL OF MATERIALS</Name>
+          <Path>d0/d90/a01059.html</Path>
+          <Anchor>autotoc_md3</Anchor>
+         </Node>
+         <Node>
+          <Name>ANNEX 1 - SLA0044</Name>
+          <Path>d0/d90/a01059.html</Path>
+          <Anchor>autotoc_md4</Anchor>
+         </Node>
+        </Subnodes>
+       </Node>
+       <Node>
+        <Name>Release Note</Name>
+        <Path>d5/d16/a01060.html</Path>
+        <Subnodes>
+         <Node>
+          <Name>V1.0.0 - July 24</Name>
+          <Path>d5/d16/a01060.html</Path>
+          <Anchor>autotoc_md6</Anchor>
+         </Node>
+        </Subnodes>
+       </Node>
+       <Node>
+        <Name>Getting Started</Name>
+        <Path>de/d9e/a01061.html</Path>
+        <Subnodes>
+         <Node>
+          <Name>Prerequisites</Name>
+          <Path>de/d9e/a01061.html</Path>
+          <Anchor>autotoc_md8</Anchor>
+         </Node>
+         <Node>
+          <Name>Hardware Setup</Name>
+          <Path>de/d9e/a01061.html</Path>
+          <Anchor>autotoc_md9</Anchor>
+         </Node>
+         <Node>
+          <Name>Software Setup</Name>
+          <Path>de/d9e/a01061.html</Path>
+          <Anchor>autotoc_md10</Anchor>
+         </Node>
+        </Subnodes>
+       </Node>
+       <Node>
+        <Name>Use-case and features examples</Name>
+        <Path>d4/d8a/a01062.html</Path>
+        <Subnodes>
+         <Node>
+          <Name>STSAFE-A110 Examples</Name>
+          <Path>d5/d67/a01070.html</Path>
+          <Subnodes>
+           <Node>
+            <Name>STSAFE-A110 Device Authentication</Name>
+            <Path>de/de6/a01063.html</Path>
+           </Node>
+           <Node>
+            <Name>STSAFE-A110_Multi-step_device_authentication</Name>
+            <Path>d0/dfb/a01066.html</Path>
+           </Node>
+           <Node>
+            <Name>STSAFE-A110 echo loop</Name>
+            <Path>d9/db3/a01064.html</Path>
+           </Node>
+           <Node>
+            <Name>STSAFE-A110_Random_number_generation</Name>
+            <Path>d2/d49/a01067.html</Path>
+           </Node>
+           <Node>
+            <Name>STSAFE-A110_secure_data_storage_counter_accesses</Name>
+            <Path>d1/de6/a01068.html</Path>
+           </Node>
+           <Node>
+            <Name>STSAFE-A110_secure_data_storage_zone_accesses</Name>
+            <Path>d8/d18/a01069.html</Path>
+           </Node>
+           <Node>
+            <Name>STSAFE-A110_wrap_unwrap</Name>
+            <Path>d6/d6a/a01072.html</Path>
+           </Node>
+           <Node>
+            <Name>STSAFE-A110_Host_key_provisioning</Name>
+            <Path>d0/dc9/a01065.html</Path>
+           </Node>
+           <Node>
+            <Name>STSAFE-A110_Symmetric_key_AES-128_CMAC</Name>
+            <Path>df/d18/a01071.html</Path>
+           </Node>
+          </Subnodes>
+         </Node>
+         <Node>
+          <Name>STSAFE-A120 Examples</Name>
+          <Path>dd/df1/a01082.html</Path>
+          <Subnodes>
+           <Node>
+            <Name>STSAFE-A120 echo loop</Name>
+            <Path>d7/df7/a01074.html</Path>
+           </Node>
+           <Node>
+            <Name>STSAFE-A120_Random_number_generation</Name>
+            <Path>d2/d4d/a01079.html</Path>
+           </Node>
+           <Node>
+            <Name>STSAFE-A120_secure_data_storage_counter_accesses</Name>
+            <Path>d9/d67/a01080.html</Path>
+           </Node>
+           <Node>
+            <Name>STSAFE-A120_secure_data_storage_zone_accesses</Name>
+            <Path>dd/dee/a01081.html</Path>
+           </Node>
+           <Node>
+            <Name>STSAFE-A120 Device Authentication</Name>
+            <Path>d9/d7c/a01073.html</Path>
+           </Node>
+           <Node>
+            <Name>STSAFE-A120_Hash</Name>
+            <Path>dd/d80/a01075.html</Path>
+           </Node>
+           <Node>
+            <Name>STSAFE-A120_Multi-step_device_authentication</Name>
+            <Path>db/dba/a01078.html</Path>
+           </Node>
+           <Node>
+            <Name>STSAFE-A120_Symmetric_key_establishment_AES-128_CMAC</Name>
+            <Path>d6/d9a/a01083.html</Path>
+           </Node>
+           <Node>
+            <Name>STSAFE-A120_Symmetric_key_establishment_AES-256_CCM</Name>
+            <Path>da/d93/a01084.html</Path>
+           </Node>
+           <Node>
+            <Name>STSAFE-A120_Symmetric_key_management_AES-128_CMAC</Name>
+            <Path>d2/df3/a01085.html</Path>
+           </Node>
+           <Node>
+            <Name>STSAFE-A120_Symmetric_key_management_AES-256_CCM</Name>
+            <Path>d9/df5/a01086.html</Path>
+           </Node>
+           <Node>
+            <Name>STSAFE-A120_wrap_unwrap</Name>
+            <Path>d0/d1f/a01087.html</Path>
+           </Node>
+           <Node>
+            <Name>STSAFE-A120_Host_key_provisioning</Name>
+            <Path>d6/d80/a01076.html</Path>
+           </Node>
+           <Node>
+            <Name>STSAFE-A120_Host_key_provisioning_wrapped</Name>
+            <Path>d0/dd3/a01077.html</Path>
+           </Node>
+          </Subnodes>
+         </Node>
+        </Subnodes>
+       </Node>
+       <Node>
+        <Name>Known issues</Name>
+        <Path>da/db7/a01088.html</Path>
+        <Subnodes>
+         <Node>
+          <Name>1 - Linker options STM32 CubeIDE / GCC toolcahin</Name>
+          <Path>da/db7/a01088.html</Path>
+          <Anchor>autotoc_md13</Anchor>
+         </Node>
+        </Subnodes>
+       </Node>
+       <Node>
         <Name>Modules</Name>
         <Path>modules.html</Path>
         <Subnodes>

@@ -25,6 +25,25 @@
 var NAVTREE =
 [
   [ "STSAFE-A120_Accessory_authentication", "index.html", [
+    [ "STSAFE-A120 Accessory Authentication project", "d5/d4c/a01058.html", [
+      [ "Project Architecture", "d5/d4c/a01058.html#autotoc_md1", null ]
+    ] ],
+    [ "SOFTWARE PACKAGE LICENSE AGREEMENT", "d0/d90/a01059.html", [
+      [ "SOFTWARE BILL OF MATERIALS", "d0/d90/a01059.html#autotoc_md3", null ],
+      [ "ANNEX 1 - SLA0044", "d0/d90/a01059.html#autotoc_md4", null ]
+    ] ],
+    [ "Release Note", "d5/d16/a01060.html", [
+      [ "V1.0.0 - July 24", "d5/d16/a01060.html#autotoc_md6", null ]
+    ] ],
+    [ "Getting Started", "de/d9e/a01061.html", [
+      [ "Prerequisites", "de/d9e/a01061.html#autotoc_md8", null ],
+      [ "Hardware Setup", "de/d9e/a01061.html#autotoc_md9", null ],
+      [ "Software Setup", "de/d9e/a01061.html#autotoc_md10", null ]
+    ] ],
+    [ "Use-case and features examples", "d4/d8a/a01062.html", "d4/d8a/a01062" ],
+    [ "Known issues", "da/db7/a01088.html", [
+      [ "1 - Linker options STM32 CubeIDE / GCC toolcahin", "da/db7/a01088.html#autotoc_md13", null ]
+    ] ],
     [ "Modules", "modules.html", "modules" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
@@ -39,8 +58,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d8/d9b/a00577.html#ga44317159bcbc7ab490ac8ba894a3ad5c",
-"dd/de9/a00552.html"
+"d6/d21/a00573.html#ga7d48371ab87838e6192a408add3d8685",
+"dc/dea/a00558.html#ggab84850593c73fe703cb00bee06034bb8a7927a7c05e3953f3b0aa01a428954460"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,4 +1,51 @@
 <toc label="STSAFE-A120_Accessory_authentication" topic="index.html">
+  <topic label="STSAFE-A120 Accessory Authentication project" href="d5/d4c/a01058.html">
+    <topic label="Project Architecture" href="d5/d4c/a01058.html#autotoc_md1"/>
+  </topic>
+  <topic label="SOFTWARE PACKAGE LICENSE AGREEMENT" href="d0/d90/a01059.html">
+    <topic label="SOFTWARE BILL OF MATERIALS" href="d0/d90/a01059.html#autotoc_md3"/>
+    <topic label="ANNEX 1 - SLA0044" href="d0/d90/a01059.html#autotoc_md4"/>
+  </topic>
+  <topic label="Release Note" href="d5/d16/a01060.html">
+    <topic label="V1.0.0 - July 24" href="d5/d16/a01060.html#autotoc_md6"/>
+  </topic>
+  <topic label="Getting Started" href="de/d9e/a01061.html">
+    <topic label="Prerequisites" href="de/d9e/a01061.html#autotoc_md8"/>
+    <topic label="Hardware Setup" href="de/d9e/a01061.html#autotoc_md9"/>
+    <topic label="Software Setup" href="de/d9e/a01061.html#autotoc_md10"/>
+  </topic>
+  <topic label="Use-case and features examples" href="d4/d8a/a01062.html">
+    <topic label="STSAFE-A110 Examples" href="d5/d67/a01070.html">
+      <topic label="STSAFE-A110 Device Authentication" href="de/de6/a01063.html"/>
+      <topic label="STSAFE-A110_Multi-step_device_authentication" href="d0/dfb/a01066.html"/>
+      <topic label="STSAFE-A110 echo loop" href="d9/db3/a01064.html"/>
+      <topic label="STSAFE-A110_Random_number_generation" href="d2/d49/a01067.html"/>
+      <topic label="STSAFE-A110_secure_data_storage_counter_accesses" href="d1/de6/a01068.html"/>
+      <topic label="STSAFE-A110_secure_data_storage_zone_accesses" href="d8/d18/a01069.html"/>
+      <topic label="STSAFE-A110_wrap_unwrap" href="d6/d6a/a01072.html"/>
+      <topic label="STSAFE-A110_Host_key_provisioning" href="d0/dc9/a01065.html"/>
+      <topic label="STSAFE-A110_Symmetric_key_AES-128_CMAC" href="df/d18/a01071.html"/>
+    </topic>
+    <topic label="STSAFE-A120 Examples" href="dd/df1/a01082.html">
+      <topic label="STSAFE-A120 echo loop" href="d7/df7/a01074.html"/>
+      <topic label="STSAFE-A120_Random_number_generation" href="d2/d4d/a01079.html"/>
+      <topic label="STSAFE-A120_secure_data_storage_counter_accesses" href="d9/d67/a01080.html"/>
+      <topic label="STSAFE-A120_secure_data_storage_zone_accesses" href="dd/dee/a01081.html"/>
+      <topic label="STSAFE-A120 Device Authentication" href="d9/d7c/a01073.html"/>
+      <topic label="STSAFE-A120_Hash" href="dd/d80/a01075.html"/>
+      <topic label="STSAFE-A120_Multi-step_device_authentication" href="db/dba/a01078.html"/>
+      <topic label="STSAFE-A120_Symmetric_key_establishment_AES-128_CMAC" href="d6/d9a/a01083.html"/>
+      <topic label="STSAFE-A120_Symmetric_key_establishment_AES-256_CCM" href="da/d93/a01084.html"/>
+      <topic label="STSAFE-A120_Symmetric_key_management_AES-128_CMAC" href="d2/df3/a01085.html"/>
+      <topic label="STSAFE-A120_Symmetric_key_management_AES-256_CCM" href="d9/df5/a01086.html"/>
+      <topic label="STSAFE-A120_wrap_unwrap" href="d0/d1f/a01087.html"/>
+      <topic label="STSAFE-A120_Host_key_provisioning" href="d6/d80/a01076.html"/>
+      <topic label="STSAFE-A120_Host_key_provisioning_wrapped" href="d0/dd3/a01077.html"/>
+    </topic>
+  </topic>
+  <topic label="Known issues" href="da/db7/a01088.html">
+    <topic label="1 - Linker options STM32 CubeIDE / GCC toolcahin" href="da/db7/a01088.html#autotoc_md13"/>
+  </topic>
   <topic label="Modules" href="modules.html">
     <topic label="Asymmetric key slots" href="dc/d40/a00568.html">
       <topic label="stsafea_private_key_operation_mode_t" href="dc/d40/a00568.html#d8/dba/a00681">
