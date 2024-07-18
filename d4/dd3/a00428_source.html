@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>STSAFE-A120_Accessory_authentication: stse_util.h Source File</title>
+<title>STSAFE-A120_Accessory_authentication: stsafea_reset.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -53,13 +53,13 @@ $(document).ready(function(){initNavTree('d4/dd3/a00428_source.html','../../'); 
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">stse_util.h</div>  </div>
+<div class="title">stsafea_reset.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*!</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> ******************************************************************************</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * \file    stse_util.h</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * \brief   Util Macros for STSAFE Middleware</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * \file    stsafea_random.h</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * \brief   Random services for STSAFE</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * \author  STMicroelectronics - CS application team</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> ******************************************************************************</span></div>
@@ -74,37 +74,40 @@ $(document).ready(function(){initNavTree('d4/dd3/a00428_source.html','../../'); 
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> ******************************************************************************</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef STSAFE_UTIL_H</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define STSAFE_UTIL_H</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef STSAFEA_RESET_H</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define STSAFEA_RESET_H</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define UI16_B0(ui16)  ((ui16) &amp; 0x00FF)</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#define UI16_B1(ui16) (((ui16) &amp; 0xFF00) &gt;&gt; 8)</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#define UI16_B0_SET(ui8) (ui8)</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define UI16_B1_SET(ui8) ((ui8) &lt;&lt; 8)</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define UI16_SWAP(ui16) ((UI16_B0(ui16)&lt;&lt;8) + UI16_B1(ui16))</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define UI32_B0(ui32)  ((ui32) &amp; 0x000000FF)</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#define UI32_B1(ui32) (((ui32) &amp; 0x0000FF00) &gt;&gt; 8)</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define UI32_B2(ui32) (((ui32) &amp; 0x00FF0000) &gt;&gt; 16)</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define UI32_B3(ui32) (((ui32) &amp; 0xFF000000) &gt;&gt; 24)</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#define ARRAY_2B_SWAP_TO_UI16(buf2) (PLAT_UI16)( ( buf2[0]&lt;&lt;8 ) + buf2[1] )</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#define ARRAY_3B_SWAP_TO_UI32(buf3) (PLAT_UI32)( ( buf3[0]&lt;&lt;16 ) + ( buf3[1]&lt;&lt;8 ) + buf3[2] )</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#define ARRAY_4B_SWAP_TO_UI32(buf4) (PLAT_UI32)( ( buf4[0]&lt;&lt;24 ) + ( buf4[1]&lt;&lt;16 ) + ( buf4[2]&lt;&lt;8 ) + buf4[3] )</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define UI32_B0_SET(ui8) (ui8)</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#define UI32_B1_SET(ui8) ((ui8) &lt;&lt; 8)</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#define UI32_B2_SET(ui8) ((ui8) &lt;&lt; 16)</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define UI32_B3_SET(ui8) ((ui8) &lt;&lt; 24)</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*STSAFE_UTIL_H*/</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;core/stse_return_codes.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;core/stse_device.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;core/stse_platform.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;core/stse_util.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;core/stse_frame.h&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;services/stsafea/stsafea_commands.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;services/stsafea/stsafea_timings.h&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">/*! \defgroup stsafea_reset Reset</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> *  \ingroup stsafea_services</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *  @{</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> * \brief       Reset target device</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"> * \details     This service format and send the reset command</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"> * \param[in]   pSTSAFE     Pointer to STSAFE Handler</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"> * \return      \ref stse_ReturnCode_t : STSE_OK on success ; error code otherwise</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<a class="code" href="../../d9/d34/a00476.html#ga6e312aa8b8cd38421ce8b85215e4b16f" title="STSE response codes enumeration.">stse_ReturnCode_t</a> <a class="code" href="../../da/d7e/a00492.html#gaec5ab6bc6b4c5e0e49e24df4f85e59b2" title="Reset target device.">stsafea_reset</a>( <a class="code" href="../../d7/db5/a00472.html#gaabe4b6e7682072e3e7798bbff6c0b77b" title="STSE Handler This handler stores all the context and working data related to a specific STSE target....">stse_Handler_t</a> * pSTSAFE );</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">/** \}*/</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* STSAFEA_RESET_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_753d84eff0dd76e051be2faf8ba62b5b.html">Middleware</a></li><li class="navelem"><a class="el" href="../../dir_a3b669742a0b1932c7dd9430f93a6acd.html">STSELib</a></li><li class="navelem"><a class="el" href="../../dir_d2d4606d5a8f43f438a7b361d251bd6a.html">core</a></li><li class="navelem"><b>stse_util.h</b></li>
+    <li class="navelem"><a class="el" href="../../dir_753d84eff0dd76e051be2faf8ba62b5b.html">Middleware</a></li><li class="navelem"><a class="el" href="../../dir_a3b669742a0b1932c7dd9430f93a6acd.html">STSELib</a></li><li class="navelem"><a class="el" href="../../dir_616f4f5625a4bff79dbc0b5b8c3d7f1d.html">services</a></li><li class="navelem"><a class="el" href="../../dir_438883bf89dd54aba76fbe6926f46959.html">stsafea</a></li><li class="navelem"><b>stsafea_reset.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

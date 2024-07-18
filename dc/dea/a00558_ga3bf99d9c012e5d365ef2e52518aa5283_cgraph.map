@@ -1,4 +1,0 @@
-<map id="stse_certificate_is_parent" name="stse_certificate_is_parent">
-<area shape="rect" id="node1" title="Check whether &quot;parent&quot; issued &quot;child&quot;." alt="" coords="5,5,144,47"/>
-<area shape="rect" id="node2" href="$dc/dea/a00558.html#ga34be70ca1945a1fab289ab94d04e66b3" title="Check that an imported x509 certificate is valid." alt="" coords="192,5,331,47"/>
-</map>

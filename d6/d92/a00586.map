@@ -1,8 +1,0 @@
-<map id="STSE Certificate" name="STSE Certificate">
-<area shape="rect" id="node1" href="$d2/d50/a00561.html" title="STSE Certificate subparsing routines." alt="" coords="419,5,619,45"/>
-<area shape="rect" id="node2" href="$d2/d50/a00559.html" title="STSE Certificate cryptography functions." alt="" coords="412,70,627,95"/>
-<area shape="rect" id="node3" href="$dc/dac/a00585.html" title="STMicroelectronics Secure Element host library." alt="" coords="5,95,191,121"/>
-<area shape="rect" id="node5" title="STSELib Certificate parser." alt="" coords="239,95,364,121"/>
-<area shape="rect" id="node4" href="$dc/dea/a00558.html" title="STSE Certificate parser." alt="" coords="434,119,605,145"/>
-<area shape="rect" id="node6" href="$d9/d19/a00560.html" title="STSE Certificate prints functions." alt="" coords="436,169,603,209"/>
-</map>

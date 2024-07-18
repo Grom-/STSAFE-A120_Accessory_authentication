@@ -1,5 +1,0 @@
-<map id="stse_internal_certificate" name="stse_internal_certificate">
-<area shape="rect" id="node1" title="internal structure used to keep the values parsed from the x509" alt="" coords="17,189,272,413"/>
-<area shape="rect" id="node2" href="$d2/d34/a00625.html" title="typedef for the structure keeping the ECDSA Signature" alt="" coords="5,5,119,127"/>
-<area shape="rect" id="node3" href="$dc/db1/a00621.html" title="typedef for the structure keeping the Ellipitc Curve Public Key" alt="" coords="143,13,312,119"/>
-</map>

@@ -1,7 +1,7 @@
 var modules =
 [
-    [ "Asymmetric key slots", "dc/d40/a00568.html", "dc/d40/a00568" ],
-    [ "Host key slot management", "d9/d42/a00575.html", "d9/d42/a00575" ],
-    [ "Symmetric key slots management", "d5/d80/a00583.html", "d5/d80/a00583" ],
-    [ "STSecureElement Library", "dc/dac/a00585.html", "dc/dac/a00585" ]
+    [ "Asymmetric key slots", "d9/dea/a00478.html", "d9/dea/a00478" ],
+    [ "Host key slot management", "d6/d1a/a00485.html", "d6/d1a/a00485" ],
+    [ "Symmetric key slots management", "d9/da5/a00493.html", "d9/da5/a00493" ],
+    [ "STSecureElement Library", "db/dc4/a00495.html", "db/dc4/a00495" ]
 ];

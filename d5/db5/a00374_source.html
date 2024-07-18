@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>STSAFE-A120_Accessory_authentication: stse_certificate.h Source File</title>
+<title>STSAFE-A120_Accessory_authentication: stsafea_echo.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -53,132 +53,69 @@ $(document).ready(function(){initNavTree('d5/db5/a00374_source.html','../../'); 
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">stse_certificate.h</div>  </div>
+<div class="title">stsafea_echo.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">  ******************************************************************************</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">  * \file    x509.h</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">  * \author  STMicroelectronics - CS application team</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">  * \brief   STSAFE-A x509 certificate Parser</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">  ******************************************************************************</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">  * \attention</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">  *</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">  * &lt;h2&gt;&lt;center&gt;&amp;copy; COPYRIGHT 2022 STMicroelectronics&lt;/center&gt;&lt;/h2&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">  *</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">  * This software is licensed under terms that can be found in the LICENSE file in</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">  * the root directory of this software component.</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">  * If no LICENSE file comes with this software, it is provided AS-IS.</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">  *</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">  ******************************************************************************</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef STSE_CERTIFICATE_H</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define STSE_CERTIFICATE_H</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;certificate/stse_certificate_types.h&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;certificate/stse_certificate_crypto.h&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;certificate/stse_certificate_prints.h&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;certificate/stse_certificate_subparsing.h&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">/** \defgroup   stse_certificate_core STSE Certificate parser</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> *  \ingroup    stse_certificate</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> *  \brief      STSE Certificate parser</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"> *  @{</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">/* Exported Functions */</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> * \brief  Initialize a certificate (\ref stse_certificate_t) to an empty one</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> * \param[in,out]  cert                 pointer to the stse_certificate_t to be initialized</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"> * \note  This functions should be called before parsing a certificate</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"> * \details     \include{doc} STSE_Authentication.dox</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dc/dea/a00558.html#gaa61ce045058ac7a28013df624861be01" title="Initialize a certificate (stse_certificate_t) to an empty one.">stse_certificate_init</a>(<a class="code" href="../../da/dd1/a00629.html" title="internal structure used to keep the values parsed from the x509">stse_certificate_t</a> *cert);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"> * \brief  Parse an x509 certificate</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment"> * \param[in]  cert                 pointer to the x509 certificate to be parsed</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment"> * \param[out] stse_certificate     pointer to the stse_certificate_t that will be filled</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment"> * \param[out] next                 pointer to cert array after the parsed certificate (it can be NULL)</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"> * \return \ref stse_ReturnCode_t : STSE_OK on success ; error code otherwise</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment"> * \warning The parsed certificated could be empty, it is necessary to call a function</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"> *          which verifies the certificate to be valid before using it.</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<a class="code" href="../../d0/d3e/a00566.html#ga6e312aa8b8cd38421ce8b85215e4b16f" title="STSE response codes enumeration.">stse_ReturnCode_t</a> <a class="code" href="../../dc/dea/a00558.html#ga83baa2b6c6c6ac34f72cbdcc43968353" title="Parse an x509 certificate.">stse_certificate_parse</a>(<span class="keyword">const</span> PLAT_UI8 *cert, <a class="code" href="../../da/dd1/a00629.html" title="internal structure used to keep the values parsed from the x509">stse_certificate_t</a> *stse_certificate, <span class="keyword">const</span> PLAT_UI8 **next);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment"> * \brief  Check that an imported x509 certificate is valid</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"> * \param[in]  stse_certificate     pointer to the parsed x509 certificate to be validated</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"> * \param[in]  currentTime          pointer to a stse_cert_validity_t with the current DateTime. If NULL no date check is done</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment"> * \return \ref stse_ReturnCode_t : STSE_OK on success ; error code otherwise</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment"> * \warning If currentTime==NULL the check on the validity dates of the certificate will be bypassed.</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<a class="code" href="../../d0/d3e/a00566.html#ga6e312aa8b8cd38421ce8b85215e4b16f" title="STSE response codes enumeration.">stse_ReturnCode_t</a> <a class="code" href="../../dc/dea/a00558.html#ga34be70ca1945a1fab289ab94d04e66b3" title="Check that an imported x509 certificate is valid.">stse_certificate_is_valid</a>(<span class="keyword">const</span> <a class="code" href="../../da/dd1/a00629.html" title="internal structure used to keep the values parsed from the x509">stse_certificate_t</a> *stse_certificate, <span class="keyword">const</span> <a class="code" href="../../d4/dc4/a00617.html" title="typedef for the structure keeping the validity">stse_cert_validity_t</a> *currentTime);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"> * \brief  Check whether a certificate is marked as belonging to a CA</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"> * \param[in]  *cert                pointer to the parsed x509 certificate to be checked</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment"> * \return \ref stse_ReturnCode_t : STSE_OK on success ; error code otherwise</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<a class="code" href="../../d0/d3e/a00566.html#ga6e312aa8b8cd38421ce8b85215e4b16f" title="STSE response codes enumeration.">stse_ReturnCode_t</a> <a class="code" href="../../dc/dea/a00558.html#gaf519f5e717a9b168d149d4f1cca6e024" title="Check whether a certificate is marked as belonging to a CA.">stse_certificate_is_CA</a>(<span class="keyword">const</span> <a class="code" href="../../da/dd1/a00629.html" title="internal structure used to keep the values parsed from the x509">stse_certificate_t</a> *cert);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment"> * \brief  Check whether &quot;parent&quot; issued &quot;child&quot;</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"> * \param[in]  parent           pointer to the parsed x509 certificate of the supposed issuer of child</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment"> * \param[in]  child            pointer to the parsed x509 certificate of the certificated supposedly issued by parent</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"> * \param[in]  currentTime      pointer to a stse_cert_validity_t with the current DateTime. If NULL no date check is done.</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment"> * \return \ref stse_ReturnCode_t : STSE_OK on success ; error code otherwise</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"> * \note RFC 5280 mandates an extremely expensive comparison, which we don&#39;t perform.</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"> *       As result of this simplification some legitimate parentship relation could be not acknowledged (the opposite should not occur).</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment"> * \warning This check only a single level parent relashion (i.e. whether parent issued child)</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<a class="code" href="../../d0/d3e/a00566.html#ga6e312aa8b8cd38421ce8b85215e4b16f" title="STSE response codes enumeration.">stse_ReturnCode_t</a> <a class="code" href="../../dc/dea/a00558.html#ga3bf99d9c012e5d365ef2e52518aa5283" title="Check whether &quot;parent&quot; issued &quot;child&quot;.">stse_certificate_is_parent</a>(<span class="keyword">const</span> <a class="code" href="../../da/dd1/a00629.html" title="internal structure used to keep the values parsed from the x509">stse_certificate_t</a> *parent, <span class="keyword">const</span> <a class="code" href="../../da/dd1/a00629.html" title="internal structure used to keep the values parsed from the x509">stse_certificate_t</a> *child, <span class="keyword">const</span> <a class="code" href="../../d4/dc4/a00617.html" title="typedef for the structure keeping the validity">stse_cert_validity_t</a> *currentTime);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"> * \brief  Copy a certificate (\ref stse_certificate_t) into another structure</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"> * \param[out]  copiedCert      pointer to the stse_certificate_t that will be written</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"> * \param[out]  originalCert    pointer to the stse_certificate_t that will be copied</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment"> * \return \ref stse_ReturnCode_t : STSE_OK on success ; error code otherwise</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dc/dea/a00558.html#gab5311b47824b3503645b34f968d2efe2" title="Copy a certificate (stse_certificate_t) into another structure.">stse_certificate_copy</a>(<a class="code" href="../../da/dd1/a00629.html" title="internal structure used to keep the values parsed from the x509">stse_certificate_t</a> *copiedCert, <span class="keyword">const</span> <a class="code" href="../../da/dd1/a00629.html" title="internal structure used to keep the values parsed from the x509">stse_certificate_t</a> *originalCert);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment"> * \brief Iterate over the certificate chain in argument and check each child/parent pairs</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"> * \param[in]   rootCA          Pointer to the root CA certificate buffer</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"> * \param[in]   certChain       Pointer to the certificate chain buffer</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment"> * \param[in]   certChainSize   Size of the certificate chain buffer</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment"> * \param[out]  leafCert        Pointer to the leaf certificate structure</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment"> * \return PLAT_I32 : 0 on success ; error code otherwise</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<a class="code" href="../../d0/d3e/a00566.html#ga6e312aa8b8cd38421ce8b85215e4b16f" title="STSE response codes enumeration.">stse_ReturnCode_t</a> <a class="code" href="../../dc/dea/a00558.html#ga3e22355b36cc1f58f7a0f844ab702b10" title="Iterate over the certificate chain in argument and check each child/parent pairs.">stse_certificate_parse_chain</a>(</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        PLAT_UI8 *rootCA,</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        PLAT_UI8 *certChain,</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        PLAT_UI16 certChainSize,</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="../../da/dd1/a00629.html" title="internal structure used to keep the values parsed from the x509">stse_certificate_t</a> *leafCert);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment"> * \brief Assign the certificate parser STSAFE-A companion</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment"> * \param[in]   pSTSAFE     Pointer to STSAFE handler</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dc/dea/a00558.html#ga3c4baca631ca6caddbc25ac6c825584c" title="Assign the certificate parser STSAFE-A companion.">stse_certificate_set_stse_companion</a>(<a class="code" href="../../d3/d2f/a00562.html#gaabe4b6e7682072e3e7798bbff6c0b77b" title="STSE Handler This handler stores all the context and working data related to a specific STSE target....">stse_Handler_t</a> *pSTSE);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment"> * \brief Reset the certificate parser STSAFE-A companion</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dc/dea/a00558.html#ga2e07d4a1a8f669724a83f0c288560408" title="Reset the certificate parser STSAFE-A companion.">stse_certificate_reset_stse_companion</a>();</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">/** @}*/</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* STSE_CERTIFICATE_H */</span><span class="preprocessor"></span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> ******************************************************************************</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * \file    stsafea_echo.h</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * \brief   Echo services for STSAFE-A</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * \author  STMicroelectronics - CS application team</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> ******************************************************************************</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * \attention</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * &lt;h2&gt;&lt;center&gt;&amp;copy; COPYRIGHT 2022 STMicroelectronics&lt;/center&gt;&lt;/h2&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * This software is licensed under terms that can be found in the LICENSE file in</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * the root directory of this software component.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * If no LICENSE file comes with this software, it is provided AS-IS.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> ******************************************************************************</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef STSAFEA_ECHO_H</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define STSAFEA_ECHO_H</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;core/stse_return_codes.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;core/stse_device.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;core/stse_platform.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;core/stse_util.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;core/stse_frame.h&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;services/stsafea/stsafea_commands.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;services/stsafea/stsafea_timings.h&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">/*! \defgroup stsafea_echo Echo</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> *  \ingroup stsafea_services</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *  @{</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> * \brief       Send an echo to target device</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"> * \details     This service format and send the echo command</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"> * \param[in]   pSTSE           Pointer to STSAFE Handler</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"> * \param[in]   message             Message buffer to send the echo command</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"> * \param[in]   echoed_message      Message buffer to receive the echo response</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment"> * \param[in]   message_size        Size of the echo message</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"> * \return \ref stse_ReturnCode_t : STSAFE_OK on success ; error code otherwise</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<a class="code" href="../../d9/d34/a00476.html#ga6e312aa8b8cd38421ce8b85215e4b16f" title="STSE response codes enumeration.">stse_ReturnCode_t</a> <a class="code" href="../../dc/da0/a00483.html#ga7d48371ab87838e6192a408add3d8685" title="Send an echo to target device.">stsafea_echo</a>(</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="../../d7/db5/a00472.html#gaabe4b6e7682072e3e7798bbff6c0b77b" title="STSE Handler This handler stores all the context and working data related to a specific STSE target....">stse_Handler_t</a> * pSTSE,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        PLAT_UI8 * message,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        PLAT_UI8 * echoed_message,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        PLAT_UI16 message_size</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">/** \}*/</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*STSAFEA_ECHO_H*/</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_753d84eff0dd76e051be2faf8ba62b5b.html">Middleware</a></li><li class="navelem"><a class="el" href="../../dir_a3b669742a0b1932c7dd9430f93a6acd.html">STSELib</a></li><li class="navelem"><a class="el" href="../../dir_9f345a774c073dfcf3320870b685d538.html">certificate</a></li><li class="navelem"><b>stse_certificate.h</b></li>
+    <li class="navelem"><a class="el" href="../../dir_753d84eff0dd76e051be2faf8ba62b5b.html">Middleware</a></li><li class="navelem"><a class="el" href="../../dir_a3b669742a0b1932c7dd9430f93a6acd.html">STSELib</a></li><li class="navelem"><a class="el" href="../../dir_616f4f5625a4bff79dbc0b5b8c3d7f1d.html">services</a></li><li class="navelem"><a class="el" href="../../dir_438883bf89dd54aba76fbe6926f46959.html">stsafea</a></li><li class="navelem"><b>stsafea_echo.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

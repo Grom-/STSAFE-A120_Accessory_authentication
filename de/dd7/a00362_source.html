@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>STSAFE-A120_Accessory_authentication: stse_random.h Source File</title>
+<title>STSAFE-A120_Accessory_authentication: stsafea_data_partition.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -53,13 +53,13 @@ $(document).ready(function(){initNavTree('de/dd7/a00362_source.html','../../'); 
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">stse_random.h</div>  </div>
+<div class="title">stsafea_data_partition.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*!</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> ******************************************************************************</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * \file    stse_random.h</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * \brief   STSE Random API set (header)</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * \file    stsafea_data_partition.h</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * \brief   Data partition services for STSAFE-A</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * \author  STMicroelectronics - CS application team</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> ******************************************************************************</span></div>
@@ -71,45 +71,196 @@ $(document).ready(function(){initNavTree('de/dd7/a00362_source.html','../../'); 
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * the root directory of this software component.</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * If no LICENSE file comes with this software, it is provided AS-IS.</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef STSE_RANDOM_H</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define STSE_RANDOM_H</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">/* Includes ------------------------------------------------------------------*/</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;services/stsafea/stsafea_random.h&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/** \defgroup   stse_random     STSE Random API set</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *  \ingroup    stse_api</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *  \brief      STSE Random API set</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> *  \details    STSE Random number generation API set</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"> *  @{</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> ******************************************************************************</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef STSAFEA_DATA_PARTITION_H</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define STSAFEA_DATA_PARTITION_H</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;core/stse_return_codes.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;core/stse_device.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;core/stse_platform.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;core/stse_util.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;core/stse_frame.h&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;services/stsafea/stsafea_commands.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;services/stsafea/stsafea_timings.h&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;services/stsafea/stsafea_put_query.h&quot;</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> * \brief           STSE generate random API</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> * \details         This API use the STSE to generate random number</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> * \param[in]       pSTSE           Pointer to target STSecureElement device</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"> * \param[in,out]   pRandom         Pointer to random buffer</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"> * \param[in,out]   random_size     Random size</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"> * \return          \ref stse_ReturnCode_t : STSE_OK on success ; error code otherwise</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<a class="code" href="../../d0/d3e/a00566.html#ga6e312aa8b8cd38421ce8b85215e4b16f" title="STSE response codes enumeration.">stse_ReturnCode_t</a> <a class="code" href="../../d6/d95/a00556.html#gacba4aecdc822ce4b118279a8fed7d7e0" title="STSE generate random API.">stse_generate_random</a>(</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="../../d3/d2f/a00562.html#gaabe4b6e7682072e3e7798bbff6c0b77b" title="STSE Handler This handler stores all the context and working data related to a specific STSE target....">stse_Handler_t</a> *pSTSE,</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        PLAT_UI8 *pRandom,</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        PLAT_UI16 random_size</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">/** @}*/</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*STSE_RANDOM_H*/</span><span class="preprocessor"></span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">/*! \defgroup stsafe_data_partition Data partition management</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> *  \ingroup stsafea_services</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *  @{</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">/* Zone Info Record (ZIR) bitfields definition  */</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#define STSAFEA_ZIR_AC_READ_CR_Pos          7</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define STSAFEA_ZIR_AC_READ_Pos             4</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#define STSAFEA_ZIR_AC_UPDATE_CR_Pos        3</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#define STSAFEA_ZIR_AC_UPDATE_Pos           0</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define STSAFEA_ZIR_AC_READ_CR_Msk          128 </span><span class="comment">/*0b10000000*/</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#define STSAFEA_ZIR_AC_READ_Msk             112 </span><span class="comment">/*0b01110000*/</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define STSAFEA_ZIR_AC_UPDATE_CR_Msk        8   </span><span class="comment">/*0b00001000*/</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#define STSAFEA_ZIR_AC_UPDATE_Msk           7   </span><span class="comment">/*0b00000111*/</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#define STSAFEA_ZIR_AC_READ_CR_GET(x)       ( ( (x) &amp; STSAFEA_ZIR_AC_READ_CR_Msk) &gt;&gt; STSAFEA_ZIR_AC_READ_CR_Pos )</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#define STSAFEA_ZIR_AC_READ_GET(x)          ( ( (x) &amp; STSAFEA_ZIR_AC_READ_Msk) &gt;&gt; STSAFEA_ZIR_AC_READ_Pos )</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#define STSAFEA_ZIR_AC_UPDATE_CR_GET(x)     ( ( (x) &amp; STSAFEA_ZIR_AC_UPDATE_CR_Msk) &gt;&gt; STSAFEA_ZIR_AC_UPDATE_CR_Pos )</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#define STSAFEA_ZIR_AC_UPDATE_GET(x)        ( ( (x) &amp; STSAFEA_ZIR_AC_UPDATE_Msk) &gt;&gt; STSAFEA_ZIR_AC_UPDATE_Pos )</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"> * \enum stsafea_atomicity_t</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"> * \brief STSAFE Update service atomicity enumeration</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#ga96053c8fd1ab8baaa7835b3e72a66c64">   55</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="../../d3/d58/a00481.html#ga96053c8fd1ab8baaa7835b3e72a66c64" title="STSAFE Update service atomicity enumeration.">stsafea_atomicity_t</a> {</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#gga96053c8fd1ab8baaa7835b3e72a66c64a8dbef28f142b3c5afe38d4fc570942f4">   56</a></span>&#160;    <a class="code" href="../../d3/d58/a00481.html#gga96053c8fd1ab8baaa7835b3e72a66c64a8dbef28f142b3c5afe38d4fc570942f4">STSAFEA_NON_ATOMIC_ACCESS</a> = 0,      <span class="comment">/*!&lt; Non Atomic Access*/</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="../../d3/d58/a00481.html#gga96053c8fd1ab8baaa7835b3e72a66c64a21d345c749163277a6d44b5474796a92">STSAFEA_ATOMIC_ACCESS</a>               <span class="comment">/*!&lt; Atomic Access*/</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#gga96053c8fd1ab8baaa7835b3e72a66c64a21d345c749163277a6d44b5474796a92">   58</a></span>&#160;}<a class="code" href="../../d3/d58/a00481.html#ga96053c8fd1ab8baaa7835b3e72a66c64" title="STSAFE Update service atomicity enumeration.">stsafea_atomicity_t</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"> * \enum stsafea_ac_t</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"> * \brief STSAFE data storage access condition enumeration</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#ga5280a54d31070a1813a3248bd29c0248">   64</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="../../d3/d58/a00481.html#ga5280a54d31070a1813a3248bd29c0248" title="STSAFE data storage access condition enumeration.">stsafea_ac_t</a>{</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#gga5280a54d31070a1813a3248bd29c0248af63d91d59a54fc8ae831f2c0aad171bc">   65</a></span>&#160;    <a class="code" href="../../d3/d58/a00481.html#gga5280a54d31070a1813a3248bd29c0248af63d91d59a54fc8ae831f2c0aad171bc">STSAFEA_AC_ALWAYS</a>= 0,       <span class="comment">/*!&lt; Zone/counter access always granted */</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#gga5280a54d31070a1813a3248bd29c0248aa7732521604e20c43f252f1e41b5dd6d">   66</a></span>&#160;    <a class="code" href="../../d3/d58/a00481.html#gga5280a54d31070a1813a3248bd29c0248aa7732521604e20c43f252f1e41b5dd6d">STSAFEA_AC_HOST</a>,            <span class="comment">/*!&lt; Zone/counter access granted on Host C-MAC validation */</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#gga5280a54d31070a1813a3248bd29c0248a83c8e858f1196bc5a71469faa53869ca">   67</a></span>&#160;    <a class="code" href="../../d3/d58/a00481.html#gga5280a54d31070a1813a3248bd29c0248a83c8e858f1196bc5a71469faa53869ca">STSAFEA_AC_AUTH</a>,            <span class="comment">/*!&lt; Zone/counter access granted on Auth C-MAC validation */</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="../../d3/d58/a00481.html#gga5280a54d31070a1813a3248bd29c0248a16b759d45b74744baf005816358d921b">STSAFEA_AC_NEVER</a> = 7        <span class="comment">/*!&lt; Zone/counter access never granted */</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#gga5280a54d31070a1813a3248bd29c0248a16b759d45b74744baf005816358d921b">   69</a></span>&#160;}<a class="code" href="../../d3/d58/a00481.html#ga5280a54d31070a1813a3248bd29c0248" title="STSAFE data storage access condition enumeration.">stsafea_ac_t</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"> * \enum stsafea_zone_ac_change_indicator_t</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment"> * \brief STSAFE data storage access condition change indicator</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#gad11b4246b350193d3d6f70a4b9fbe697">   75</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="../../d3/d58/a00481.html#gad11b4246b350193d3d6f70a4b9fbe697" title="STSAFE data storage access condition change indicator.">stsafea_zone_ac_change_indicator_t</a> {</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#ggad11b4246b350193d3d6f70a4b9fbe697a2a114b40b4f35323efa986ee633f52da">   76</a></span>&#160;    <a class="code" href="../../d3/d58/a00481.html#ggad11b4246b350193d3d6f70a4b9fbe697a2a114b40b4f35323efa986ee633f52da">STSAFEA_AC_CHANGE</a> = 0,      <span class="comment">/*!&lt; request access condition change */</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="../../d3/d58/a00481.html#ggad11b4246b350193d3d6f70a4b9fbe697a22509491dabcd6c2fc7e153733334dfa">STSAFEA_AC_IGNORE</a>           <span class="comment">/*!&lt; ignore access condition change */</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#ggad11b4246b350193d3d6f70a4b9fbe697a22509491dabcd6c2fc7e153733334dfa">   78</a></span>&#160;}<a class="code" href="../../d3/d58/a00481.html#gad11b4246b350193d3d6f70a4b9fbe697" title="STSAFE data storage access condition change indicator.">stsafea_zone_ac_change_indicator_t</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"> * \enum stsafea_ac_change_right_t</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"> * \brief STSAFE data storage access condition change right enumeration</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#ga087c61de64f4953e40782d5a24522365">   84</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="../../d3/d58/a00481.html#ga087c61de64f4953e40782d5a24522365" title="STSAFE data storage access condition change right enumeration.">stsafea_ac_change_right_t</a> {</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#gga087c61de64f4953e40782d5a24522365aff8c658445fae1b59f550a9ebfcd1a17">   85</a></span>&#160;        <a class="code" href="../../d3/d58/a00481.html#gga087c61de64f4953e40782d5a24522365aff8c658445fae1b59f550a9ebfcd1a17">STSAFE_ACCR_DISABLED</a> = 0,       <span class="comment">/*!&lt; accessible under pairing session*/</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="../../d3/d58/a00481.html#gga087c61de64f4953e40782d5a24522365aecf6db95616c3974b8def84b9d3b76f0">STSAFE_ACCR_ENABLE</a>              <span class="comment">/*!&lt;  Always accessible*/</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#gga087c61de64f4953e40782d5a24522365aecf6db95616c3974b8def84b9d3b76f0">   87</a></span>&#160;}<a class="code" href="../../d3/d58/a00481.html#ga087c61de64f4953e40782d5a24522365" title="STSAFE data storage access condition change right enumeration.">stsafea_ac_change_right_t</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment"> * \struct stsafea_read_option_t</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment"> * \brief STSAFE Read service options</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html">   93</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="../../d3/d58/a00481.html#de/d94/a00603" title="STSAFE Read service options.">stsafea_read_option_t</a> {</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#a990ecd64be66e0a02f3dc97afd997b42">   94</a></span>&#160;    <a class="code" href="../../d3/d58/a00481.html#ga5280a54d31070a1813a3248bd29c0248" title="STSAFE data storage access condition enumeration.">stsafea_ac_t</a> <a class="code" href="../../d3/d58/a00481.html#a990ecd64be66e0a02f3dc97afd997b42">new_read_ac</a>:STSE_3BIT_LEN;                                 <span class="comment">/*!&lt; Access condition */</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#a3fbb59be4e1113ac4856dcca4a5d2172">   95</a></span>&#160;    <a class="code" href="../../d3/d58/a00481.html#ga087c61de64f4953e40782d5a24522365" title="STSAFE data storage access condition change right enumeration.">stsafea_ac_change_right_t</a> <a class="code" href="../../d3/d58/a00481.html#a3fbb59be4e1113ac4856dcca4a5d2172">new_read_ac_change_right</a>:STSE_1BIT_LEN;       <span class="comment">/*!&lt; Access condition change right */</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#a3beb2767e821ef19ad4b4270716ae3cd">   96</a></span>&#160;    <a class="code" href="../../d3/d58/a00481.html#gad11b4246b350193d3d6f70a4b9fbe697" title="STSAFE data storage access condition change indicator.">stsafea_zone_ac_change_indicator_t</a> <a class="code" href="../../d3/d58/a00481.html#a3beb2767e821ef19ad4b4270716ae3cd">change_ac_indicator</a>:STSE_1BIT_LEN;   <span class="comment">/*!&lt; Access condition change indicator */</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#a7f02f7ec7571bc8e10cde1df43c9ef1a">   97</a></span>&#160;    PLAT_UI8 <a class="code" href="../../d3/d58/a00481.html#a7f02f7ec7571bc8e10cde1df43c9ef1a">filler</a>:STSE_3BIT_LEN;                                          <span class="comment">/*!&lt; Must be 0b0 */</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}<a class="code" href="../../d3/d58/a00481.html#de/d94/a00603" title="STSAFE Read service options.">stsafea_read_option_t</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment"> * \struct stsafea_update_option_t</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment"> * \brief STSAFE Update service options</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html">  104</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="../../d3/d58/a00481.html#d9/d07/a00607" title="STSAFE Update service options.">stsafea_update_option_t</a> {</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#ad888840ad0bae8f5a9d8f753cdfb25cf">  105</a></span>&#160;    <a class="code" href="../../d3/d58/a00481.html#ga5280a54d31070a1813a3248bd29c0248" title="STSAFE data storage access condition enumeration.">stsafea_ac_t</a> <a class="code" href="../../d3/d58/a00481.html#ad888840ad0bae8f5a9d8f753cdfb25cf">new_update_ac</a>:STSE_3BIT_LEN;                               <span class="comment">/*!&lt; Access condition */</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#ac65af5f6b0f4674de32ae40bcaf03891">  106</a></span>&#160;    <a class="code" href="../../d3/d58/a00481.html#ga087c61de64f4953e40782d5a24522365" title="STSAFE data storage access condition change right enumeration.">stsafea_ac_change_right_t</a> <a class="code" href="../../d3/d58/a00481.html#ac65af5f6b0f4674de32ae40bcaf03891">new_update_ac_change_right</a>:STSE_1BIT_LEN;     <span class="comment">/*!&lt; Access condition change right */</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#a10ef86ac6f5402dcf1fffcb8a0762a36">  107</a></span>&#160;    <a class="code" href="../../d3/d58/a00481.html#gad11b4246b350193d3d6f70a4b9fbe697" title="STSAFE data storage access condition change indicator.">stsafea_zone_ac_change_indicator_t</a> <a class="code" href="../../d3/d58/a00481.html#a10ef86ac6f5402dcf1fffcb8a0762a36">change_ac_indicator</a>:STSE_1BIT_LEN;   <span class="comment">/*!&lt; Access condition change indicator */</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#ab502041515f6c5552f161893d29a66f6">  108</a></span>&#160;    PLAT_UI8 <a class="code" href="../../d3/d58/a00481.html#ab502041515f6c5552f161893d29a66f6">filler</a>:STSE_2BIT_LEN;                                          <span class="comment">/*!&lt; Must be 0b0 */</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#a28266f7ca6378c8066256614845a95b4">  109</a></span>&#160;    <a class="code" href="../../d3/d58/a00481.html#ga96053c8fd1ab8baaa7835b3e72a66c64" title="STSAFE Update service atomicity enumeration.">stsafea_atomicity_t</a> <a class="code" href="../../d3/d58/a00481.html#a28266f7ca6378c8066256614845a95b4">atomicity</a>:STSE_1BIT_LEN;                            <span class="comment">/*!&lt; Atomicity */</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;} PLAT_PACKED_STRUCT <a class="code" href="../../d3/d58/a00481.html#d9/d07/a00607" title="STSAFE Update service options.">stsafea_update_option_t</a>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment"> * \struct stsafea_decrement_option_t</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment"> * \brief STSAFE decrement service options</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html">  116</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="../../d3/d58/a00481.html#dd/dc0/a00611" title="STSAFE decrement service options.">stsafea_decrement_option_t</a> {</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#a5feff4cbf64b16a97b8fbf3ff0e64fe4">  117</a></span>&#160;    <a class="code" href="../../d3/d58/a00481.html#ga5280a54d31070a1813a3248bd29c0248" title="STSAFE data storage access condition enumeration.">stsafea_ac_t</a> <a class="code" href="../../d3/d58/a00481.html#a5feff4cbf64b16a97b8fbf3ff0e64fe4">new_decrement_ac</a>:STSE_3BIT_LEN;                            <span class="comment">/*!&lt; Access condition */</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#aebf4667fb58d6b68fb8ff7eea9bbdb64">  118</a></span>&#160;    <a class="code" href="../../d3/d58/a00481.html#ga087c61de64f4953e40782d5a24522365" title="STSAFE data storage access condition change right enumeration.">stsafea_ac_change_right_t</a> <a class="code" href="../../d3/d58/a00481.html#aebf4667fb58d6b68fb8ff7eea9bbdb64">new_decrement_ac_change_right</a>:STSE_1BIT_LEN;  <span class="comment">/*!&lt; Access condition change right */</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#a7d39e7f8c4bc1a89f4681b2042ce9ad1">  119</a></span>&#160;    <a class="code" href="../../d3/d58/a00481.html#gad11b4246b350193d3d6f70a4b9fbe697" title="STSAFE data storage access condition change indicator.">stsafea_zone_ac_change_indicator_t</a> <a class="code" href="../../d3/d58/a00481.html#a7d39e7f8c4bc1a89f4681b2042ce9ad1">change_ac_indicator</a>:STSE_1BIT_LEN;   <span class="comment">/*!&lt; Access condition change indicator */</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html#a0bdbed6adc6f76ed128c719e216a5d30">  120</a></span>&#160;    PLAT_UI8 <a class="code" href="../../d3/d58/a00481.html#a0bdbed6adc6f76ed128c719e216a5d30">filler</a>:STSE_3BIT_LEN;                                          <span class="comment">/*!&lt; Must be 0b0 */</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;} PLAT_PACKED_STRUCT <a class="code" href="../../d3/d58/a00481.html#dd/dc0/a00611" title="STSAFE decrement service options.">stsafea_decrement_option_t</a>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment"> * \struct stsafea_data_partition_record_t</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment"> * \brief STSAFE data partition record typedef</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="../../d3/d58/a00481.html">  127</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    PLAT_UI8 index;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    PLAT_UI8 zone_type;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    uint16_t data_segment_length;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <a class="code" href="../../d3/d58/a00481.html#ga087c61de64f4953e40782d5a24522365" title="STSAFE data storage access condition change right enumeration.">stsafea_ac_change_right_t</a> read_ac_cr;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <a class="code" href="../../d3/d58/a00481.html#ga5280a54d31070a1813a3248bd29c0248" title="STSAFE data storage access condition enumeration.">stsafea_ac_t</a> read_ac;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="code" href="../../d3/d58/a00481.html#ga087c61de64f4953e40782d5a24522365" title="STSAFE data storage access condition change right enumeration.">stsafea_ac_change_right_t</a> update_ac_cr;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="../../d3/d58/a00481.html#ga5280a54d31070a1813a3248bd29c0248" title="STSAFE data storage access condition enumeration.">stsafea_ac_t</a> update_ac;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    uint32_t counter_value;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}<a class="code" href="../../d3/d58/a00481.html#d5/dd8/a00615" title="STSAFE data partition record typedef.">stsafea_data_partition_record_t</a>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment"> * \brief           STSAFEA get total partition count service</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment"> * \details         This service format and send/receive STSAFE-Axxx start hash command/response</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment"> * \param[in]       pSTSE                   Pointer to target SE handler</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment"> * \param[out]      total_partition_count   total partition count in bytes</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment"> * \return          \ref stse_ReturnCode_t : STSAFE_OK on success ; error code otherwise</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<a class="code" href="../../d9/d34/a00476.html#ga6e312aa8b8cd38421ce8b85215e4b16f" title="STSE response codes enumeration.">stse_ReturnCode_t</a> <a class="code" href="../../d3/d58/a00481.html#ga118abd5d0b3c5b830f8d0bf8966ec7e7" title="STSAFEA get total partition count service.">stsafea_get_total_partition_count</a>( <a class="code" href="../../d7/db5/a00472.html#gaabe4b6e7682072e3e7798bbff6c0b77b" title="STSE Handler This handler stores all the context and working data related to a specific STSE target....">stse_Handler_t</a>* pSTSE,</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        PLAT_UI8* total_partition_count);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment"> * \brief           STSAFEA get data partition configuration service</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment"> * \details         This service format and send/receive STSAFE-Axxx start hash command/response</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment"> * \param[in]       pSTSE                   Pointer to target SE handler</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment"> * \param[in]       total_partitions_count  Total partition count in bytes</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment"> * \param[in,out]   pRecord_table           Pointer to applicative partition record table</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment"> * \param[in]       record_table_length     Applicative record table length</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment"> * \return          \ref stse_ReturnCode_t : STSE_OK on success ; error code otherwise</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<a class="code" href="../../d9/d34/a00476.html#ga6e312aa8b8cd38421ce8b85215e4b16f" title="STSE response codes enumeration.">stse_ReturnCode_t</a> <a class="code" href="../../d3/d58/a00481.html#gaa944fab8627716fb4128f1b3650dbe91" title="STSAFEA get data partition configuration service.">stsafea_get_data_partitions_configuration</a>( <a class="code" href="../../d7/db5/a00472.html#gaabe4b6e7682072e3e7798bbff6c0b77b" title="STSE Handler This handler stores all the context and working data related to a specific STSE target....">stse_Handler_t</a>* pSTSE,</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    PLAT_UI8                            total_partitions_count,</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="code" href="../../d3/d58/a00481.html#d5/dd8/a00615" title="STSAFE data partition record typedef.">stsafea_data_partition_record_t</a>*    pRecord_table,</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    PLAT_UI16                           record_table_length);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<a class="code" href="../../d9/d34/a00476.html#ga6e312aa8b8cd38421ce8b85215e4b16f" title="STSE response codes enumeration.">stse_ReturnCode_t</a> stsafea_decrement_counter_zone(<a class="code" href="../../d7/db5/a00472.html#gaabe4b6e7682072e3e7798bbff6c0b77b" title="STSE Handler This handler stores all the context and working data related to a specific STSE target....">stse_Handler_t</a> * pSTSE,</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        PLAT_UI8 zone_index,</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <a class="code" href="../../d3/d58/a00481.html#dd/dc0/a00611" title="STSAFE decrement service options.">stsafea_decrement_option_t</a> option,</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        PLAT_UI32 amount,</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        PLAT_UI16 offset,</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        PLAT_UI8 *data,</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        PLAT_UI8  data_length,</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        PLAT_UI32 * new_counter_value,</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <a class="code" href="../../d9/dc5/a00480.html#gaad289cc303fe75567e2dc24d5d169762" title="STSAFE-Axxx Command Protection enumeration.">stsafea_cmd_protection_t</a> protection);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<a class="code" href="../../d9/d34/a00476.html#ga6e312aa8b8cd38421ce8b85215e4b16f" title="STSE response codes enumeration.">stse_ReturnCode_t</a> stsafea_read_counter_zone(<a class="code" href="../../d7/db5/a00472.html#gaabe4b6e7682072e3e7798bbff6c0b77b" title="STSE Handler This handler stores all the context and working data related to a specific STSE target....">stse_Handler_t</a> * pSTSE,</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        PLAT_UI32 zone_index,</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <a class="code" href="../../d3/d58/a00481.html#de/d94/a00603" title="STSAFE Read service options.">stsafea_read_option_t</a> read_ac,</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        PLAT_UI16 read_offset,</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        PLAT_UI8 *pReadBuffer,</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        PLAT_UI16 read_length,</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        PLAT_UI32 *pCounter_value,</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <a class="code" href="../../d9/dc5/a00480.html#gaad289cc303fe75567e2dc24d5d169762" title="STSAFE-Axxx Command Protection enumeration.">stsafea_cmd_protection_t</a> protection);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<a class="code" href="../../d9/d34/a00476.html#ga6e312aa8b8cd38421ce8b85215e4b16f" title="STSE response codes enumeration.">stse_ReturnCode_t</a> stsafea_read_data_zone(<a class="code" href="../../d7/db5/a00472.html#gaabe4b6e7682072e3e7798bbff6c0b77b" title="STSE Handler This handler stores all the context and working data related to a specific STSE target....">stse_Handler_t</a> * pSTSE,</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        PLAT_UI32 zone_index,</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <a class="code" href="../../d3/d58/a00481.html#de/d94/a00603" title="STSAFE Read service options.">stsafea_read_option_t</a> read_ac,</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        PLAT_UI16 read_offset,</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        PLAT_UI8 *pReadBuffer,</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        PLAT_UI16 read_length,</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <a class="code" href="../../d9/dc5/a00480.html#gaad289cc303fe75567e2dc24d5d169762" title="STSAFE-Axxx Command Protection enumeration.">stsafea_cmd_protection_t</a> protection);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<a class="code" href="../../d9/d34/a00476.html#ga6e312aa8b8cd38421ce8b85215e4b16f" title="STSE response codes enumeration.">stse_ReturnCode_t</a> stsafea_update_data_zone(<a class="code" href="../../d7/db5/a00472.html#gaabe4b6e7682072e3e7798bbff6c0b77b" title="STSE Handler This handler stores all the context and working data related to a specific STSE target....">stse_Handler_t</a> * pSTSE,</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        PLAT_UI32 zone_index,</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <a class="code" href="../../d3/d58/a00481.html#d9/d07/a00607" title="STSAFE Update service options.">stsafea_update_option_t</a> option,</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        PLAT_UI16 offset,</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        PLAT_UI8 *data ,</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        PLAT_UI32 data_length,</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <a class="code" href="../../d9/dc5/a00480.html#gaad289cc303fe75567e2dc24d5d169762" title="STSAFE-Axxx Command Protection enumeration.">stsafea_cmd_protection_t</a> protection);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="comment">/** \}*/</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*STSAFE_DATA_PARTITION_H*/</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_753d84eff0dd76e051be2faf8ba62b5b.html">Middleware</a></li><li class="navelem"><a class="el" href="../../dir_a3b669742a0b1932c7dd9430f93a6acd.html">STSELib</a></li><li class="navelem"><a class="el" href="../../dir_3a9cb7185296917ebf7cedb56d2c75b9.html">api</a></li><li class="navelem"><b>stse_random.h</b></li>
+    <li class="navelem"><a class="el" href="../../dir_753d84eff0dd76e051be2faf8ba62b5b.html">Middleware</a></li><li class="navelem"><a class="el" href="../../dir_a3b669742a0b1932c7dd9430f93a6acd.html">STSELib</a></li><li class="navelem"><a class="el" href="../../dir_616f4f5625a4bff79dbc0b5b8c3d7f1d.html">services</a></li><li class="navelem"><a class="el" href="../../dir_438883bf89dd54aba76fbe6926f46959.html">stsafea</a></li><li class="navelem"><b>stsafea_data_partition.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

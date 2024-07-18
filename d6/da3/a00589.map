@@ -1,9 +1,3 @@
-<map id="Core layer" name="Core layer">
-<area shape="rect" id="node1" href="$d0/d3e/a00566.html" title=" " alt="" coords="376,5,551,31"/>
-<area shape="rect" id="node2" href="$d0/dc2/a00564.html" title=" " alt="" coords="379,55,548,80"/>
-<area shape="rect" id="node3" title="STSELib core Layer." alt="" coords="239,104,328,129"/>
-<area shape="rect" id="node4" href="$d3/d2f/a00562.html" title=" " alt="" coords="384,104,543,129"/>
-<area shape="rect" id="node5" href="$dc/dae/a00563.html" title=" " alt="" coords="387,153,540,179"/>
-<area shape="rect" id="node7" href="$d8/dd2/a00565.html" title="STSAFE Middleware Platform Abstraction Layer." alt="" coords="385,203,541,243"/>
-<area shape="rect" id="node6" href="$dc/dac/a00585.html" title="STMicroelectronics Secure Element host library." alt="" coords="5,104,191,129"/>
+<map id="stsafea_private_key_operation_mode_t" name="stsafea_private_key_operation_mode_t">
+<area shape="rect" id="node1" title="stsafea private key operation mode type" alt="" coords="5,5,225,244"/>
 </map>

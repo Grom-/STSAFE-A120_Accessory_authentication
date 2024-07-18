@@ -1,0 +1,14 @@
+<map id="API layer" name="API layer">
+<area shape="rect" id="node1" title="STSELib API Layer." alt="" coords="239,244,319,269"/>
+<area shape="rect" id="node2" href="$d3/d5d/a00463.html" title="STSE Elliptic Curve Cryptography API set." alt="" coords="421,5,505,31"/>
+<area shape="rect" id="node3" href="$da/d65/a00458.html" title="STSE data storage API set." alt="" coords="377,55,550,80"/>
+<area shape="rect" id="node4" href="$db/d2c/a00466.html" title="STSE Random API set." alt="" coords="383,104,544,129"/>
+<area shape="rect" id="node5" href="$d2/d91/a00459.html" title="STSecureElement asymmetric cryptography API." alt="" coords="381,154,545,194"/>
+<area shape="rect" id="node6" href="$de/dcb/a00462.html" title="STSecureElement middleware device Management API." alt="" coords="367,219,560,244"/>
+<area shape="rect" id="node7" href="$db/de0/a00465.html" title="STSE Message Authentication Code (MAC) API set." alt="" coords="374,268,553,293"/>
+<area shape="rect" id="node8" href="$d2/d9d/a00464.html" title="STSE Hash (SHA2/SHA3) API set." alt="" coords="418,317,509,343"/>
+<area shape="rect" id="node10" href="$d7/d5e/a00467.html" title="STSecureElement symmetric cryptography API." alt="" coords="385,367,541,407"/>
+<area shape="rect" id="node11" href="$db/db1/a00460.html" title="STSE data storage API set." alt="" coords="392,432,535,457"/>
+<area shape="rect" id="node12" href="$d5/d5f/a00461.html" title="STSE Middleware Authentication API." alt="" coords="387,481,540,507"/>
+<area shape="rect" id="node9" href="$db/dc4/a00495.html" title="STMicroelectronics Secure Element host library." alt="" coords="5,244,191,269"/>
+</map>

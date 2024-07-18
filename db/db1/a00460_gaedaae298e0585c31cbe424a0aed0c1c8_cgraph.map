@@ -1,0 +1,4 @@
+<map id="stse_data_storage_get_total_partition_count" name="stse_data_storage_get_total_partition_count">
+<area shape="rect" id="node1" title="Get the total partition count from the target STSAFE device." alt="" coords="5,5,175,47"/>
+<area shape="rect" id="node2" href="$d3/d58/a00481.html#ga118abd5d0b3c5b830f8d0bf8966ec7e7" title="STSAFEA get total partition count service." alt="" coords="223,5,420,47"/>
+</map>

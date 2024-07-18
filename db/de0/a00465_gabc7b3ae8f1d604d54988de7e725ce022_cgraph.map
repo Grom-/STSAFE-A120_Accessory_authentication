@@ -1,0 +1,5 @@
+<map id="stse_aes_gmac_compute" name="stse_aes_gmac_compute">
+<area shape="rect" id="node1" title="Generate a GMAC." alt="" coords="5,5,192,32"/>
+<area shape="rect" id="node2" href="$dd/d9c/a00487.html#ga2f34e47a7a1cf282b7956d57ba02c41c" title="Generate a GMAC." alt="" coords="240,5,447,32"/>
+<area shape="rect" id="node3" href="$d9/dca/a00477.html#ga7d5bab263e5b44411ac0f95ad826d40a" title="Encrypt payload in AES GCM mode." alt="" coords="495,5,685,32"/>
+</map>

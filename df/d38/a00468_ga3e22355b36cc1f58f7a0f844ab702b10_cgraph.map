@@ -1,0 +1,9 @@
+<map id="stse_certificate_parse_chain" name="stse_certificate_parse_chain">
+<area shape="rect" id="node1" title="Iterate over the certificate chain in argument and check each child/parent pairs." alt="" coords="5,57,169,98"/>
+<area shape="rect" id="node2" href="$df/d38/a00468.html#gab5311b47824b3503645b34f968d2efe2" title="Copy a certificate (stse_certificate_t) into another structure." alt="" coords="220,5,379,32"/>
+<area shape="rect" id="node3" href="$df/d38/a00468.html#ga3bf99d9c012e5d365ef2e52518aa5283" title="Check whether &quot;parent&quot; issued &quot;child&quot;." alt="" coords="230,57,369,98"/>
+<area shape="rect" id="node5" href="$df/d38/a00468.html#ga83baa2b6c6c6ac34f72cbdcc43968353" title="Parse an x509 certificate." alt="" coords="217,125,381,152"/>
+<area shape="rect" id="node4" href="$df/d38/a00468.html#ga34be70ca1945a1fab289ab94d04e66b3" title="Check that an imported x509 certificate is valid." alt="" coords="449,53,587,94"/>
+<area shape="rect" id="node6" href="$d4/d4b/a00471.html#gaa88b975c48fd20aca9809945941f7987" title="Identify the ASN.1 TLV." alt="" coords="429,118,607,159"/>
+<area shape="rect" id="node7" href="$df/d38/a00468.html#gaa61ce045058ac7a28013df624861be01" title="Initialize a certificate (stse_certificate_t) to an empty one." alt="" coords="443,184,593,211"/>
+</map>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>STSAFE-A120_Accessory_authentication: stse_certificate_subparsing.h Source File</title>
+<title>STSAFE-A120_Accessory_authentication: stsafea_low_power.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -53,192 +53,70 @@ $(document).ready(function(){initNavTree('d4/d27/a00392_source.html','../../'); 
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">stse_certificate_subparsing.h</div>  </div>
+<div class="title">stsafea_low_power.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">  ******************************************************************************</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">  * \file    stse_certificate_subparsing.h</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">  * \author  STMicroelectronics - CS application team</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">  * \brief   Helper for the x509 certificate Parser</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">  ******************************************************************************</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">  * \attention</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">  *</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">  * &lt;h2&gt;&lt;center&gt;&amp;copy; COPYRIGHT 2022 STMicroelectronics&lt;/center&gt;&lt;/h2&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">  *</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">  * This software is licensed under terms that can be found in the LICENSE file in</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">  * the root directory of this software component.</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">  * If no LICENSE file comes with this software, it is provided AS-IS.</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">  *</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">  ******************************************************************************</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef STSE_CERTIFICATE_SUBPARSING_H</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define STSE_CERTIFICATE_SUBPARSING_H</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;certificate/stse_certificate_types.h&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">/** \defgroup   stse_certificate_subparsing STSE Certificate subparsing routines</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> *  \ingroup    stse_certificate</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *  \brief      STSE Certificate subparsing routines</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> *  \{</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//void stse_certificate_parse_integerValue(const PLAT_UI8 *value, PLAT_I32 size, const PLAT_UI8 **outp, PLAT_I32 *outSize);</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*!</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> ******************************************************************************</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * \file    stsafea_low_power.h</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * \brief   low-power modes services for STSAFE-A</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * \author  STMicroelectronics - CS application team</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> ******************************************************************************</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * \attention</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * &lt;h2&gt;&lt;center&gt;&amp;copy; COPYRIGHT 2022 STMicroelectronics&lt;/center&gt;&lt;/h2&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * This software is licensed under terms that can be found in the LICENSE file in</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * the root directory of this software component.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * If no LICENSE file comes with this software, it is provided AS-IS.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> ******************************************************************************</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef STSAFEA_LOW_POWER_H</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define STSAFEA_LOW_POWER_H</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;core/stse_return_codes.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;core/stse_device.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;core/stse_platform.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;core/stse_util.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;core/stse_frame.h&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;services/stsafea/stsafea_commands.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;services/stsafea/stsafea_timings.h&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">* \brief  Identify the ASN.1 TLV</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">* \param[in]  *asn1 pointer to the ASN.1 TLV</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">* \param[out] *parsed will contain the number of processed bytes (rarely used)</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">* \param[out] *size  will contain the size (in bytes) of the value field of this ASN.1 TLV</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">* \param[out] **value  will contain a pointer to the value field of this ASN.1 TLV</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">* \return   The internal TAG identifier of this TLV or -1 if failure</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;PLAT_I32 <a class="code" href="../../d2/d50/a00561.html#gaa88b975c48fd20aca9809945941f7987" title="Identify the ASN.1 TLV.">stse_certificate_identify_ASN1_TLV</a>(<span class="keyword">const</span> PLAT_UI8 *asn1, PLAT_I32 *parsed, PLAT_I32 *size, <span class="keyword">const</span> PLAT_UI8 **value);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">* \brief  Identify the Name Attribute from its OID</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">* \param[in]  *oid The value of the OID of the Attribute (got from \ref stse_certificate_identify_ASN1_TLV )</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">* \param[in]  size size (in bytes) of the value field of this OID (got from \ref stse_certificate_identify_ASN1_TLV )</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">* \note  Only a very limited set of Attributes is supported</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">* \return    The internal type identifing the Attribute or -1 for failure</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;PLAT_I32 <a class="code" href="../../d2/d50/a00561.html#ga533a1e9389c3a121c03c8fa1260fc18c" title="Identify the Name Attribute from its OID.">stse_certificate_identify_attribute</a>(<span class="keyword">const</span> PLAT_UI8 *oid, PLAT_I32 size);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">* \brief  Parse an ECDSA signature</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">* \param[in]  *signature pointer to the expected signature field of the x509 certificate</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">* \param[out] *stse_certificate pointer to the stse_certificate_t that will be filled</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">* \param[out] **next_thing  will contain a pointer to the next TLV</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d50/a00561.html#ga05a33685fc72c85d3c46e91d89a2e35d" title="Parse an ECDSA signature.">stse_certificate_parse_ECDSA_signature</a>(<span class="keyword">const</span> PLAT_UI8 *signature, <a class="code" href="../../da/dd1/a00629.html" title="internal structure used to keep the values parsed from the x509">stse_certificate_t</a> *stse_certificate, <span class="keyword">const</span> PLAT_UI8 **next_thing);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">* \brief  Parse the x509 Version of a certificate</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">* \param[in]  *x509VersionField pointer to the version field of a certificate</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">* \param[out] *stse_certificate pointer to the stse_certificate_t that will be filled</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">* \param[out] **next_thing output pointer to next TLV</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d50/a00561.html#gaf6ac8e5e2fa0c9e1d3ff7ea05f8f474d" title="Parse the x509 Version of a certificate.">stse_certificate_parse_X509_version</a>(<span class="keyword">const</span> PLAT_UI8 *x509VersionField, <a class="code" href="../../da/dd1/a00629.html" title="internal structure used to keep the values parsed from the x509">stse_certificate_t</a> *stse_certificate, <span class="keyword">const</span> PLAT_UI8 **next_thing);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">* \brief  Parse a SignatureAlgorithm (or signature of a tbsCertificate)</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">* \param[in]  *SA pointer to the SignatureAlgorithm (or signature of a tbsCertificate)</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">* \param[out] *singatureAlgorithm integer that will be filled with the internal encoding of signatureAlgorithm</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">* \param[out] **next_thing output pointer to next TLV</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">* \note  Only a very limited set of SignatureAlgorithm is supported</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d50/a00561.html#ga3e53f7b091ef7996407a230c1179b08d" title="Parse a SignatureAlgorithm (or signature of a tbsCertificate)">stse_certificate_parse_signature_algorithm</a>(<span class="keyword">const</span> PLAT_UI8 *SA, PLAT_I32 *singatureAlgorithm, <span class="keyword">const</span> PLAT_UI8 **next_thing);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">* \brief  Parse an ECC public Key from a certificate</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">* \param[in]  *EccPK pointer to the ECC public Key</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">* \param[out] *stse_certificate pointer to the stse_certificate_t that will be filled</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">* \param[out] **next_thing output pointer to next TLV</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d50/a00561.html#ga98420b145861bfb869f6fa9f90fcbf61" title="Parse an ECC public Key from a certificate.">stse_certificate_parse_ECC_public_key</a>(<span class="keyword">const</span> PLAT_UI8 *EccPK, <a class="code" href="../../da/dd1/a00629.html" title="internal structure used to keep the values parsed from the x509">stse_certificate_t</a> *stse_certificate, <span class="keyword">const</span> PLAT_UI8 **next_thing);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">* \brief  Parse an ASN.1 INTEGER</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">* \param[in]  *integer pointer to the expected INTEGER TLV</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">* \param[out] *outp will point to the starting byte of the integer</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">* \param[out] *outSize will contain the size of the integer in bytes</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">* \param[out] **next_thing  will contain a pointer to the next TLV</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">* \note This doesn&#39;t copy the integer. To keep memory small this just returns a pointer to it.</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">* \warning only non-negative integers are supported</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d50/a00561.html#gad70d0962519b7d9c973c41aed5773920" title="Parse an ASN.1 INTEGER.">stse_certificate_parse_integer</a>(<span class="keyword">const</span> PLAT_UI8 *integer, <span class="keyword">const</span> PLAT_UI8 **outp, PLAT_I32 *outSize, <span class="keyword">const</span> PLAT_UI8 **next_thing);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">* \brief  Parse the validity of a certificate</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">* \param[in]  *p pointer to the Name Attribute SET to be parsed</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">* \param[out] *notBefore_st pointer to stse_cert_validity_t structure that will be filled with the &quot;not before&quot; date</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">* \param[out] *notAfter_st  pointer to stse_cert_validity_t structure that will be filled with the &quot;not after&quot; date</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">* \param[out] **next_thing output pointer to next TLV</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">* \note In this function next_thing can be NULL</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d50/a00561.html#ga0e43f89e638b9f8d36d2e514ee219be6" title="Parse the validity of a certificate.">stse_certificate_parse_validity</a>(<span class="keyword">const</span> PLAT_UI8 *p, <a class="code" href="../../d4/dc4/a00617.html" title="typedef for the structure keeping the validity">stse_cert_validity_t</a> *notBefore_st, <a class="code" href="../../d4/dc4/a00617.html" title="typedef for the structure keeping the validity">stse_cert_validity_t</a> *notAfter_st, <span class="keyword">const</span> PLAT_UI8 **next_thing);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment">* \brief  Parse an RelativeDistinguishedName</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">* \param[in]  *p pointer to the RelativeDistinguishedName (expeting a SET)</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">* \param[out] **nextRDN output pointer to next RDN</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">* \param[out] **attribute output pointer to RDN first attribute</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d50/a00561.html#ga03d6b42e074c354999ee22bc0c1fcebb" title="Parse an RelativeDistinguishedName.">stse_certificate_parse_relative_distinguished_name</a>(<span class="keyword">const</span> PLAT_UI8 *p, <span class="keyword">const</span> PLAT_UI8 **nextRDN, <span class="keyword">const</span> PLAT_UI8 **attribute);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">* \brief  Parse a Name Attribute</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">* \param[in]  *p pointer to the AttributeTypeAndValue SEQUENCE to be parsed</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">* \param[out] *attribute_st pointer to stse_cert_attribute_t structure that will be filled</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">* \param[out] **next_thing output pointer to next TLV</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d50/a00561.html#ga0aa01204d027c7dc4fcadff5f0a10b0e" title="Parse a Name Attribute.">stse_certificate_parse_attribute</a>(<span class="keyword">const</span> PLAT_UI8 *p, <a class="code" href="../../d0/d1c/a00605.html" title="typedef for the attribute">stse_cert_attribute_t</a> *<a class="code" href="../../d0/d1c/a00605.html" title="typedef for the attribute">attribute_st</a>, <span class="keyword">const</span> PLAT_UI8 **next_thing);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">* \brief  Compare two stse_cert_validity_t structures</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">* \param[in]  *D1 pointer to the first stse_cert_validity_t</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">* \param[in]  *D2 pointer to the second stse_cert_validity_t</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">* \return Result of Comparison</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment">* \retval   -1  D1 &lt; D2</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">* \retval    0  D1 = D2</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment">* \retval    1  D1 &gt; D2</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;PLAT_I32 <a class="code" href="../../d2/d50/a00561.html#gaf085531ad82b27d615cdc33347c99f2f" title="Compare two stse_cert_validity_t structures.">stse_certificate_date_compare</a>(<span class="keyword">const</span> <a class="code" href="../../d4/dc4/a00617.html" title="typedef for the structure keeping the validity">stse_cert_validity_t</a> *D1, <span class="keyword">const</span> <a class="code" href="../../d4/dc4/a00617.html" title="typedef for the structure keeping the validity">stse_cert_validity_t</a> *D2);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">* \brief  Count the number of Attributes within a NAME</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment">* \param[in]  *p pointer to the RDNSequence to be parsed</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">* \returun The number of Attributes</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;PLAT_I32 <a class="code" href="../../d2/d50/a00561.html#ga635873a1afbdb10f2106703198b57100" title="Count the number of Attributes within a NAME.">stse_certificate_count_attributes</a>(<span class="keyword">const</span> PLAT_UI8 *p);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment">* \brief  String Comparison (case insensitive and for utf8)</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment">* \param[in]  *p1 first string to compare</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment">* \param[in]  *p2 second string to compare</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">* \param[in]  size p1/p2 size</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">* \return  result of comparison</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">* \retval -1 strings are different</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">* \retval 0 strings match</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;PLAT_I32 <a class="code" href="../../d2/d50/a00561.html#ga1ce58c9432c1abd52824c33dee991c90" title="String Comparison (case insensitive and for utf8)">stse_certificate_case_insensitive_compare</a>(<span class="keyword">const</span> PLAT_UI8 *p1, <span class="keyword">const</span> PLAT_UI8 *p2, PLAT_I32 size);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment">* \brief  Identify the Extension from its OID</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment">* \param[in]  *oid The value of the OID of the Extension (got from \ref stse_certificate_identify_ASN1_TLV )</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment">* \param[in]  size size (in bytes) of the value field of this OID (got from \ref stse_certificate_identify_ASN1_TLV )</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">* \note  Only a very limited set of Extension is supported</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">* \return    The internal type identifing the Extension or -1 for failure</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;PLAT_I32 <a class="code" href="../../d2/d50/a00561.html#gaef1ed24cc654d7e7886cc6361fd0b1dc" title="Identify the Extension from its OID.">stse_certificate_case_identify_extension</a>(<span class="keyword">const</span> PLAT_UI8 *oid, PLAT_I32 size);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="comment">* \brief  Parse an x509 Extension</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="comment">* \param[in]  *ext pointer to the extension</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="comment">* \param[out]  extFlags pointer to a field extensionsFlags of an stse_certificate_t structure</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment">* \param[out]  *ext_st pointer to an stse_cert_extension_t structure</span></div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d50/a00561.html#ga4e9d50573f7c74207efdd2363f59d7e5" title="Parse an x509 Extension.">stse_certificate_parse_extension</a>(<span class="keyword">const</span> PLAT_UI8 *ext, PLAT_UI32 *extFlags, <a class="code" href="../../d1/d6e/a00613.html" title="typedef for the extension">stse_cert_extension_t</a> *ext_st);</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="comment">* \brief  Reads the value of an INTEGER and returns it as a PLAT_I32</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment">* \param[in]  *value pointer to the value field of an INTEGER TLV (got from \ref stse_certificate_identify_ASN1_TLV)</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="comment">* \param[in]  size size of the integer (got from \ref stse_certificate_identify_ASN1_TLV)</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="comment">* \return the integer value as an PLAT_I32</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment">* \warning only non-negative integers are supported</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;PLAT_I32 <a class="code" href="../../d2/d50/a00561.html#gad5a08fb4e091c3316e6f030af2838c1b" title="Reads the value of an INTEGER and returns it as a PLAT_I32.">stse_certificate_get_small_integer</a>(<span class="keyword">const</span> PLAT_UI8 *value, PLAT_I32 size);</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment">/** \}*/</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* STSE_CERTIFICATE_SUBPARSING_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">/*! \defgroup stsafea_low_power Low power management</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> *  \ingroup stsafea_services</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> *  @{</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../db/df1/a00486.html#ga40c19d723738a1a89548931046626443">   36</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../db/df1/a00486.html#gga40c19d723738a1a89548931046626443a003e474d7248ccebd5b4a93dbfbbf858">   37</a></span>&#160;    <a class="code" href="../../db/df1/a00486.html#gga40c19d723738a1a89548931046626443a003e474d7248ccebd5b4a93dbfbbf858">STSAFEA_HIBERNATE_WAKEUP_I2C_OR_RESET</a>    = 0x01, <span class="comment">/*!&lt; Wake up from hibernate after I2C start condition or after reset. */</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="../../db/df1/a00486.html#gga40c19d723738a1a89548931046626443a520b1b35e119539601f8e0a60cb7eac0">STSAFEA_HIBERNATE_WAKEUP_RESET_ONLY</a>      = 0x02  <span class="comment">/*!&lt; Wake up from hibernate after reset only. */</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../db/df1/a00486.html#gga40c19d723738a1a89548931046626443a520b1b35e119539601f8e0a60cb7eac0">   39</a></span>&#160;} <a class="code" href="../../db/df1/a00486.html#ga40c19d723738a1a89548931046626443">stsafea_hibernate_wake_up_mode_t</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"> * \brief       Put target device in hibernate mode</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment"> * \details     This function format and send hibernate command to target device</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment"> * \param[in]   pSTSAFE             Pointer to STSAFE Handler</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment"> * \param[in]   wake_up_mode        Event to wake up from,</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment"> *                                  listed in enum \ref stsafea_hibernate_wake_up_mode_t</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"> * \return \ref stse_ReturnCode_t : STSAFE_OK on success ; error code otherwise</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<a class="code" href="../../d9/d34/a00476.html#ga6e312aa8b8cd38421ce8b85215e4b16f" title="STSE response codes enumeration.">stse_ReturnCode_t</a> <a class="code" href="../../db/df1/a00486.html#gac4a1fd6365d0999f280c5e433f8b0de3" title="Put target device in hibernate mode.">stsafea_hibernate</a>(<a class="code" href="../../d7/db5/a00472.html#gaabe4b6e7682072e3e7798bbff6c0b77b" title="STSE Handler This handler stores all the context and working data related to a specific STSE target....">stse_Handler_t</a> *pSTSAFE,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                                     <a class="code" href="../../db/df1/a00486.html#ga40c19d723738a1a89548931046626443">stsafea_hibernate_wake_up_mode_t</a> wake_up_mode);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">/** \}*/</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*STSAFEA_LOW_POWER_H*/</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_753d84eff0dd76e051be2faf8ba62b5b.html">Middleware</a></li><li class="navelem"><a class="el" href="../../dir_a3b669742a0b1932c7dd9430f93a6acd.html">STSELib</a></li><li class="navelem"><a class="el" href="../../dir_9f345a774c073dfcf3320870b685d538.html">certificate</a></li><li class="navelem"><b>stse_certificate_subparsing.h</b></li>
+    <li class="navelem"><a class="el" href="../../dir_753d84eff0dd76e051be2faf8ba62b5b.html">Middleware</a></li><li class="navelem"><a class="el" href="../../dir_a3b669742a0b1932c7dd9430f93a6acd.html">STSELib</a></li><li class="navelem"><a class="el" href="../../dir_616f4f5625a4bff79dbc0b5b8c3d7f1d.html">services</a></li><li class="navelem"><a class="el" href="../../dir_438883bf89dd54aba76fbe6926f46959.html">stsafea</a></li><li class="navelem"><b>stsafea_low_power.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
