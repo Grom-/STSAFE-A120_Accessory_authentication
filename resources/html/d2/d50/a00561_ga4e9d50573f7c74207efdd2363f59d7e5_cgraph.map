@@ -1,0 +1,6 @@
+<map id="stse_certificate_parse_extension" name="stse_certificate_parse_extension">
+<area shape="rect" id="node1" title="Parse an x509 Extension." alt="" coords="5,71,169,112"/>
+<area shape="rect" id="node2" href="$d2/d50/a00561.html#gaef1ed24cc654d7e7886cc6361fd0b1dc" title="Identify the Extension from its OID." alt="" coords="227,5,385,47"/>
+<area shape="rect" id="node3" href="$d2/d50/a00561.html#gad5a08fb4e091c3316e6f030af2838c1b" title="Reads the value of an INTEGER and returns it as a PLAT_I32." alt="" coords="231,71,381,112"/>
+<area shape="rect" id="node4" href="$d2/d50/a00561.html#gaa88b975c48fd20aca9809945941f7987" title="Identify the ASN.1 TLV." alt="" coords="217,136,395,177"/>
+</map>

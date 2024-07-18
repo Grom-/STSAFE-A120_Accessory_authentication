@@ -1,0 +1,781 @@
+<toc label="STSAFE-A120_Accessory_authentication" topic="index.html">
+  <topic label="Modules" href="modules.html">
+    <topic label="Asymmetric key slots" href="dc/d40/a00568.html">
+      <topic label="stsafea_private_key_operation_mode_t" href="dc/d40/a00568.html#d8/dba/a00681">
+        <topic label="ephemeral_private_key_gen_method" href="dc/d40/a00568.html#a61dd0e2398bd67f90810c913c24000f1"/>
+        <topic label="filler" href="dc/d40/a00568.html#a50b4d44487aa36fe741a2f6065ff0cb6"/>
+        <topic label="change_right" href="dc/d40/a00568.html#a7f0da7c55e623e5bb2d411ad0dd1170a"/>
+        <topic label="key_establishment" href="dc/d40/a00568.html#ace45e6edb9782ec9322be4a872b5efc7"/>
+        <topic label="reserved" href="dc/d40/a00568.html#aa9d0886926dff5a4f73c33aae242f7b6"/>
+        <topic label="sig_gen_over_external_data" href="dc/d40/a00568.html#a7e98db6adf03cf66bcdab6c79656b154"/>
+        <topic label="sig_gen_over_internal_external_data" href="dc/d40/a00568.html#a854366343683efaf6ac64c4095659b55"/>
+        <topic label="generate_key_AC" href="dc/d40/a00568.html#a08dfc15a14a054c146794fa370db696e"/>
+        <topic label="EdDSA_variant" href="dc/d40/a00568.html#ac87ded67cfee5c7f41cf613841588c50"/>
+      </topic>
+      <topic label="stsafea_private_key_slot_information_t" href="dc/d40/a00568.html#d0/df1/a00685">
+      </topic>
+      <topic label="stsafea_generic_public_key_configuration_flags_t" href="dc/d40/a00568.html#d1/d87/a00689">
+      </topic>
+      <topic label="stsafea_query_private_key_slots_count" href="dc/d40/a00568.html#ga98dc85f17d38830f4cee48f10f64c180"/>
+    </topic>
+    <topic label="Host key slot management" href="d9/d42/a00575.html">
+      <topic label="stsafea_query_host_key_provisioning_ctrl_fields" href="d9/d42/a00575.html#ga44fb5eb6d424309e8eeb2c144feeef55"/>
+      <topic label="stsafea_put_host_key_provisioning_ctrl_fields" href="d9/d42/a00575.html#gad04e256e46e715d2131ad0b6ae5ffa4a"/>
+      <topic label="stsafea_query_host_key" href="d9/d42/a00575.html#ga5a243541d4e41f74b1fe8492729a9b58"/>
+      <topic label="stsafea_query_host_key_v2" href="d9/d42/a00575.html#ga8b7b3c450a97c29459119988c54ffe74"/>
+      <topic label="stsafea_put_attribute_host_key" href="d9/d42/a00575.html#ga67d00682ec009adab16e9c32aa503ac2"/>
+      <topic label="stsafea_host_key_provisioning" href="d9/d42/a00575.html#gae4c0590567a9b512ca43e51be84b3c3e"/>
+      <topic label="stsafea_host_key_provisioning_wrapped" href="d9/d42/a00575.html#gac651d275858ce7c75e902a45d95b3b0a"/>
+    </topic>
+    <topic label="Symmetric key slots management" href="d5/d80/a00583.html">
+      <topic label="STSAFEA_KEY_INFO_LENGTH_CMAC" href="d5/d80/a00583.html#ga82325680af576861c268b9be9a2e651e"/>
+      <topic label="STSAFEA_KEY_INFO_LENGTH_ECB" href="d5/d80/a00583.html#ga6011cd548312d3c67bcf826edf3b1e15"/>
+      <topic label="STSAFEA_KEY_INFO_LENGTH_GCM" href="d5/d80/a00583.html#ga4c6af8a1526695abe5224f558cb7333f"/>
+      <topic label="STSAFEA_KEY_INFO_LENGTH_HKDF" href="d5/d80/a00583.html#ga902e1cef0630787ee29be729ff5a88a9"/>
+      <topic label="STSAFEA_KEY_INFO_LENGTH_HMAC" href="d5/d80/a00583.html#gadfcbc6447c6372e4e6b6d53a77bea89c"/>
+      <topic label="stsafea_symmetric_key_slot_t" href="d5/d80/a00583.html#ga60f20b7d1ac64ddea420b168598fcf95"/>
+      <topic label="stsafea_symmetric_key_t" href="d5/d80/a00583.html#ga9de2c82c5fb72d8f52a4f5e85f524b30"/>
+      <topic label="stsafea_symmetric_key_operation_mode_t" href="d5/d80/a00583.html#ga3c47308475c1e85811f6a91e2b6ad943"/>
+      <topic label="stsafea_symmetric_key_information_length_t" href="d5/d80/a00583.html#ga9666dc868c5feec290dc861de1ea156d"/>
+      <topic label="stsafea_symmetric_key_lock_indicator_t" href="d5/d80/a00583.html#gac8627c2244f49cb6ee2d2030351b4171"/>
+      <topic label="stsafea_symmetric_key_slot_provisioning_ctrl_fields_t" href="d5/d80/a00583.html#gadcabff60241da0ebc938475c7a144601"/>
+      <topic label="stsafea_symmetric_key_usage_t" href="d5/d80/a00583.html#gae4d292f3fd87be4994a494e89d45488b"/>
+      <topic label="stsafea_generic_key_information_t" href="d5/d80/a00583.html#gaa56e15f47d07d0535a2c5d6dd8418466"/>
+      <topic label="stsafea_symmetric_key_slot_t" href="d5/d80/a00583.html#ga1bc89734c63ba7a059905b84609a4f0a">
+        <topic label="STSAFEA_STATIC_PRIVATE_KEY_SLOT_0" href="d5/d80/a00583.html#gga1bc89734c63ba7a059905b84609a4f0aad0e0ae4ce021eb68137a89ce1aaca4b3"/>
+        <topic label="STSAFEA_STATIC_PRIVATE_KEY_SLOT_1" href="d5/d80/a00583.html#gga1bc89734c63ba7a059905b84609a4f0aa9e05020f040261f9f2fc17e1f80c57e3"/>
+        <topic label="STSAFEA_STATIC_PRIVATE_KEY_SLOT_2" href="d5/d80/a00583.html#gga1bc89734c63ba7a059905b84609a4f0aa3a139250ab3c7a45596c9963d4b47959"/>
+        <topic label="STSAFEA_STATIC_PRIVATE_KEY_SLOT_3" href="d5/d80/a00583.html#gga1bc89734c63ba7a059905b84609a4f0aae4324b6895892ceb52476ce400e01fad"/>
+        <topic label="STSAFEA_STATIC_PRIVATE_KEY_SLOT_4" href="d5/d80/a00583.html#gga1bc89734c63ba7a059905b84609a4f0aa6021ea9a9ee9a9b3876e31f63886d74a"/>
+        <topic label="STSAFEA_EAP_PERIPHERAL_KEY_SLOTS" href="d5/d80/a00583.html#gga1bc89734c63ba7a059905b84609a4f0aa8b1a7ad57d9924551d9e0e2eb21f788a"/>
+        <topic label="STSAFEA_EAP_COMPANION_SLOT" href="d5/d80/a00583.html#gga1bc89734c63ba7a059905b84609a4f0aa04aa7d1a94d1884130b9968c213cfa80"/>
+        <topic label="STSAFEA_EAP_KEY_CONFIRMATION" href="d5/d80/a00583.html#gga1bc89734c63ba7a059905b84609a4f0aa919553399399f5a857be3a817f6855cb"/>
+        <topic label="STSAFEA_EPHEMERAL_KEY_SLOT" href="d5/d80/a00583.html#gga1bc89734c63ba7a059905b84609a4f0aae5a32ef70d27b627fc474638acb1cc9b"/>
+      </topic>
+      <topic label="stsafea_symmetric_key_t" href="d5/d80/a00583.html#ga622c5153212735bf8a708680bdc13ef0">
+        <topic label="STSAFEA_SYMMETRIC_KEY_TYPE_AES_128" href="d5/d80/a00583.html#gga622c5153212735bf8a708680bdc13ef0af66d331dbb9620077656a9a0d8dea755"/>
+        <topic label="STSAFEA_SYMMETRIC_KEY_TYPE_AES_256" href="d5/d80/a00583.html#gga622c5153212735bf8a708680bdc13ef0aaf47833875f187ba3dbf6b68cc17dee0"/>
+        <topic label="STSAFEA_SYMMETRIC_KEY_TYPE_GENERIC_SECRET" href="d5/d80/a00583.html#gga622c5153212735bf8a708680bdc13ef0a993856ed095516961d0bad1de3d0e466"/>
+      </topic>
+      <topic label="stsafea_symmetric_key_operation_mode_t" href="d5/d80/a00583.html#ga742545b74ab0c9c0b939da27501f00bd">
+        <topic label="STSAFEA_KEY_OPERATION_MODE_CCM" href="d5/d80/a00583.html#gga742545b74ab0c9c0b939da27501f00bda4f15d32f1ec8ee92f27b165b5493862c"/>
+        <topic label="STSAFEA_KEY_OPERATION_MODE_CMAC" href="d5/d80/a00583.html#gga742545b74ab0c9c0b939da27501f00bda83f0f57d0b9282b578dcedd032f10aa8"/>
+        <topic label="STSAFEA_KEY_OPERATION_MODE_ECB" href="d5/d80/a00583.html#gga742545b74ab0c9c0b939da27501f00bda8a76d5e7eaec60e4cd6debf4dbb51085"/>
+        <topic label="STSAFEA_KEY_OPERATION_MODE_GCM" href="d5/d80/a00583.html#gga742545b74ab0c9c0b939da27501f00bda9d64b322501c362d72c152b0b048123f"/>
+        <topic label="STSAFEA_KEY_OPERATION_MODE_HKDF" href="d5/d80/a00583.html#gga742545b74ab0c9c0b939da27501f00bda620ffac2f043cb8cf6be1cd71f8ba2e7"/>
+        <topic label="STSAFEA_KEY_OPERATION_MODE_HMAC" href="d5/d80/a00583.html#gga742545b74ab0c9c0b939da27501f00bda6f804e0aa9d4af296fbaa3de29290d8c"/>
+      </topic>
+      <topic label="stsafea_symmetric_key_information_length_t" href="d5/d80/a00583.html#ga46eaf1d46095ce806582ae2cf9ae7270">
+        <topic label="STSAFEA_KEY_INFORMATION_LENGTH_ECB" href="d5/d80/a00583.html#gga46eaf1d46095ce806582ae2cf9ae7270a3d7926473d8dd2fdd8f7999e5383de52"/>
+        <topic label="STSAFEA_KEY_INFORMATION_LENGTH_CMAC" href="d5/d80/a00583.html#gga46eaf1d46095ce806582ae2cf9ae7270a19bb659c4abdb0cbca8653a95c409e8d"/>
+        <topic label="STSAFEA_KEY_INFORMATION_LENGTH_CCM" href="d5/d80/a00583.html#gga46eaf1d46095ce806582ae2cf9ae7270aaaca10dc1f2ad010b802508856db292f"/>
+      </topic>
+      <topic label="stsafea_symmetric_key_lock_indicator_t" href="d5/d80/a00583.html#gacb80673751d7d2c700d2eacf3fa72f7c">
+      </topic>
+      <topic label="stsafea_put_symmetric_key_slot_provisioning_ctrl_fields" href="d5/d80/a00583.html#ga7777fef0c53d43a1b7f9a57046a0a5a5"/>
+      <topic label="stsafea_query_symmetric_key_slots_count" href="d5/d80/a00583.html#gadcc89084a0cf4cfd57859abe541c6d9c"/>
+      <topic label="stsafea_query_symmetric_key_table" href="d5/d80/a00583.html#ga7a2aea5788a48fb1e0e79cc2b115f7c6"/>
+      <topic label="stsafea_establish_symmetric_key" href="d5/d80/a00583.html#gab9aff381395f86ae31fa93105c4b704e"/>
+      <topic label="stsafea_establish_symmetric_key_authenticated" href="d5/d80/a00583.html#ga5d648a40bb7b55fa58b0865339983af7"/>
+      <topic label="stsafea_confirm_symmetric_key" href="d5/d80/a00583.html#ga4b31939a87010cfb43654431cc397937"/>
+      <topic label="stsafea_write_symmetric_key_wrapped" href="d5/d80/a00583.html#ga0b1e1bf723f984033adef743795c03be"/>
+      <topic label="stsafea_write_symmetric_key_plaintext" href="d5/d80/a00583.html#ga828f3ae48180d9d972574b3c6f214cf7"/>
+      <topic label="stsafea_generate_wrap_unwrap_key" href="d5/d80/a00583.html#gad134587e7c67639c7ef4319b7c98c7d4"/>
+      <topic label="stsafea_erase_symmetric_key_slot" href="d5/d80/a00583.html#ga5243e5bc149e6a3ccfa0e0ef4662262a"/>
+    </topic>
+    <topic label="STSecureElement Library" href="dc/dac/a00585.html">
+      <topic label="STSE Certificate" href="d6/d92/a00586.html">
+        <topic label="STSE Certificate parser" href="dc/dea/a00558.html">
+          <topic label="IS_VALID_TAG" href="dc/dea/a00558.html#gab85a3ea3da476a0ddfe7e9c22f00db95"/>
+          <topic label="stse_cert_attribute_t" href="dc/dea/a00558.html#ga867519c680ddb94407b7db75df132d86"/>
+          <topic label="stse_cert_extension_t" href="dc/dea/a00558.html#gad083a8183ae16ca8a4d37b9eb50f5ab6"/>
+          <topic label="stse_cert_validity_t" href="dc/dea/a00558.html#ga01829ca36194d1e2c01be4fde07e147e"/>
+          <topic label="stse_cert_public_key_t" href="dc/dea/a00558.html#ga81046f008034b1976b59d225105e6a2c"/>
+          <topic label="stse_cert_signature_t" href="dc/dea/a00558.html#ga51199844840855e9a243de4c6cc7563f"/>
+          <topic label="stse_certificate_t" href="dc/dea/a00558.html#ga4578dd24da739a4929e7cc156473fe36"/>
+          <topic label="stse_certificate_tag_t" href="dc/dea/a00558.html#ga4c01ebf9927142ebafd6749bde931bad">
+            <topic label="TAG_BOOLEAN" href="dc/dea/a00558.html#gga4c01ebf9927142ebafd6749bde931bada353060b05ff948b6dbbc7fad7cd90988"/>
+            <topic label="TAG_INTEGER" href="dc/dea/a00558.html#gga4c01ebf9927142ebafd6749bde931bada2b80ec6962a32a149f228a902870f8d7"/>
+            <topic label="TAG_BITSTRING" href="dc/dea/a00558.html#gga4c01ebf9927142ebafd6749bde931badac660be05f068d78ade7aa8756e7e21d5"/>
+            <topic label="TAG_OCTETSTRING" href="dc/dea/a00558.html#gga4c01ebf9927142ebafd6749bde931badab4688385612afe7aa9e42b9d32ce0c5d"/>
+            <topic label="TAG_NULL" href="dc/dea/a00558.html#gga4c01ebf9927142ebafd6749bde931bada81938a78b8aefc4200f2827cc5f51573"/>
+            <topic label="TAG_OBJECT_IDENTIFIER" href="dc/dea/a00558.html#gga4c01ebf9927142ebafd6749bde931bada3a5faef46217b8b847901d8954f74a85"/>
+            <topic label="TAG_ObjectDescriptor" href="dc/dea/a00558.html#gga4c01ebf9927142ebafd6749bde931badabb85cee90a18e114553138b9f393b892"/>
+            <topic label="TAG_ENUMERATED" href="dc/dea/a00558.html#gga4c01ebf9927142ebafd6749bde931bada840486dadec2f9ddc9e4e863a5dbf5cd"/>
+            <topic label="TAG_UTF8String" href="dc/dea/a00558.html#gga4c01ebf9927142ebafd6749bde931badab63c6d2c3f28f550e827996e28c97525"/>
+            <topic label="TAG_PrintableString" href="dc/dea/a00558.html#gga4c01ebf9927142ebafd6749bde931bada80e6244635a55607a80d136741dcd2f6"/>
+            <topic label="TAG_IA5String" href="dc/dea/a00558.html#gga4c01ebf9927142ebafd6749bde931badade70021e9112deae6b3c4b932185baa4"/>
+            <topic label="TAG_UTCTime" href="dc/dea/a00558.html#gga4c01ebf9927142ebafd6749bde931bada2160e5d666974b11ef28d0a69fed0535"/>
+            <topic label="TAG_GeneralizedTime" href="dc/dea/a00558.html#gga4c01ebf9927142ebafd6749bde931badae1bb091c7305f0afe40f7d233bc1a4ff"/>
+            <topic label="TAG_SEQUENCE" href="dc/dea/a00558.html#gga4c01ebf9927142ebafd6749bde931bada3b2075991ffb89661a2f6bd6b2f60c86"/>
+            <topic label="TAG_SET" href="dc/dea/a00558.html#gga4c01ebf9927142ebafd6749bde931badaa9c9c8a13b371b125bfb7ef1ceeb37f5"/>
+            <topic label="TAG_x509VERSION" href="dc/dea/a00558.html#gga4c01ebf9927142ebafd6749bde931bada7130065df2028bf5abe7b7dfd18c0d09"/>
+            <topic label="TAG_issuerUniqueID" href="dc/dea/a00558.html#gga4c01ebf9927142ebafd6749bde931bada01e887a77fbe2cc00d5110de228aa74d"/>
+            <topic label="TAG_subjectUniqueID" href="dc/dea/a00558.html#gga4c01ebf9927142ebafd6749bde931bada6a88b8a452a1c21c0b92ce99fb0f84a8"/>
+            <topic label="TAG_extensions" href="dc/dea/a00558.html#gga4c01ebf9927142ebafd6749bde931bada98f59c2dcaa9e3bbc2d7d7bd92f39b68"/>
+          </topic>
+          <topic label="stse_certificate_signature_algorithms_t" href="dc/dea/a00558.html#ga0d9ce5fc2e1d06cd9dc074d56c41f75c">
+            <topic label="SIG_ECDSA_SHA1" href="dc/dea/a00558.html#gga0d9ce5fc2e1d06cd9dc074d56c41f75cabf7c6908e9120616f1337677209b40f3"/>
+            <topic label="SIG_ECDSA_SHA224" href="dc/dea/a00558.html#gga0d9ce5fc2e1d06cd9dc074d56c41f75ca7805029c629fb9d07dfd5cd872119f1d"/>
+            <topic label="SIG_ECDSA_SHA256" href="dc/dea/a00558.html#gga0d9ce5fc2e1d06cd9dc074d56c41f75ca135ed59d1cb11e6124cbefc7791b51a9"/>
+            <topic label="SIG_ECDSA_SHA384" href="dc/dea/a00558.html#gga0d9ce5fc2e1d06cd9dc074d56c41f75ca0353be3e1f7b7821332b536ba5a8f323"/>
+            <topic label="SIG_ECDSA_SHA512" href="dc/dea/a00558.html#gga0d9ce5fc2e1d06cd9dc074d56c41f75ca09d36ac3440b40c9e188924be2a0a75d"/>
+          </topic>
+          <topic label="stse_certificate_name_attributes_t" href="dc/dea/a00558.html#gab84850593c73fe703cb00bee06034bb8">
+            <topic label="ATTR_CN" href="dc/dea/a00558.html#ggab84850593c73fe703cb00bee06034bb8a564c90d99ab269b2e04644d1fcd0f393"/>
+            <topic label="ATTR_SN" href="dc/dea/a00558.html#ggab84850593c73fe703cb00bee06034bb8a3cb419a92427e673fc46450c80f9e32f"/>
+            <topic label="ATTR_C" href="dc/dea/a00558.html#ggab84850593c73fe703cb00bee06034bb8a88930a07728dccf7e0656f3e640c05da"/>
+            <topic label="ATTR_LN" href="dc/dea/a00558.html#ggab84850593c73fe703cb00bee06034bb8aee5d31ea5daa33d65dc0460533781415"/>
+            <topic label="ATTR_SOPN" href="dc/dea/a00558.html#ggab84850593c73fe703cb00bee06034bb8a7e2f1482940c01608f497493648fb8b1"/>
+            <topic label="ATTR_ON" href="dc/dea/a00558.html#ggab84850593c73fe703cb00bee06034bb8ac89250dab6c648f169d065091deff77b"/>
+            <topic label="ATTR_OUN" href="dc/dea/a00558.html#ggab84850593c73fe703cb00bee06034bb8a0cf362addaaf45a200aadd98adb33232"/>
+            <topic label="ATTR_UID" href="dc/dea/a00558.html#ggab84850593c73fe703cb00bee06034bb8acc817658e70d0fc9d55fd9883a542035"/>
+            <topic label="ATTR_DN" href="dc/dea/a00558.html#ggab84850593c73fe703cb00bee06034bb8a7927a7c05e3953f3b0aa01a428954460"/>
+          </topic>
+          <topic label="stse_certificate_elliptic_curves_t" href="dc/dea/a00558.html#gae76759c6cd92a4093a5c1e26b5d60ba2">
+            <topic label="EC_P256" href="dc/dea/a00558.html#ggae76759c6cd92a4093a5c1e26b5d60ba2aa652fb24a96647f4f971c3c94f3d62b1"/>
+            <topic label="EC_P384" href="dc/dea/a00558.html#ggae76759c6cd92a4093a5c1e26b5d60ba2a50f093be9c70d0e2571e050bc14fafd4"/>
+            <topic label="EC_P521" href="dc/dea/a00558.html#ggae76759c6cd92a4093a5c1e26b5d60ba2af9ef34522b2fafe6df366c6c66dabac0"/>
+            <topic label="EC_bp256r1" href="dc/dea/a00558.html#ggae76759c6cd92a4093a5c1e26b5d60ba2a6d9dc04f84d640c3e58cf27c9b9acae1"/>
+            <topic label="EC_bp256t1" href="dc/dea/a00558.html#ggae76759c6cd92a4093a5c1e26b5d60ba2a59bbcce12f2e4bcf3085eb206480d5a6"/>
+            <topic label="EC_bp384r1" href="dc/dea/a00558.html#ggae76759c6cd92a4093a5c1e26b5d60ba2ace5c810808d611be491c4c70d2bb21fe"/>
+            <topic label="EC_bp384t1" href="dc/dea/a00558.html#ggae76759c6cd92a4093a5c1e26b5d60ba2a582f6caaa56cbed121bf381c27970b99"/>
+            <topic label="EC_bp512r1" href="dc/dea/a00558.html#ggae76759c6cd92a4093a5c1e26b5d60ba2a9a6b7c55483ef86c5f743f96197f609d"/>
+            <topic label="EC_bp512t1" href="dc/dea/a00558.html#ggae76759c6cd92a4093a5c1e26b5d60ba2acae4e8091dcfc9e2642e8acc44ab6f0d"/>
+          </topic>
+          <topic label="stse_certificate_extensions_type_t" href="dc/dea/a00558.html#ga651a2e69937d2d74088572fb64453e69">
+            <topic label="EXTENSION_KU" href="dc/dea/a00558.html#gga651a2e69937d2d74088572fb64453e69a3d65ccb5b086a3af8e39635439b3aca1"/>
+            <topic label="EXTENSION_BC" href="dc/dea/a00558.html#gga651a2e69937d2d74088572fb64453e69a7a63d8a86985c328fba75512f39271bb"/>
+            <topic label="EXTENSION_EKU" href="dc/dea/a00558.html#gga651a2e69937d2d74088572fb64453e69a25326d9326e83db2dd383798b39db25a"/>
+          </topic>
+          <topic label="stse_certificate_init" href="dc/dea/a00558.html#gaa61ce045058ac7a28013df624861be01"/>
+          <topic label="stse_certificate_parse" href="dc/dea/a00558.html#ga83baa2b6c6c6ac34f72cbdcc43968353"/>
+          <topic label="stse_certificate_is_valid" href="dc/dea/a00558.html#ga34be70ca1945a1fab289ab94d04e66b3"/>
+          <topic label="stse_certificate_is_CA" href="dc/dea/a00558.html#gaf519f5e717a9b168d149d4f1cca6e024"/>
+          <topic label="stse_certificate_is_parent" href="dc/dea/a00558.html#ga3bf99d9c012e5d365ef2e52518aa5283"/>
+          <topic label="stse_certificate_copy" href="dc/dea/a00558.html#gab5311b47824b3503645b34f968d2efe2"/>
+          <topic label="stse_certificate_parse_chain" href="dc/dea/a00558.html#ga3e22355b36cc1f58f7a0f844ab702b10"/>
+          <topic label="stse_certificate_set_stse_companion" href="dc/dea/a00558.html#ga3c4baca631ca6caddbc25ac6c825584c"/>
+          <topic label="stse_certificate_reset_stse_companion" href="dc/dea/a00558.html#ga2e07d4a1a8f669724a83f0c288560408"/>
+        </topic>
+        <topic label="STSE Certificate cryptography" href="d2/d50/a00559.html">
+          <topic label="stse_certificate_verify_signature" href="d2/d50/a00559.html#gaf1f1b2aad6be8bbd4a1ed30b6ed61690"/>
+          <topic label="stse_certificate_verify_cert_signature" href="d2/d50/a00559.html#ga3124d47cef13df9a5dc27a91a17ed5f9"/>
+          <topic label="stse_certificate_get_key_type" href="d2/d50/a00559.html#gac3b2d561c5bc1642ae3107f0a3e1a1e4"/>
+          <topic label="stse_certificate_get_sig_hash_algo" href="d2/d50/a00559.html#gaca1998c23c9ebc9c7bcf7a87ef9b2947"/>
+        </topic>
+        <topic label="STSE Certificate prints functions" href="d9/d19/a00560.html">
+          <topic label="stse_certificate_print_attribute" href="d9/d19/a00560.html#ga063c1612681ac7f214d9a071e613f612"/>
+          <topic label="stse_certificate_print_signature_algorithm" href="d9/d19/a00560.html#ga86003d070297a2bfc09af0aaa88f7be8"/>
+          <topic label="stse_certificate_print_tag" href="d9/d19/a00560.html#ga2979adebb2684d9c0886e5199d87523d"/>
+          <topic label="stse_certificate_print_elliptic_curve" href="d9/d19/a00560.html#ga4f7d62988d0298478547a862bd480a3b"/>
+          <topic label="stse_certificate_print_integer" href="d9/d19/a00560.html#gae2e0fa9cb026866430d8ef362bb2f56b"/>
+          <topic label="stse_certificate_print_bit_string" href="d9/d19/a00560.html#ga9b2dd8468f24aad0042573e1ef8e919b"/>
+          <topic label="stse_certificate_print_parsed_cert" href="d9/d19/a00560.html#gacd768ea2f58f9a6653f0e35f52f988b2"/>
+          <topic label="stse_certificate_print_name" href="d9/d19/a00560.html#ga1aafadc17cb6d538d8ee919117d5e40b"/>
+          <topic label="stse_certificate_print_validity" href="d9/d19/a00560.html#gadbb6b32cc999a74b61240ff620ac2e32"/>
+          <topic label="stse_certificate_simple_parse_attribute" href="d9/d19/a00560.html#ga4b0afc203293acf01fbd8498fc3ab0d5"/>
+        </topic>
+        <topic label="STSE Certificate subparsing routines" href="d2/d50/a00561.html">
+          <topic label="stse_certificate_identify_ASN1_TLV" href="d2/d50/a00561.html#gaa88b975c48fd20aca9809945941f7987"/>
+          <topic label="stse_certificate_identify_attribute" href="d2/d50/a00561.html#ga533a1e9389c3a121c03c8fa1260fc18c"/>
+          <topic label="stse_certificate_parse_ECDSA_signature" href="d2/d50/a00561.html#ga05a33685fc72c85d3c46e91d89a2e35d"/>
+          <topic label="stse_certificate_parse_X509_version" href="d2/d50/a00561.html#gaf6ac8e5e2fa0c9e1d3ff7ea05f8f474d"/>
+          <topic label="stse_certificate_parse_signature_algorithm" href="d2/d50/a00561.html#ga3e53f7b091ef7996407a230c1179b08d"/>
+          <topic label="stse_certificate_parse_ECC_public_key" href="d2/d50/a00561.html#ga98420b145861bfb869f6fa9f90fcbf61"/>
+          <topic label="stse_certificate_parse_integer" href="d2/d50/a00561.html#gad70d0962519b7d9c973c41aed5773920"/>
+          <topic label="stse_certificate_parse_validity" href="d2/d50/a00561.html#ga0e43f89e638b9f8d36d2e514ee219be6"/>
+          <topic label="stse_certificate_parse_relative_distinguished_name" href="d2/d50/a00561.html#ga03d6b42e074c354999ee22bc0c1fcebb"/>
+          <topic label="stse_certificate_parse_attribute" href="d2/d50/a00561.html#ga0aa01204d027c7dc4fcadff5f0a10b0e"/>
+          <topic label="stse_certificate_date_compare" href="d2/d50/a00561.html#gaf085531ad82b27d615cdc33347c99f2f"/>
+          <topic label="stse_certificate_count_attributes" href="d2/d50/a00561.html#ga635873a1afbdb10f2106703198b57100"/>
+          <topic label="stse_certificate_case_insensitive_compare" href="d2/d50/a00561.html#ga1ce58c9432c1abd52824c33dee991c90"/>
+          <topic label="stse_certificate_case_identify_extension" href="d2/d50/a00561.html#gaef1ed24cc654d7e7886cc6361fd0b1dc"/>
+          <topic label="stse_certificate_parse_extension" href="d2/d50/a00561.html#ga4e9d50573f7c74207efdd2363f59d7e5"/>
+          <topic label="stse_certificate_get_small_integer" href="d2/d50/a00561.html#gad5a08fb4e091c3316e6f030af2838c1b"/>
+        </topic>
+      </topic>
+      <topic label="API layer" href="de/dde/a00587.html">
+        <topic label="STSE AES cryptography" href="dd/de6/a00548.html">
+          <topic label="stse_aes_ecb_encrypt" href="dd/de6/a00548.html#ga667334655eca69909683ab6884a95824"/>
+          <topic label="stse_aes_ecb_decrypt" href="dd/de6/a00548.html#ga858bd21e92c3afe1bcc7753cafa1e7f0"/>
+          <topic label="stse_aes_ccm_encrypt" href="dd/de6/a00548.html#ga9c8bfb2bbe76631e80c696a2ccc48331"/>
+          <topic label="stse_aes_ccm_decrypt" href="dd/de6/a00548.html#ga362ca17417edb45f9bb195901240cb71"/>
+          <topic label="stse_aes_gcm_encrypt" href="dd/de6/a00548.html#gafd9c3bad4b1c88f8b970802890dc4084"/>
+          <topic label="stse_aes_gcm_decrypt" href="dd/de6/a00548.html#gac5f657a57f8b9cb48e1bfd145e52068b"/>
+        </topic>
+        <topic label="STSE Asymmetric key management" href="d5/d21/a00549.html">
+          <topic label="stse_get_ecc_key_slots_count" href="d5/d21/a00549.html#ga5dc66751ea4ba7b5fce537f739828480"/>
+          <topic label="stse_get_ecc_key_table_info" href="d5/d21/a00549.html#ga4424b5e97beaae5217baee1457459863"/>
+          <topic label="stse_get_ecc_key_slot_info" href="d5/d21/a00549.html#gaa12369dab5931280db9349fa36da14b2"/>
+          <topic label="stse_generate_ECDHE_key_pair" href="d5/d21/a00549.html#ga33cda196ad44195e84e3149e2e8bf748"/>
+          <topic label="stse_generate_ecc_key_pair" href="d5/d21/a00549.html#ga675d3b2745c4d82ba9a217d3c7ac5ec8"/>
+          <topic label="stse_write_generic_ecc_public_key" href="d5/d21/a00549.html#ga84265b605da923230c52349377e3dd45"/>
+        </topic>
+        <topic label="STSE Data storage" href="de/de7/a00550.html">
+          <topic label="stse_data_storage_get_total_partition_count" href="de/de7/a00550.html#gaedaae298e0585c31cbe424a0aed0c1c8"/>
+          <topic label="stse_data_storage_get_partitioning_table" href="de/de7/a00550.html#ga409b5b14e31c703d4fd1567946b00d02"/>
+          <topic label="stse_data_storage_read_data_zone" href="de/de7/a00550.html#ga07917b2902862d9c02bc2e0c90942547"/>
+          <topic label="stse_data_storage_update_data_zone" href="de/de7/a00550.html#ga5b96954f9538fb5781a712e2fbf4e4d6"/>
+          <topic label="stse_data_storage_decrement_counter_zone" href="de/de7/a00550.html#gadd019fbde5ca19ebc9363061a24057e2"/>
+          <topic label="stse_data_storage_read_counter_zone" href="de/de7/a00550.html#ga0c1c802dbb50c543600b87144662f8fa"/>
+          <topic label="stse_data_storage_change_read_access_condition" href="de/de7/a00550.html#ga1cb0c5886f91f1702ee96cc9fe0858cc"/>
+          <topic label="stse_data_storage_change_update_access_condition" href="de/de7/a00550.html#ga88f03b3c0abd2a6e108797ffbce1111b"/>
+          <topic label="stse_data_storage_change_decrement_access_condition" href="de/de7/a00550.html#gad0c2da1358f90a4558b14e422f3e1579"/>
+        </topic>
+        <topic label="STSE Authentication" href="d9/d87/a00551.html">
+          <topic label="stse_get_device_id" href="d9/d87/a00551.html#gab8d15b8dbf62cf52521a776044e8e38b"/>
+          <topic label="stse_get_device_certificate_size" href="d9/d87/a00551.html#gabcbf52cae81e5f189e835cdf1c15d3c9"/>
+          <topic label="stse_get_device_certificate" href="d9/d87/a00551.html#gac4cf4f5db6991002ca820374bd348926"/>
+          <topic label="stse_device_authenticate" href="d9/d87/a00551.html#ga0e9daf43052c8a789bffb1aa3b745fa6"/>
+        </topic>
+        <topic label="STSE Device Management" href="dd/de9/a00552.html">
+          <topic label="stse_init" href="dd/de9/a00552.html#ga68ba486aaac219e6120a619c2e2b749e"/>
+          <topic label="stse_device_reset" href="dd/de9/a00552.html#gae4673ca90626f43c3e97f77cd790a050"/>
+          <topic label="stse_device_enter_hibernate" href="dd/de9/a00552.html#gaa679a3b3e10027c00a13fb2f3a986fd6"/>
+          <topic label="stse_device_power_on" href="dd/de9/a00552.html#ga18c0c4db9a784a6c15c443c4c3d65c88"/>
+          <topic label="stse_device_power_off" href="dd/de9/a00552.html#gab455b29a1b6a962a9e0548de47b439c9"/>
+          <topic label="stse_device_echo" href="dd/de9/a00552.html#ga95511105b624474a255625d5c1f428c2"/>
+          <topic label="stse_device_lock" href="dd/de9/a00552.html#ga93575e9fa3d032a94ef0d7dd8159610a"/>
+          <topic label="stse_device_unlock" href="dd/de9/a00552.html#ga507fa72e3cf5a66874746fc78638f323"/>
+          <topic label="stse_device_get_command_count" href="dd/de9/a00552.html#gafbc4e447d25d2db14a05890da54c679f"/>
+          <topic label="stse_device_get_command_AC_records" href="dd/de9/a00552.html#ga300b1d95c18d088732628915da521bea"/>
+          <topic label="stse_device_get_life_cycle_state" href="dd/de9/a00552.html#ga32a1def2c09e7503bc21a2e41831e17b"/>
+        </topic>
+        <topic label="STSE ECC" href="d0/d79/a00553.html">
+          <topic label="stse_ecc_verify_signature" href="d0/d79/a00553.html#ga8d2402e73fa615a0baaf84dc798489b7"/>
+          <topic label="stse_ecc_generate_signature" href="d0/d79/a00553.html#ga0fd11c3fea9712d55985d0facfda1a59"/>
+          <topic label="stse_ecc_establish_shared_secret" href="d0/d79/a00553.html#gaf1afe1d19907fc11b3f4141fc059eab0"/>
+          <topic label="stse_ecc_decompress_public_key" href="d0/d79/a00553.html#ga4c785db63ee7f6d2206f80899407222a"/>
+        </topic>
+        <topic label="STSE Hash" href="dc/df9/a00554.html">
+          <topic label="stse_start_hash" href="dc/df9/a00554.html#ga9062d6ebda52fa1857fbd7632158dcad"/>
+          <topic label="stse_process_hash" href="dc/df9/a00554.html#gaa5deb1a20a7cc472f112ab96d52cf4d2"/>
+          <topic label="stse_finish_hash" href="dc/df9/a00554.html#ga33640129e864c0d7c0e564edcd541192"/>
+          <topic label="stse_compute_hash" href="dc/df9/a00554.html#ga6a232058f4ea78a2988f7d50dc4fc934"/>
+        </topic>
+        <topic label="STSE MAC cryptography" href="d8/d75/a00555.html">
+          <topic label="stse_cmac_hmac_compute" href="d8/d75/a00555.html#ga380d6dab1593c1cb48f385e712612d14"/>
+          <topic label="stse_cmac_hmac_verify" href="d8/d75/a00555.html#ga949bd37847fceb47f686cf565ccba2ea"/>
+          <topic label="stse_aes_gmac_compute" href="d8/d75/a00555.html#gabc7b3ae8f1d604d54988de7e725ce022"/>
+          <topic label="stse_aes_gmac_verify" href="d8/d75/a00555.html#ga21c5653944ddb57985e3117a40c7ce8b"/>
+        </topic>
+        <topic label="STSE Random API set" href="d6/d95/a00556.html">
+          <topic label="stse_generate_random" href="d6/d95/a00556.html#gacba4aecdc822ce4b118279a8fed7d7e0"/>
+        </topic>
+        <topic label="STSE Symmetric key management" href="d8/df0/a00557.html">
+          <topic label="stse_host_key_provisioning" href="d8/df0/a00557.html#gaf3f84f1e0e225d74c62d4b40531f42df"/>
+          <topic label="stse_host_key_provisioning_wrapped" href="d8/df0/a00557.html#ga369e57fc934178731b5c06f1b1739600"/>
+          <topic label="stse_host_key_provisioning_wrapped_authenticated" href="d8/df0/a00557.html#ga5bc07a31d68cd5f362f4f4e1fd4acc2b"/>
+          <topic label="stse_get_symmetric_key_slots_count" href="d8/df0/a00557.html#ga245130095fc158f0257d33095ec589e5"/>
+          <topic label="stse_get_symmetric_key_slot_info" href="d8/df0/a00557.html#ga01df1cce9465a001539351ae45b211a5"/>
+          <topic label="stse_get_symmetric_key_table_info" href="d8/df0/a00557.html#ga1055b154eeffd3537fce07d21008b740"/>
+          <topic label="stse_get_symmetric_key_slot_provisioning_ctrl_fields" href="d8/df0/a00557.html#ga28310619dbf1a43f5e1180c8135d084e"/>
+          <topic label="stse_write_symmetric_key_plaintext" href="d8/df0/a00557.html#gae96ac46a71d83ded4c06f51c739deb6f"/>
+          <topic label="stse_write_symmetric_key_wrapped" href="d8/df0/a00557.html#ga1c6197973018de4714ea3f37ee61950e"/>
+          <topic label="stse_write_symmetric_key_wrapped_authenticated" href="d8/df0/a00557.html#gab59b1a458c14fd2eafe83eaeb6ef47c2"/>
+          <topic label="stse_establish_symmetric_key" href="d8/df0/a00557.html#ga7d06e9ed7fb8366561f6673a4790f9c3"/>
+          <topic label="stse_establish_symmetric_key_authenticated" href="d8/df0/a00557.html#ga25a22f91e014f84316289fcb2f109d56"/>
+        </topic>
+      </topic>
+      <topic label="Services layer" href="d8/d2e/a00588.html">
+        <topic label="STSAFE-Axxx" href="d4/d9e/a00569.html">
+          <topic label="AES" href="d2/dd7/a00567.html">
+            <topic label="stsafea_aes_ecb_encrypt" href="d2/dd7/a00567.html#ga877531a10a30a58a9a947bb8b30d5cf8"/>
+            <topic label="stsafea_aes_ecb_decrypt" href="d2/dd7/a00567.html#gaea25d6971618311ff5ae66fccd0f74b6"/>
+            <topic label="stsafea_aes_ccm_encrypt" href="d2/dd7/a00567.html#gac08ef3bbbdc85269b28a0e0c64aa4006"/>
+            <topic label="stsafea_aes_ccm_decrypt" href="d2/dd7/a00567.html#ga81372d20528381fab8198dfcfa6947e2"/>
+            <topic label="stsafea_aes_gcm_encrypt" href="d2/dd7/a00567.html#ga7d5bab263e5b44411ac0f95ad826d40a"/>
+            <topic label="stsafea_aes_gcm_decrypt" href="d2/dd7/a00567.html#gabb002a2e1be2750109ae2ed2a9e3a241"/>
+          </topic>
+          <topic label="Command Codes" href="d8/da5/a00570.html">
+            <topic label="STSAFEA_PROT_Pos" href="d8/da5/a00570.html#ga9b45aac6ea2d912d87c2ee75a62caa4f"/>
+            <topic label="STSAFEA_PROT_Msk" href="d8/da5/a00570.html#ga32140548c863a0f650855de6510be1dc"/>
+            <topic label="STSAFEA_PROT_CMD_Msk" href="d8/da5/a00570.html#gaefdcdf839c24ae86a460bb6d3d51831e"/>
+            <topic label="STSAFEA_PROT_RSP_Msk" href="d8/da5/a00570.html#ga78ad4bf556112c4b3cd27cc7d4d0d84a"/>
+            <topic label="stsafea_cmd_code_t" href="d8/da5/a00570.html#ga5ddcdd8afdc40f246d5f9e8c9ea5dce8">
+              <topic label="STSAFEA_CMD_ECHO" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8a67be3acc960d28a7b3a0b06991614ed7"/>
+              <topic label="STSAFEA_CMD_RESET" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8aeea8aeac22e3b78e94b899f19167971c"/>
+              <topic label="STSAFEA_CMD_GENERATE_RANDOM" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8a3551e461836c24f7a11e0f8f0e9ef95f"/>
+              <topic label="STSAFEA_CMD_START_SESSION" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8a9c183c7a13166b603b89ae43d03e6cef"/>
+              <topic label="STSAFEA_CMD_DECREMENT" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8ad5eab74f12d772d6d59abd850743e1a9"/>
+              <topic label="STSAFEA_CMD_READ" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8a2a93615473b2862b5d1aca181d8829b0"/>
+              <topic label="STSAFEA_CMD_UPDATE" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8a385a193772be4bfab06ca95171ee8f85"/>
+              <topic label="STSAFEA_CMD_INCREMENT" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8a7263db01c49df24e4e46355c0fc12a7c"/>
+              <topic label="STSAFEA_CMD_DERIVE_LORA_KEY" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8acd1a30ac78cfdf13b1e1f5dccb36e073"/>
+              <topic label="STSAFEA_CMD_GENERATE_MAC" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8a558f49b582b9236023a61b270fcc95df"/>
+              <topic label="STSAFEA_CMD_VERIFY_MAC" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8a02c2432941cc0bb5d94366f724d7be9b"/>
+              <topic label="STSAFEA_CMD_UNWRAP_ISSUER_ENVELOPE" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8a3c11c5e4c72bdb0e8452e29c5692de8f"/>
+              <topic label="STSAFEA_CMD_DELETE" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8a71ad9d653279ab0aa79ad2c29af50f43"/>
+              <topic label="STSAFEA_CMD_HIBERNATE" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8a5aaf28df1cc6611111c0b0e01b6759f2"/>
+              <topic label="STSAFEA_CMD_WRAP_LOCAL_ENVELOPE" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8adf39001d88987eb5141f8ca19e606022"/>
+              <topic label="STSAFEA_CMD_UNWRAP_LOCAL_ENVELOPE" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8a1a8155d2adc10947e10f2df5e8243089"/>
+              <topic label="STSAFEA_CMD_PUT_ATTRIBUTE" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8ab19d77b57a09bee74a9f7729dcba0a1e"/>
+              <topic label="STSAFEA_CMD_GENERATE_KEY" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8a1a830f313b501ee5cddbefbf09e87b50"/>
+              <topic label="STSAFEA_CMD_PUT_KEY" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8af121aad19f8b69bf531af6f6d71874e5"/>
+              <topic label="STSAFEA_CMD_CONFIGURE" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8a14774c587765724e06d013863e467acc"/>
+              <topic label="STSAFEA_CMD_QUERY" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8a69a1ebafb1e61d2f345947f446e2bfc0"/>
+              <topic label="STSAFEA_CMD_GET_SIGNATURE" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8a4d3057d0d803bac04cf73b4b3650f469"/>
+              <topic label="STSAFEA_CMD_GENERATE_SIGNATURE" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8aa8b23942986f7d58061c67b8ef8d1ddb"/>
+              <topic label="STSAFEA_CMD_VERIFY_SIGNATURE" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8a25ed78865f6163fff73b75bf526141b9"/>
+              <topic label="STSAFEA_CMD_ESTABLISH_KEY" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8aace66926c9538853672a17ff6135b809"/>
+              <topic label="STSAFEA_CMD_STANDBY" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8ac7e6a1fd4ded67fc4b45e6f585b1e829"/>
+              <topic label="STSAFEA_CMD_VERIFY_PASSWORD" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8aad7d9193df273ee0c9b1f491b0846801"/>
+              <topic label="STSAFEA_CMD_ENCRYPT" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8a6590f67bef15e70651b773dc12854b80"/>
+              <topic label="STSAFEA_CMD_DECRYPT" href="d8/da5/a00570.html#gga5ddcdd8afdc40f246d5f9e8c9ea5dce8aec5791e46f853657b44a8b42d4900ac4"/>
+            </topic>
+            <topic label="stsafea_extended_cmd_code_t" href="d8/da5/a00570.html#gaf7b6a32294b71c2eb7d44c2c127e5906">
+              <topic label="STSAFEA_EXTENDED_CMD_START_HASH" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906addca6821f3dd8fe0cd36b68b84a7540e"/>
+              <topic label="STSAFEA_EXTENDED_CMD_PROCESS_HASH" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906a76f94221c2672bc7a43fdef0b54c2582"/>
+              <topic label="STSAFEA_EXTENDED_CMD_FINISH_HASH" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906a6c1a244c6c7393145aaa1a00eb99ad37"/>
+              <topic label="STSAFEA_EXTENDED_CMD_START_VOLATILE_KEK_SESSION" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906a4dd28d816036ee94e27cd72c483cee43"/>
+              <topic label="STSAFEA_EXTENDED_CMD_ESTABLISH_SYMMETRIC_KEYS" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906a290ed6a8d24ec7a0b825444566789380"/>
+              <topic label="STSAFEA_EXTENDED_CMD_CONFIRM_SYMMETRIC_KEYS" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906a3579b85c2fb9c6283f83730342977e51"/>
+              <topic label="STSAFEA_EXTENDED_CMD_STOP_VOLATILE_KEK_SESSION" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906a3ca8cfe7ef5edadcc8704f44615481c3"/>
+              <topic label="STSAFEA_EXTENDED_CMD_WRITE_HOST_KEY_V2_PLAINTEXT" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906ab0e8698c030dd6f21d31bd4662af12ae"/>
+              <topic label="STSAFEA_EXTENDED_CMD_WRITE_HOST_KEY_V2_WRAPPED" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906a7cca310ca94dc02a2bd89b7a970d3794"/>
+              <topic label="STSAFEA_EXTENDED_CMD_WRITE_SYMMETRIC_KEY_WRAPPED" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906a4b26c55bd469b9ffdac16b4e80f2a298"/>
+              <topic label="STSAFEA_EXTENDED_CMD_WRITE_PUBLIC_KEY" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906a2c5310e6beaf4dd82d3e6224fdfcb587"/>
+              <topic label="STSAFEA_EXTENDED_CMD_GENERATE_ECDHE" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906a1229bed4c069eb65bf66352960340497"/>
+              <topic label="STSAFEA_EXTENDED_CMD_GENERATE_CHALLENGE" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906ab4a1718329af13b8c5b815f0be3a7b97"/>
+              <topic label="STSAFEA_EXTENDED_CMD_VERIFY_ENTITY_SIGNATURE" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906ad1a4cb124e6b3f5de1cbd824a7ae669f"/>
+              <topic label="STSAFEA_EXTENDED_CMD_DERIVE_KEYS" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906a70bf8229c8cb24c00f2b00d0b546ec97"/>
+              <topic label="STSAFEA_EXTENDED_CMD_START_ENCRYPT" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906a86ff26f648e8e11c2bf37ba9873c1c9e"/>
+              <topic label="STSAFEA_EXTENDED_CMD_PROCESS_ENCRYPT" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906a9d1cd1500dc4ca9a2c251de6785e00ba"/>
+              <topic label="STSAFEA_EXTENDED_CMD_FINISH_ENCRYPT" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906a88b4d5e866c53be348fc5fd3454e4a90"/>
+              <topic label="STSAFEA_EXTENDED_CMD_START_DECRYPT" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906a116950f61f242dd19b8b78a6c22f29eb"/>
+              <topic label="STSAFEA_EXTENDED_CMD_PROCESS_DECRYPT" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906afdf6bbd3014f746dcce9d44601d432bd"/>
+              <topic label="STSAFEA_EXTENDED_CMD_FINISH_DECRYPT" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906a08a5a5ea2e2b3066f800aa14517be098"/>
+              <topic label="STSAFEA_EXTENDED_CMD_WRITE_SYMMETRIC_KEY_PLAINTEXT" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906a4cff7adf1684a7d57e94c147fc234a99"/>
+              <topic label="STSAFEA_EXTENDED_CMD_ESTABLISH_HOST_KEY_V2" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906ac5106c1992cfb48342af458a34043b26"/>
+              <topic label="STSAFEA_EXTENDED_CMD_ERASE_SYMMETRIC_KEY_SLOT" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906a54fd751449c2b1f8f54b87254e156662"/>
+              <topic label="STSAFEA_EXTENDED_CMD_DECOMPRESS_PUBLIC_KEY" href="d8/da5/a00570.html#ggaf7b6a32294b71c2eb7d44c2c127e5906abf245af1c6e099f3e462f915842c26e6"/>
+            </topic>
+            <topic label="stsafea_cmd_protection_t" href="d8/da5/a00570.html#gaad289cc303fe75567e2dc24d5d169762">
+              <topic label="STSAFEA_NO_PROT" href="d8/da5/a00570.html#ggaad289cc303fe75567e2dc24d5d169762a7f4fa48f14398babd7b4da1e33117c01"/>
+              <topic label="STSAFEA_OTHER_SESSION_RMAC_PROTECTED" href="d8/da5/a00570.html#ggaad289cc303fe75567e2dc24d5d169762a3889dca423cfd933ed5f68e7430c0539"/>
+              <topic label="STSAFEA_HOST_SESSION_RMAC_PROTECTED" href="d8/da5/a00570.html#ggaad289cc303fe75567e2dc24d5d169762a0c48e690bbc45cf75a282cddaacc1df9"/>
+              <topic label="STSAFEA_OTHER_SESSION_CMAC_PROTECTED" href="d8/da5/a00570.html#ggaad289cc303fe75567e2dc24d5d169762a06597e71f68444cb171c20b5059beed0"/>
+              <topic label="STSAFEA_HOST_SESSION_CMAC_PROTECTED" href="d8/da5/a00570.html#ggaad289cc303fe75567e2dc24d5d169762ab29ba6457cd646245715df0284cbcd36"/>
+              <topic label="STSAFEA_OTHER_SESSION_CMAC_RMAC_PROTECTED" href="d8/da5/a00570.html#ggaad289cc303fe75567e2dc24d5d169762a576d8fc627e5753f56dcc45ed5f4d5a7"/>
+              <topic label="STSAFEA_HOST_SESSION_CMAC_RMAC_PROTECTED" href="d8/da5/a00570.html#ggaad289cc303fe75567e2dc24d5d169762a5171462c59cf1bbfc4d3e7183cdae2ff"/>
+            </topic>
+          </topic>
+          <topic label="Data partition management" href="df/d3a/a00571.html">
+            <topic label="stsafea_read_option_t" href="df/d3a/a00571.html#d3/dd2/a00693">
+              <topic label="new_read_ac" href="df/d3a/a00571.html#a990ecd64be66e0a02f3dc97afd997b42"/>
+              <topic label="new_read_ac_change_right" href="df/d3a/a00571.html#a3fbb59be4e1113ac4856dcca4a5d2172"/>
+              <topic label="change_ac_indicator" href="df/d3a/a00571.html#a3beb2767e821ef19ad4b4270716ae3cd"/>
+              <topic label="filler" href="df/d3a/a00571.html#a7f02f7ec7571bc8e10cde1df43c9ef1a"/>
+            </topic>
+            <topic label="stsafea_update_option_t" href="df/d3a/a00571.html#d2/d74/a00697">
+              <topic label="new_update_ac" href="df/d3a/a00571.html#ad888840ad0bae8f5a9d8f753cdfb25cf"/>
+              <topic label="new_update_ac_change_right" href="df/d3a/a00571.html#ac65af5f6b0f4674de32ae40bcaf03891"/>
+              <topic label="change_ac_indicator" href="df/d3a/a00571.html#a10ef86ac6f5402dcf1fffcb8a0762a36"/>
+              <topic label="filler" href="df/d3a/a00571.html#ab502041515f6c5552f161893d29a66f6"/>
+              <topic label="atomicity" href="df/d3a/a00571.html#a28266f7ca6378c8066256614845a95b4"/>
+            </topic>
+            <topic label="stsafea_decrement_option_t" href="df/d3a/a00571.html#dd/d57/a00701">
+              <topic label="new_decrement_ac" href="df/d3a/a00571.html#a5feff4cbf64b16a97b8fbf3ff0e64fe4"/>
+              <topic label="new_decrement_ac_change_right" href="df/d3a/a00571.html#aebf4667fb58d6b68fb8ff7eea9bbdb64"/>
+              <topic label="change_ac_indicator" href="df/d3a/a00571.html#a7d39e7f8c4bc1a89f4681b2042ce9ad1"/>
+              <topic label="filler" href="df/d3a/a00571.html#a0bdbed6adc6f76ed128c719e216a5d30"/>
+            </topic>
+            <topic label="stsafea_data_partition_record_t" href="df/d3a/a00571.html#d7/df1/a00705">
+            </topic>
+            <topic label="stsafea_atomicity_t" href="df/d3a/a00571.html#ga96053c8fd1ab8baaa7835b3e72a66c64">
+              <topic label="STSAFEA_NON_ATOMIC_ACCESS" href="df/d3a/a00571.html#gga96053c8fd1ab8baaa7835b3e72a66c64a8dbef28f142b3c5afe38d4fc570942f4"/>
+              <topic label="STSAFEA_ATOMIC_ACCESS" href="df/d3a/a00571.html#gga96053c8fd1ab8baaa7835b3e72a66c64a21d345c749163277a6d44b5474796a92"/>
+            </topic>
+            <topic label="stsafea_ac_t" href="df/d3a/a00571.html#ga5280a54d31070a1813a3248bd29c0248">
+              <topic label="STSAFEA_AC_ALWAYS" href="df/d3a/a00571.html#gga5280a54d31070a1813a3248bd29c0248af63d91d59a54fc8ae831f2c0aad171bc"/>
+              <topic label="STSAFEA_AC_HOST" href="df/d3a/a00571.html#gga5280a54d31070a1813a3248bd29c0248aa7732521604e20c43f252f1e41b5dd6d"/>
+              <topic label="STSAFEA_AC_AUTH" href="df/d3a/a00571.html#gga5280a54d31070a1813a3248bd29c0248a83c8e858f1196bc5a71469faa53869ca"/>
+              <topic label="STSAFEA_AC_NEVER" href="df/d3a/a00571.html#gga5280a54d31070a1813a3248bd29c0248a16b759d45b74744baf005816358d921b"/>
+            </topic>
+            <topic label="stsafea_zone_ac_change_indicator_t" href="df/d3a/a00571.html#gad11b4246b350193d3d6f70a4b9fbe697">
+              <topic label="STSAFEA_AC_CHANGE" href="df/d3a/a00571.html#ggad11b4246b350193d3d6f70a4b9fbe697a2a114b40b4f35323efa986ee633f52da"/>
+              <topic label="STSAFEA_AC_IGNORE" href="df/d3a/a00571.html#ggad11b4246b350193d3d6f70a4b9fbe697a22509491dabcd6c2fc7e153733334dfa"/>
+            </topic>
+            <topic label="stsafea_ac_change_right_t" href="df/d3a/a00571.html#ga087c61de64f4953e40782d5a24522365">
+              <topic label="STSAFE_ACCR_DISABLED" href="df/d3a/a00571.html#gga087c61de64f4953e40782d5a24522365aff8c658445fae1b59f550a9ebfcd1a17"/>
+              <topic label="STSAFE_ACCR_ENABLE" href="df/d3a/a00571.html#gga087c61de64f4953e40782d5a24522365aecf6db95616c3974b8def84b9d3b76f0"/>
+            </topic>
+            <topic label="stsafea_get_total_partition_count" href="df/d3a/a00571.html#ga118abd5d0b3c5b830f8d0bf8966ec7e7"/>
+            <topic label="stsafea_get_data_partitions_configuration" href="df/d3a/a00571.html#gaa944fab8627716fb4128f1b3650dbe91"/>
+          </topic>
+          <topic label="ECC" href="d6/d06/a00572.html">
+            <topic label="stsafea_ecc_verify_signature" href="d6/d06/a00572.html#ga84bc185d7506052b1e7cce8e1a71a160"/>
+          </topic>
+          <topic label="Echo" href="d6/d21/a00573.html">
+            <topic label="stsafea_echo" href="d6/d21/a00573.html#ga7d48371ab87838e6192a408add3d8685"/>
+          </topic>
+          <topic label="Hash" href="d4/dbe/a00574.html">
+            <topic label="stsafea_hash_algorithm_identifier_t" href="d4/dbe/a00574.html#d3/d82/a00717">
+            </topic>
+            <topic label="stsafea_hash_info_t" href="d4/dbe/a00574.html#dd/dc1/a00721">
+            </topic>
+            <topic label="STSAFEA_SHA_1_HASH_SIZE" href="d4/dbe/a00574.html#ga91eedf22a40ee1006ee766392a235a97"/>
+            <topic label="STSAFEA_SHA_224_HASH_SIZE" href="d4/dbe/a00574.html#gadfd66db524e4c8e6de8a31e080c661f8"/>
+            <topic label="STSAFEA_SHA_256_HASH_SIZE" href="d4/dbe/a00574.html#ga2a52300d461530f2484b5a4220789576"/>
+            <topic label="STSAFEA_SHA_384_HASH_SIZE" href="d4/dbe/a00574.html#gaf823826f959f73f2d4dcda4a74a567f8"/>
+            <topic label="STSAFEA_SHA_512_HASH_SIZE" href="d4/dbe/a00574.html#ga2e5f27b13ec0f7fc2f0c26c0288803a7"/>
+            <topic label="STSAFEA_HASH_ALGO_ID_VALUE_SIZE" href="d4/dbe/a00574.html#gabd147b63e2f22dcbb3cdca60a2407be4"/>
+            <topic label="STSAFEA_HASH_ALGO_ID_LENGTH_SIZE" href="d4/dbe/a00574.html#ga8f348978565e0ef6a0cc373bcf4dfd65"/>
+            <topic label="stsafea_start_hash" href="d4/dbe/a00574.html#gac3505ae6f5b4709d7ee8ffd44cf03914"/>
+            <topic label="stsafea_process_hash" href="d4/dbe/a00574.html#gae0509bd520501b8c1bf234c45884a9d2"/>
+            <topic label="stsafea_finish_hash" href="d4/dbe/a00574.html#ga88b1eda6150d16cc4ce0f9ddcb0ea001"/>
+          </topic>
+          <topic label="Low power management" href="de/d7c/a00576.html">
+            <topic label="stsafea_hibernate_wake_up_mode_t" href="de/d7c/a00576.html#ga40c19d723738a1a89548931046626443">
+              <topic label="STSAFEA_HIBERNATE_WAKEUP_I2C_OR_RESET" href="de/d7c/a00576.html#gga40c19d723738a1a89548931046626443a003e474d7248ccebd5b4a93dbfbbf858"/>
+              <topic label="STSAFEA_HIBERNATE_WAKEUP_RESET_ONLY" href="de/d7c/a00576.html#gga40c19d723738a1a89548931046626443a520b1b35e119539601f8e0a60cb7eac0"/>
+            </topic>
+            <topic label="stsafea_hibernate" href="de/d7c/a00576.html#gac4a1fd6365d0999f280c5e433f8b0de3"/>
+          </topic>
+          <topic label="MAC" href="d8/d9b/a00577.html">
+            <topic label="stsafea_cmac_hmac_compute" href="d8/d9b/a00577.html#ga44317159bcbc7ab490ac8ba894a3ad5c"/>
+            <topic label="stsafea_cmac_hmac_verify" href="d8/d9b/a00577.html#ga045f6a453cade5c70edca9e49439b026"/>
+            <topic label="stsafea_aes_gmac_compute" href="d8/d9b/a00577.html#ga2f34e47a7a1cf282b7956d57ba02c41c"/>
+            <topic label="stsafea_aes_gmac_verify" href="d8/d9b/a00577.html#gab6681cb3df8be95406d04a1172cfe006"/>
+          </topic>
+          <topic label="Password management" href="dd/d5c/a00578.html">
+            <topic label="stsafea_verify_password" href="dd/d5c/a00578.html#ga3e709e7aff52dac1723a45f59501ecd4"/>
+            <topic label="stsafea_delete_password" href="dd/d5c/a00578.html#gaf7047a8c2a586d48b9af5e36c6210812"/>
+          </topic>
+          <topic label="Patch management" href="dc/d4a/a00579.html">
+            <topic label="stsafea_get_patch_update_command_counter" href="dc/d4a/a00579.html#gabd0d3bbd8b571db04aa5139a134fb056"/>
+            <topic label="stsafea_patch_start" href="dc/d4a/a00579.html#ga32fccfa7e4bcc8b361907911219b20b0"/>
+            <topic label="stsafea_patch_update" href="dc/d4a/a00579.html#ga7d9d8750f341aa4504336fde7ac0be3b"/>
+            <topic label="stsafea_patch_finalize" href="dc/d4a/a00579.html#gacb849f3ebfaa21a390b2bf5a846ba3f5"/>
+          </topic>
+          <topic label="Put Query" href="d3/de2/a00580.html">
+            <topic label="STSAFEA_SUBJECT_TAG_ADMIN_BASE_KEY_SLOT" href="d3/de2/a00580.html#ga20e32bde607f7d76f2e5618102865f9a"/>
+            <topic label="STSAFEA_SUBJECT_TAG_P1_BASE_KEY_SLOT_RETRO" href="d3/de2/a00580.html#ga1b3932f4c4b8a93c0feaecfd40ec6d07"/>
+            <topic label="STSAFEA_SUBJECT_TAG_MASTER_KEY_TABLE" href="d3/de2/a00580.html#ga9e897c48016d2e98ba18891157392d24"/>
+            <topic label="STSAFEA_SUBJECT_TAG_LOCAL_ENVELOPE_KEY_TABLE" href="d3/de2/a00580.html#gaf4ca23309144682734c8af881bd1e298"/>
+            <topic label="STSAFEA_SUBJECT_TAG_LIFE_CYCLE_STATE" href="d3/de2/a00580.html#gab0b1310179723028ccee36977a13e075"/>
+            <topic label="STSAFEA_SUBJECT_TAG_PASSWORD_SLOT" href="d3/de2/a00580.html#gac785fa1674fed4bb8fba5aa705243c59"/>
+            <topic label="STSAFEA_SUBJECT_TAG_REMANING_CACHE_DERIVATION" href="d3/de2/a00580.html#gaa74f548cec85a7b231f747fc381156d5"/>
+            <topic label="STSAFEA_SUBJECT_TAG_I2C_PARAMETERS" href="d3/de2/a00580.html#ga828f7c65bad92403e76499d6b419c49d"/>
+            <topic label="STSAFEA_SUBJECT_TAG_PRODUCT_DATA" href="d3/de2/a00580.html#ga934123f6c1145fc698b6119896fbb23e"/>
+            <topic label="STSAFEA_SUBJECT_TAG_DATA_PARTITION_CONFIGURATION" href="d3/de2/a00580.html#gad04cfec6c6433726fc7fb765d1906c13"/>
+            <topic label="STSAFEA_SUBJECT_TAG_PRIVATE_KEY_SLOT" href="d3/de2/a00580.html#gae3d7abf397ab0e6f98082926b77d2d6f"/>
+            <topic label="STSAFEA_SUBJECT_TAG_PRIVATE_KEY_TABLE" href="d3/de2/a00580.html#ga64437a443764863cbfa2428cfff2752f"/>
+            <topic label="STSAFEA_SUBJECT_TAG_HOST_KEY_SLOT_V1" href="d3/de2/a00580.html#ga9bec039a60e500bc6cb3032b5a43ca43"/>
+            <topic label="STSAFEA_SUBJECT_TAG_SYMMETRIC_KEY_TABLE" href="d3/de2/a00580.html#gacf22a0ce51377cc7c9471ba6a3d83888"/>
+            <topic label="STSAFEA_SUBJECT_TAG_COMMAND_AUTHORIZATION_CONFIG" href="d3/de2/a00580.html#gae5d81191e80a2b3360fab087d06faa53"/>
+            <topic label="STSAFEA_SUBJECT_TAG_COMMAND_ACCESS_CONDITION" href="d3/de2/a00580.html#ga8860244eaca2de4ed117272ffcfd839f"/>
+            <topic label="STSAFEA_SUBJECT_TAG_COMMAND_HOST_ENCRYPTION_FLAGS" href="d3/de2/a00580.html#ga55cdf4d6341d1cbbbf4a99b630e65e9d"/>
+            <topic label="STSAFEA_SUBJECT_TAG_P2_BASE_KEY_SLOT" href="d3/de2/a00580.html#gadba17548d4207f1b47bb5a705fdf8c2f"/>
+            <topic label="STSAFEA_SUBJECT_TAG_PHI_P_SLOT" href="d3/de2/a00580.html#ga31ed8b37b51920027055649ef388d0c0"/>
+            <topic label="STSAFEA_SUBJECT_TAG_PHI_C_SLOT" href="d3/de2/a00580.html#ga76f8c4b5bf72b9eccba0cd109a873fb0"/>
+            <topic label="STSAFEA_SUBJECT_TAG_P1_BASE_KEY_SLOT" href="d3/de2/a00580.html#gae687c020ba876f77d39931429ce68e3a"/>
+            <topic label="STSAFEA_SUBJECT_TAG_PATCH_PARENT_KEY" href="d3/de2/a00580.html#ga490ef709e23dfcd58b10b0ac589a72be"/>
+            <topic label="STSAFEA_SUBJECT_TAG_PATCH_START" href="d3/de2/a00580.html#ga60feca90b19516fd33ea15239acef13e"/>
+            <topic label="STSAFEA_SUBJECT_TAG_PATCH_UPDATE" href="d3/de2/a00580.html#ga8d198a3e2f8957d47d97be5004b9d0fc"/>
+            <topic label="STSAFEA_SUBJECT_TAG_PATCH_FINALIZE" href="d3/de2/a00580.html#gae70cc14579bd57fcc49a41137010eae4"/>
+            <topic label="STSAFEA_SUBJECT_TAG_PATCH_SIGNATURE_VERIFICATION_KEY" href="d3/de2/a00580.html#ga1b936a36b708be3ac06a2e0bab7e280f"/>
+            <topic label="STSAFEA_SUBJECT_TAG_PATCH_SIGNATURE_CONFIGURATION_FLAGS" href="d3/de2/a00580.html#ga8239fd878a5820d70a4a050cb1c897e4"/>
+            <topic label="STSAFEA_SUBJECT_TAG_PATCH_UPDATE_COMMAND_COUNTER" href="d3/de2/a00580.html#ga6340852406cb7b481d4770ae668599c0"/>
+            <topic label="STSAFEA_SUBJECT_TAG_PATCH_PARENT_KEY_USAGE_LIMIT" href="d3/de2/a00580.html#ga168d1e6ca0fd6a3aa967e9d74f92709f"/>
+            <topic label="STSAFEA_SUBJECT_TAG_HOST_KEY_SLOT_V2" href="d3/de2/a00580.html#ga60416bcd44c0c55a48c90bb2dc7028a8"/>
+            <topic label="STSAFEA_SUBJECT_TAG_GENERIC_PUBLIC_KEY_TABLE" href="d3/de2/a00580.html#ga67f06c24e018b6a13c761d1ffe6ed730"/>
+            <topic label="STSAFEA_SUBJECT_TAG_HOST_KEY_SLOT_PROVISIONING_CONTROL_FIELDS" href="d3/de2/a00580.html#ga399c983bded435132b5981a18f8c67d8"/>
+            <topic label="STSAFEA_SUBJECT_TAG_SYMMETRIC_KEY_SLOT_PROVISIONING_CONTROL" href="d3/de2/a00580.html#ga8400d44c1735e09f920f56306367838c"/>
+            <topic label="STSAFEA_SUBJECT_TAG_GENERIC_PUBLIC_KEY_SLOT" href="d3/de2/a00580.html#gafae74ad8508b81ceb55ec2e00e307d3f"/>
+            <topic label="STSAFEA_SUBJECT_TAG_GENERIC_PUBLIC_KEY_CONFIGURATION_FLAGS" href="d3/de2/a00580.html#ga6e932c7e9d46b66d541c13eb3664abbf"/>
+            <topic label="stsafea_life_cycle_state_t" href="d3/de2/a00580.html#gac76f72dd630e7e5ba394f41ec712310e">
+              <topic label="STSAFEA_LCS_BORN" href="d3/de2/a00580.html#ggac76f72dd630e7e5ba394f41ec712310ea2711eb62a971504bd3606bb5f57d9b6d"/>
+              <topic label="STSAFEA_LCS_PATCHING" href="d3/de2/a00580.html#ggac76f72dd630e7e5ba394f41ec712310ea7c5c1fa58cf7ff758bcf58b01435f850"/>
+              <topic label="STSAFEA_LCS_OPERATIONAL" href="d3/de2/a00580.html#ggac76f72dd630e7e5ba394f41ec712310eae2b8e6680bd65ab52718cb1455ba43d1"/>
+              <topic label="STSAFEA_LCS_TERMINATED" href="d3/de2/a00580.html#ggac76f72dd630e7e5ba394f41ec712310ea14111a6a058a7fd8c83805265a8de5cb"/>
+              <topic label="STSAFEA_LCS_BORN_AND_LOCKED" href="d3/de2/a00580.html#ggac76f72dd630e7e5ba394f41ec712310ea4e03c6e6aa00e5e54ea6bb32e807b868"/>
+              <topic label="STSAFEA_LCS_OPERATIONAL_AND_LOCKED" href="d3/de2/a00580.html#ggac76f72dd630e7e5ba394f41ec712310ea9bde6e1175c9ec8d02b6b8c03766968c"/>
+            </topic>
+            <topic label="stsafea_put_life_cyle_state" href="d3/de2/a00580.html#ga574a746e5236721b2b98cb3ab5fbd133"/>
+            <topic label="stsafea_query_life_cycle_state" href="d3/de2/a00580.html#gab80b01a6f0b9d3482fe31af6216ede1c"/>
+          </topic>
+          <topic label="Random" href="d8/dc8/a00581.html">
+            <topic label="STSAFEA_MAXIMUM_RNG_SIZE" href="d8/dc8/a00581.html#gab8af760f240dd442515f4c1ce98be068"/>
+            <topic label="stsafea_generate_random" href="d8/dc8/a00581.html#gabe1deb3840c69d2321e86e6e04161b7c"/>
+          </topic>
+          <topic label="Reset" href="d4/d2f/a00582.html">
+            <topic label="stsafea_reset" href="d4/d2f/a00582.html#gaec5ab6bc6b4c5e0e49e24df4f85e59b2"/>
+          </topic>
+          <topic label="Wrap/Un-wrap" href="d7/d21/a00584.html">
+            <topic label="stsafea_wrap_payload" href="d7/d21/a00584.html#gaf2407d961d0afe4c3e85165f117a2f54"/>
+            <topic label="stsafea_unwrap_payload" href="d7/d21/a00584.html#gac0a48647f2326cdb6555527f50631965"/>
+          </topic>
+        </topic>
+      </topic>
+      <topic label="Core layer" href="d6/da3/a00589.html">
+        <topic label="Device management" href="d3/d2f/a00562.html">
+          <topic label="stse_Handler_t" href="d3/d2f/a00562.html#gaabe4b6e7682072e3e7798bbff6c0b77b"/>
+          <topic label="stse_session_type_t" href="d3/d2f/a00562.html#gaa03e180852d78b30446836c489a1e2e8">
+            <topic label="STSE_HOST_SESSION" href="d3/d2f/a00562.html#ggaa03e180852d78b30446836c489a1e2e8af34065d2077cbd26a9cd810b73dcb488"/>
+            <topic label="STSE_VOLATILE_KEK_SESSION" href="d3/d2f/a00562.html#ggaa03e180852d78b30446836c489a1e2e8abbbc9384c88bfa457f1179f66edcfc4f"/>
+          </topic>
+          <topic label="stse_device_t" href="d3/d2f/a00562.html#ga520bfa15eb37ba5a10e9195e9be0b86a">
+            <topic label="STSAFE_A100" href="d3/d2f/a00562.html#gga520bfa15eb37ba5a10e9195e9be0b86aac5121a1082b555ce270f8d7588345724"/>
+            <topic label="STSAFE_A110" href="d3/d2f/a00562.html#gga520bfa15eb37ba5a10e9195e9be0b86aa386ad182abb184f199eb11ec09067581"/>
+            <topic label="STSAFE_A120" href="d3/d2f/a00562.html#gga520bfa15eb37ba5a10e9195e9be0b86aa79bbc155ecb175aaee2989cddb624185"/>
+            <topic label="STSAFE_A200" href="d3/d2f/a00562.html#gga520bfa15eb37ba5a10e9195e9be0b86aa549fd8f49c218bde6fc71aecf884cc4b"/>
+          </topic>
+          <topic label="stse_bus" href="d3/d2f/a00562.html#gaddfbc7f6dd57de58300d8886912c1921">
+            <topic label="STSE_BUS_TYPE_I2C" href="d3/d2f/a00562.html#ggaddfbc7f6dd57de58300d8886912c1921a7eac308774daef8d4f57fd2d0a338117"/>
+          </topic>
+          <topic label="stse_set_default_handler_value" href="d3/d2f/a00562.html#ga78d47c22688fc62670d83b917ddfbe02"/>
+        </topic>
+        <topic label="Frame Management" href="dc/dae/a00563.html">
+          <topic label="stse_frame_insert_strap" href="dc/dae/a00563.html#gaf1968892eef33e9ee695c234c4d2d4f3"/>
+          <topic label="stse_frame_unstrap" href="dc/dae/a00563.html#gab022f583b07d463589daabc983621e6b"/>
+          <topic label="stse_frame_update" href="dc/dae/a00563.html#ga6587494fbc6e1facc1f6ad688c35443f"/>
+          <topic label="stse_frame_crc16_compute" href="dc/dae/a00563.html#ga06639c197228334d7ed6f673b61fea6f"/>
+          <topic label="stse_frame_element_swap_byte_order" href="dc/dae/a00563.html#ga36a4479502f1f5163bf708cb1fb67ed1"/>
+          <topic label="stse_frame_push_element" href="dc/dae/a00563.html#ga18ceec7a1494016e02b4e829a02e360a"/>
+          <topic label="stse_frame_pop_element" href="dc/dae/a00563.html#gabad690bb87cf672ee1409ff1b210d44d"/>
+          <topic label="stse_frame_debug_print" href="dc/dae/a00563.html#gaa44ca8c74a10c80310a9944b6bcb7e8c"/>
+          <topic label="stse_frame_transmit" href="dc/dae/a00563.html#ga37f6cfe467207b3ec2592c9c012b2191"/>
+          <topic label="stse_frame_receive" href="dc/dae/a00563.html#ga28ff0bbacec0a46eebd3d8ffb8d2211a"/>
+          <topic label="stse_frame_transfer" href="dc/dae/a00563.html#gaa5cd7a355c4455a473f7c5ba33134454"/>
+        </topic>
+        <topic label="STSE Generic typedefs" href="d0/dc2/a00564.html">
+          <topic label="stse_cmd_authorization_CR_t" href="d0/dc2/a00564.html#d8/d7a/a00669">
+          </topic>
+          <topic label="stse_cmd_authorization_record_t" href="d0/dc2/a00564.html#d4/d4f/a00673">
+          </topic>
+          <topic label="STSE_SECURE_CHANNEL_Msk" href="d0/dc2/a00564.html#ga97a8c12b5f250185108af60e717e4a00"/>
+          <topic label="STSE_SECURE_CHANNEL_HOST" href="d0/dc2/a00564.html#gaf27a913160f7c9205895fb04bd2a96c0"/>
+          <topic label="STSE_SECURE_CHANNEL_SESSION" href="d0/dc2/a00564.html#ga848dc30ac5fae2ce1c83203d16b8fa1e"/>
+          <topic label="stse_ecc_key_type_t" href="d0/dc2/a00564.html#ga6e9a5f04f4c75410f6f4775b889dcf82">
+          </topic>
+          <topic label="stse_hash_algorithm_t" href="d0/dc2/a00564.html#ga0f8aa78e88ffc3b7e23f7f2cf43c1647">
+          </topic>
+          <topic label="stse_cmd_access_conditions_t" href="d0/dc2/a00564.html#gad1a8532f8c9a85537fcfc873a2ea1844">
+            <topic label="STSE_CMD_AC_NEVER" href="d0/dc2/a00564.html#ggad1a8532f8c9a85537fcfc873a2ea1844a8af68407717046d9d9a365c79b2b2e3c"/>
+            <topic label="STSE_CMD_AC_FREE" href="d0/dc2/a00564.html#ggad1a8532f8c9a85537fcfc873a2ea1844a8d161a9a662ee7a46e1ab063a45a7300"/>
+            <topic label="STSE_CMD_AC_ADMIN" href="d0/dc2/a00564.html#ggad1a8532f8c9a85537fcfc873a2ea1844a7afb3699061c1f9093eccfd307afc18d"/>
+            <topic label="STSE_CMD_AC_HOST" href="d0/dc2/a00564.html#ggad1a8532f8c9a85537fcfc873a2ea1844a5c297c8fd61462b144c2ae21ac37fc35"/>
+            <topic label="STSE_CMD_AC_ADMIN_OR_PWD" href="d0/dc2/a00564.html#ggad1a8532f8c9a85537fcfc873a2ea1844a7a4b9a4ec411be7840197bee8106100d"/>
+            <topic label="STSE_CMD_AC_ADMIN_OR_HOST" href="d0/dc2/a00564.html#ggad1a8532f8c9a85537fcfc873a2ea1844a8e13fa709f26da6566d95359420c0142"/>
+          </topic>
+        </topic>
+        <topic label="Platform Abstraction Layer (PAL)" href="d8/dd2/a00565.html">
+          <topic label="stse_services_platform_init" href="d8/dd2/a00565.html#ga8d2a94407bc1ddcee38972ebdd1ba923"/>
+          <topic label="stse_platform_Crc16_Calculate" href="d8/dd2/a00565.html#ga3d165b8346ed2852e80ab9b358bc0e5e"/>
+          <topic label="stse_platform_Crc16_Accumulate" href="d8/dd2/a00565.html#ga4006d912fcbef5bd87e3072227ed2776"/>
+          <topic label="stse_platform_Delay_ms" href="d8/dd2/a00565.html#ga9bb7958a74196f6ffa45c65d69bde3a6"/>
+          <topic label="stse_platform_timeout_ms_start" href="d8/dd2/a00565.html#gab7509fc8e1a84e4a36e3795157bc3e82"/>
+          <topic label="stse_platform_timeout_ms_get_status" href="d8/dd2/a00565.html#gaca275f2d592407e6a0c4522de75add34"/>
+          <topic label="stse_platform_nvm_write" href="d8/dd2/a00565.html#ga376b481ce2ac2ae2eb9fe646ada156fd"/>
+          <topic label="stse_platform_Random" href="d8/dd2/a00565.html#gab7dad254b8f81be2208479d6091b9f56"/>
+          <topic label="stse_platform_aes_cmac_compute" href="d8/dd2/a00565.html#gad20b0ba816f7b9d06916d01fa3398f17"/>
+          <topic label="stse_platform_aes_cmac_verify" href="d8/dd2/a00565.html#ga6b3b720616ea7664c892ddde6aa5a6b8"/>
+          <topic label="stse_platform_aes_ccm_enc" href="d8/dd2/a00565.html#ga4b66fcfb657e5f6af19ac7de4db859b0"/>
+          <topic label="stse_platform_aes_ccm_dec" href="d8/dd2/a00565.html#gac2802fefc0d0681c930ddf789ad4617b"/>
+          <topic label="stse_platform_aes_cbc_enc" href="d8/dd2/a00565.html#ga6bb0acbe9a463f34e7295fc85827b100"/>
+          <topic label="stse_platform_aes_cbc_dec" href="d8/dd2/a00565.html#gad845528cfefa86236acb2ade21d88d1c"/>
+          <topic label="stse_platform_aes_ecb_enc" href="d8/dd2/a00565.html#ga030a4e7294e82e01f04b48c40ee935f9"/>
+          <topic label="stse_platform_aes_ecb_dec" href="d8/dd2/a00565.html#gab96d6b28d7ba7d9a348446599253489d"/>
+          <topic label="stse_platform_nist_kw_encrypt" href="d8/dd2/a00565.html#ga01f29f1c7493756afd6049ab6fbace45"/>
+          <topic label="stse_platform_hmac_sha256_compute" href="d8/dd2/a00565.html#gab15dd925d3bc0e849871eb3a415a4777"/>
+          <topic label="stse_platform_hmac_sha256_extract" href="d8/dd2/a00565.html#gace97f03c107db3765f3a64ca508507d7"/>
+          <topic label="stse_platform_hmac_sha256_expand" href="d8/dd2/a00565.html#gae221bac7dece570305cdc24dba670b5e"/>
+          <topic label="stse_platform_hash_sha256_compute" href="d8/dd2/a00565.html#ga05b74e9e0411272f5deda374b891a767"/>
+          <topic label="stse_platform_power_ctrl_init" href="d8/dd2/a00565.html#ga3f266d5491e050fc05d84404eed7f320"/>
+          <topic label="stse_platform_power_on" href="d8/dd2/a00565.html#gab30a61565cb9bb4a36c81add885d1aae"/>
+          <topic label="stse_platform_power_off" href="d8/dd2/a00565.html#ga613e13301633ff6743d73e032b8218af"/>
+        </topic>
+        <topic label="Return Codes definition" href="d0/d3e/a00566.html">
+          <topic label="stse_ReturnCode_t" href="d0/d3e/a00566.html#ga6e312aa8b8cd38421ce8b85215e4b16f">
+            <topic label="STSE_OK" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa0d3996f0849d6b075a5b9a12c147870c"/>
+            <topic label="STSE_COMMUNICATION_ERROR" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa3f34e8f12a893f5c316cc02c87c83bad"/>
+            <topic label="STSE_INCONSISTENT_COMMAND_DATA" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa79d6998ee5850cbf81a48b4358a02acc"/>
+            <topic label="STSE_VALUE_OUT_OF_RANGE" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa145f85d393d2845beb17441d63c7592f"/>
+            <topic label="STSE_COMMAND_CODE_NOT_SUPPORTED" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa33081b48aef91949c7cdf11744a3fee1"/>
+            <topic label="STSE_UNEXPECTED_ERROR" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa718d3e8b54a6f26b58881e01010e13b5"/>
+            <topic label="STSE_BUFFER_LENGTH_EXCEEDED" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa45a6825da2c4a104d8af36efc02684f2"/>
+            <topic label="STSE_SESSION_ERROR" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa3ab7ab2fb717098276ef868d40ebfd1f"/>
+            <topic label="STSE_TOO_MANY_MESSAGES_LOST" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa432c3b7f3250aa892c37f02e2c30ecea"/>
+            <topic label="STSE_C_MAC_COUNTER_MAXIMUM_REACHED" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa3dda9e3a3cef0d85d2e652f02973a3fc"/>
+            <topic label="STSE_KEY_NOT_FOUND" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa534182267e4933700ae015af87fe4901"/>
+            <topic label="STSE_KEY_BLOCKED" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa63a709df90c42cf9185721ada708426f"/>
+            <topic label="STSE_WRONG_KEY_TYPE" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16faeb3ede74c5983715131933195f5561ef"/>
+            <topic label="STSE_SESSION_COUNTER_OUT_OF_RANGE" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16facc2bc60f7b9ad3e638e53dbfe7920e11"/>
+            <topic label="STSE_INVALID_LIFE_CYCLE_STATE" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa8f99fd909470e3164af3bb13156c10d0"/>
+            <topic label="STSE_ENTRY_NOT_FOUND" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa0cb3063403b2e979152bec8050b57f64"/>
+            <topic label="STSE_ACCESS_CONDITION_NOT_SATISFIED" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa250273f6f5fff5ead6615673d0eeac4f"/>
+            <topic label="STSE_WRONG_ZONE_TYPE" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa1279fd8a7b746a5d790e97f328ea692a"/>
+            <topic label="STSE_COUNTER_LIMIT_EXCEEDED" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa970b86fb5388315f67541a2d244af994"/>
+            <topic label="STSE_BOUNDARY_EXCEEDED" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa64186ed561305ec3ba8d0bdddc2cd6c7"/>
+            <topic label="STSE_INVALID_PRIVATE_KEY" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16faed20db99f65608a3dcc7ab425f79ff2c"/>
+            <topic label="STSE_INVALID_C_MAC" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa890f8325ee49acfde5a61824c8e9a47d"/>
+            <topic label="STSE_CHALLENGE_MISSING" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa861308947221576a75fbea4b54f8250b"/>
+            <topic label="STSE_COMMAND_DECRYPTION_ERROR" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16faaa3464cdf1b4864f98a21597d356f945"/>
+            <topic label="STSE_INVALID_PUBLIC_KEY" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa3d496435347d9c16154dfbedcd668698"/>
+            <topic label="STSE_PASSWORD_BLOCKED" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa983f2d306018e7bd92a104c316e2d2e4"/>
+            <topic label="STSE_WRONG_KEY_USAGE" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa2e57faf89c73196bf0735562eb11be89"/>
+            <topic label="STSE_WRONG_MODE_OF_OPERATION" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa932dab4d676bf160a6c7e63fb12a1013"/>
+            <topic label="STSE_WRONG_MAC_LENGTH" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fab6d2bd804d8bc8fc641fc78b9ca43957"/>
+            <topic label="STSE_COMMAND_NOT_AUTHORIZED" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16faba213d5a52f42ed945f3fd2eb6939542"/>
+            <topic label="STSE_OLD_MESSAGE" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16faf6aa3694a3ccfac8dd280a9cfb3314b4"/>
+            <topic label="STSE_PLATFORM_SERVICES_INIT_ERROR" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa82a2f6129206c2cdcd0c34bababb4783"/>
+            <topic label="STSE_PLATFORM_CRYPTO_INIT_ERROR" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa7d9815990e9816cd959afad2c113e8ee"/>
+            <topic label="STSE_PLATFORM_INVALID_PARAMETER" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fada97ff62c6c1511a576c49b6e5357e98"/>
+            <topic label="STSE_PLATFORM_BUFFER_ERR" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa09a947239824a442a36cef4d8fbb6159"/>
+            <topic label="STSE_PLATFORM_BUS_ARBITRATION_LOST" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa48fe2cd353bdec0354df7456c49844e2"/>
+            <topic label="STSE_PLATFORM_BUS_RECEIVE_TIMEOUT" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16faee4e3f05c94b2acd3b5e39fbf5e1e880"/>
+            <topic label="STSE_PLATFORM_BUS_ACK_ERROR" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa49194ec3c4446484b2c645b0458a9798"/>
+            <topic label="STSE_PLATFORM_FLASH_WRITE_ERROR" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa3a51b23f1cdc79b81790a0fb1992aea4"/>
+            <topic label="STSE_PLATFORM_POWER_ERROR" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa22c24b27f48e0474ede196c4833aacf6"/>
+            <topic label="STSE_CORE_FRAME_CRC_ERROR" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fabbda738514a6bc63bf1b5d37a17da8d3"/>
+            <topic label="STSE_CORE_FRAME_RMAC_ERROR" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa0a29660f5139eb48e2213bdf24161bad"/>
+            <topic label="STSE_SERVICE_INVALID_PARAMETER" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa191768619d20bd447ad8cc0ec2ed29cb"/>
+            <topic label="STSE_SERVICE_HANDLER_NOT_INITIALISED" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16faee2e1f2ed3a99186bb26a5a4261090aa"/>
+            <topic label="STSE_API_HANDLER_NOT_INITIALISED" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fad59f6cfbf75aafa47bb7179be89eda59"/>
+            <topic label="STSE_CERT_INVALID_PARAMETER" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16fa5d1e5a803e1bc697eb7ba9687bbd94d3"/>
+            <topic label="STSE_CERT_HANDLER_NOT_INITIALISED" href="d0/d3e/a00566.html#gga6e312aa8b8cd38421ce8b85215e4b16faab328b64733812010cc453bcdc930371"/>
+          </topic>
+        </topic>
+      </topic>
+    </topic>
+  </topic>
+  <topic label="Data Structures" href="annotated.html">
+    <topic label="Data Structures" href="annotated.html">
+      <topic label="attribute_st" href="d0/d1c/a00605.html">
+        <topic label="type" href="d0/d1c/a00605.html#a6585b3d925e385ad68e8bc6c5df803e9"/>
+        <topic label="strFormat" href="d0/d1c/a00605.html#a3d0e49e7aa0fab3f484e1801e9070697"/>
+        <topic label="str" href="d0/d1c/a00605.html#a691439e4be2091e2b92b607360e4cad9"/>
+        <topic label="strSize" href="d0/d1c/a00605.html#a978d6f4b184b671d3a361a811fff651a"/>
+      </topic>
+      <topic label="AttributeOID_st" href="d8/dbd/a00597.html">
+        <topic label="len" href="d8/dbd/a00597.html#ad90ede1298999113d5914bb70ca37def"/>
+        <topic label="type" href="d8/dbd/a00597.html#ac7c6f244908d19a2c0da8ec5f5db3005"/>
+        <topic label="oid" href="d8/dbd/a00597.html#a92db771ca28f7d07aae003e7a3233721"/>
+      </topic>
+      <topic label="ECDSAsign_st" href="d2/d34/a00625.html">
+        <topic label="pR" href="d2/d34/a00625.html#abc037f880be0a93876d10a76a3ae27e6"/>
+        <topic label="rSize" href="d2/d34/a00625.html#a8e6ef2ffc7aa71075245b60e5c25cc6a"/>
+        <topic label="pS" href="d2/d34/a00625.html#a3da63209a6775e59b48377a59f49bf59"/>
+        <topic label="sSize" href="d2/d34/a00625.html#a4d0389b4876ca1b5f349f425ca793210"/>
+      </topic>
+      <topic label="EllipticCurveOID_st" href="d6/db2/a00601.html">
+        <topic label="len" href="d6/db2/a00601.html#a89aa21e2416a9c02ebb0f605c656d857"/>
+        <topic label="type" href="d6/db2/a00601.html#a3909aa2e0c6255247ab392ff3cba76a6"/>
+        <topic label="oid" href="d6/db2/a00601.html#ab674f15482a3f35b5f7229359c214930"/>
+      </topic>
+      <topic label="extension_st" href="d1/d6e/a00613.html">
+        <topic label="type" href="d1/d6e/a00613.html#a87180cec0f3401044c9fd898286d8604"/>
+        <topic label="critical" href="d1/d6e/a00613.html#a35989115326fb8f34072007d075cee23"/>
+        <topic label="value" href="d1/d6e/a00613.html#aa1279d319edae48c3b1283fbbb177787"/>
+        <topic label="valueSize" href="d1/d6e/a00613.html#ac4a0c8ed0e0809562e5551ca19a4aed3"/>
+      </topic>
+      <topic label="ExtensionOID_st" href="db/d3f/a00609.html">
+        <topic label="len" href="db/d3f/a00609.html#a298ac3db15bebf2cb0c56fc8fc71ea2e"/>
+        <topic label="type" href="db/d3f/a00609.html#aa13ada5db850675eb01c05aae4f113f6"/>
+        <topic label="oid" href="db/d3f/a00609.html#ad12adc93ed8630df775c91d80c12c867"/>
+      </topic>
+      <topic label="SignatureAlgorithmOID_st" href="d2/da3/a00593.html">
+        <topic label="len" href="d2/da3/a00593.html#a747dd95b322b69d79212c76080c427c5"/>
+        <topic label="type" href="d2/da3/a00593.html#ada0712031351fb3f640c9b01a6cb5e31"/>
+        <topic label="oid" href="d2/da3/a00593.html#a459899e1a9383e597421d2eb53f008e9"/>
+      </topic>
+      <topic label="stsafe_generic_key_information_t" href="d8/d7d/a00789.html">
+        <topic label="info_length" href="d8/d7d/a00789.html#a2aca2578dabaa1f7846987431d000b5f"/>
+        <topic label="lock_indicator" href="d8/d7d/a00789.html#a737ff1d19f09bb6e533dc1c46e7ff224"/>
+        <topic label="slot_number" href="d8/d7d/a00789.html#a39f21609b5687420fb520b027af78295"/>
+        <topic label="type" href="d8/d7d/a00789.html#a6914271b1126bce1a070942def8a6906"/>
+        <topic label="mode_of_operation" href="d8/d7d/a00789.html#a4535fe49b320dc347a59f34de8809312"/>
+        <topic label="usage" href="d8/d7d/a00789.html#a567e1ced7090faf3dac258dec9b0a186"/>
+      </topic>
+      <topic label="stsafea_data_partition_record_t" href="df/d3a/a00571.html#d7/df1/a00705">
+      </topic>
+      <topic label="stsafea_decrement_option_t" href="df/d3a/a00571.html#dd/d57/a00701">
+        <topic label="new_decrement_ac" href="df/d3a/a00571.html#a5feff4cbf64b16a97b8fbf3ff0e64fe4"/>
+        <topic label="new_decrement_ac_change_right" href="df/d3a/a00571.html#aebf4667fb58d6b68fb8ff7eea9bbdb64"/>
+        <topic label="change_ac_indicator" href="df/d3a/a00571.html#a7d39e7f8c4bc1a89f4681b2042ce9ad1"/>
+        <topic label="filler" href="df/d3a/a00571.html#a0bdbed6adc6f76ed128c719e216a5d30"/>
+      </topic>
+      <topic label="stsafea_generic_public_key_configuration_flags_t" href="dc/d40/a00568.html#d1/d87/a00689">
+      </topic>
+      <topic label="stsafea_hash_algorithm_identifier_t" href="d4/dbe/a00574.html#d3/d82/a00717">
+      </topic>
+      <topic label="stsafea_hash_info_t" href="d4/dbe/a00574.html#dd/dc1/a00721">
+      </topic>
+      <topic label="stsafea_private_key_operation_mode_t" href="dc/d40/a00568.html#d8/dba/a00681">
+        <topic label="ephemeral_private_key_gen_method" href="dc/d40/a00568.html#a61dd0e2398bd67f90810c913c24000f1"/>
+        <topic label="filler" href="dc/d40/a00568.html#a50b4d44487aa36fe741a2f6065ff0cb6"/>
+        <topic label="change_right" href="dc/d40/a00568.html#a7f0da7c55e623e5bb2d411ad0dd1170a"/>
+        <topic label="key_establishment" href="dc/d40/a00568.html#ace45e6edb9782ec9322be4a872b5efc7"/>
+        <topic label="reserved" href="dc/d40/a00568.html#aa9d0886926dff5a4f73c33aae242f7b6"/>
+        <topic label="sig_gen_over_external_data" href="dc/d40/a00568.html#a7e98db6adf03cf66bcdab6c79656b154"/>
+        <topic label="sig_gen_over_internal_external_data" href="dc/d40/a00568.html#a854366343683efaf6ac64c4095659b55"/>
+        <topic label="generate_key_AC" href="dc/d40/a00568.html#a08dfc15a14a054c146794fa370db696e"/>
+        <topic label="EdDSA_variant" href="dc/d40/a00568.html#ac87ded67cfee5c7f41cf613841588c50"/>
+      </topic>
+      <topic label="stsafea_private_key_slot_information_t" href="dc/d40/a00568.html#d0/df1/a00685">
+      </topic>
+      <topic label="stsafea_read_option_t" href="df/d3a/a00571.html#d3/dd2/a00693">
+        <topic label="new_read_ac" href="df/d3a/a00571.html#a990ecd64be66e0a02f3dc97afd997b42"/>
+        <topic label="new_read_ac_change_right" href="df/d3a/a00571.html#a3fbb59be4e1113ac4856dcca4a5d2172"/>
+        <topic label="change_ac_indicator" href="df/d3a/a00571.html#a3beb2767e821ef19ad4b4270716ae3cd"/>
+        <topic label="filler" href="df/d3a/a00571.html#a7f02f7ec7571bc8e10cde1df43c9ef1a"/>
+      </topic>
+      <topic label="stsafea_symmetric_key_slot_provisioning_ctrl_fields_t" href="d5/de8/a00749.html">
+      </topic>
+      <topic label="stsafea_symmetric_key_usage_t" href="dc/dd0/a00753.html">
+      </topic>
+      <topic label="stsafea_update_option_t" href="df/d3a/a00571.html#d2/d74/a00697">
+        <topic label="new_update_ac" href="df/d3a/a00571.html#ad888840ad0bae8f5a9d8f753cdfb25cf"/>
+        <topic label="new_update_ac_change_right" href="df/d3a/a00571.html#ac65af5f6b0f4674de32ae40bcaf03891"/>
+        <topic label="change_ac_indicator" href="df/d3a/a00571.html#a10ef86ac6f5402dcf1fffcb8a0762a36"/>
+        <topic label="filler" href="df/d3a/a00571.html#ab502041515f6c5552f161893d29a66f6"/>
+        <topic label="atomicity" href="df/d3a/a00571.html#a28266f7ca6378c8066256614845a95b4"/>
+      </topic>
+      <topic label="stse_cert_public_key_t" href="dc/db1/a00621.html">
+        <topic label="pX" href="dc/db1/a00621.html#a4c1a23eda630ed04467d466d580c0cc9"/>
+        <topic label="pY" href="dc/db1/a00621.html#a0fabf3a4d40d3ea25e1be273e83c3338"/>
+        <topic label="fsize" href="dc/db1/a00621.html#a922832db8079d2e192d04c4b7bd75f00"/>
+      </topic>
+      <topic label="stse_cmd_authorization_CR_t" href="d0/dc2/a00564.html#d8/d7a/a00669">
+      </topic>
+      <topic label="stse_cmd_authorization_record_t" href="d0/dc2/a00564.html#d4/d4f/a00673">
+      </topic>
+      <topic label="stse_internal_certificate" href="da/dd1/a00629.html">
+        <topic label="pPubKey_point_representation_id" href="da/dd1/a00629.html#a213679615ae95a68a08b1e0e319f2582"/>
+        <topic label="tbs" href="da/dd1/a00629.html#a27d8b09f4095c2e5cdbe0f91227acb0a"/>
+        <topic label="tbsSize" href="da/dd1/a00629.html#ac74dba0bd0b5d5ef65b9358d6f3c91c3"/>
+        <topic label="x509Version" href="da/dd1/a00629.html#a72eaec51e874acab8fd8516deae52fb6"/>
+        <topic label="serialNumber" href="da/dd1/a00629.html#aa03c259bea7fa4f2447486e5a9dac105"/>
+        <topic label="serialNumberSize" href="da/dd1/a00629.html#ad5a7748ec1c9b1232f5f2b2fdc6a9015"/>
+        <topic label="signature" href="da/dd1/a00629.html#ac8fec8a32511d88d5509de81e34d5c0f"/>
+        <topic label="issuer" href="da/dd1/a00629.html#a02046cd3bfa3cbbe4da80cd15d6f1de5"/>
+        <topic label="issuerSize" href="da/dd1/a00629.html#aed8d7dde7d11cb3834e91f02dc2168e1"/>
+        <topic label="validity" href="da/dd1/a00629.html#af1c6daac8fd24c25f0fdd3acea0db384"/>
+        <topic label="validitySize" href="da/dd1/a00629.html#a482187ee80fd76c9575648fe74fb1eea"/>
+        <topic label="subject" href="da/dd1/a00629.html#a12115001047f384a55d3c845ea9ad3e6"/>
+        <topic label="subjectSize" href="da/dd1/a00629.html#a5d221baa7dec2d9515450a8bcc5b499a"/>
+        <topic label="EllipticCurve" href="da/dd1/a00629.html#a4ed4c25808450e0ad101d33c98190058"/>
+        <topic label="PubKey" href="da/dd1/a00629.html#a572bccfe79aac0c60405b7c054698778"/>
+        <topic label="extensions" href="da/dd1/a00629.html#ac9e40198d1728b25346af569ab3d620e"/>
+        <topic label="extensionsSize" href="da/dd1/a00629.html#a1274787e22755b2d46a7fe86c00fa182"/>
+        <topic label="extensionsFlags" href="da/dd1/a00629.html#ab5c3f9a2de7c7a82257cd8349504162d"/>
+        <topic label="SignatureAlgorithm" href="da/dd1/a00629.html#a3327b077285b0a25f256cf93c2b094da"/>
+        <topic label="Sign" href="da/dd1/a00629.html#abbe16a8b0dfe3842bb6910080431dc9d"/>
+      </topic>
+      <topic label="validity_st" href="d4/dc4/a00617.html">
+        <topic label="seconds" href="d4/dc4/a00617.html#ac9092ef06d3e88db018a9ec9e7311973"/>
+        <topic label="minutes" href="d4/dc4/a00617.html#aeaea69e915a0d350079f43cf39ac5d5d"/>
+        <topic label="hours" href="d4/dc4/a00617.html#a66c410ff538527d9af04a81758ce2e97"/>
+        <topic label="days" href="d4/dc4/a00617.html#a0f7873a8958ba5426207f1dd7af63446"/>
+        <topic label="month" href="d4/dc4/a00617.html#abbc8e5e5efccd6083de3c4de44aa4a1b"/>
+        <topic label="year" href="d4/dc4/a00617.html#a717657d20560003bfc630ec218d14994"/>
+      </topic>
+    </topic>
+    <topic label="Data Fields" href="functions.html">
+      <topic label="All" href="functions.html"/>
+      <topic label="Variables" href="functions_vars.html"/>
+    </topic>
+  </topic>
+</toc>

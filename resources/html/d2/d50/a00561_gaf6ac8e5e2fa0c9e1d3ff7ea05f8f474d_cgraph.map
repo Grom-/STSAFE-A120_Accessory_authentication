@@ -1,0 +1,5 @@
+<map id="stse_certificate_parse_X509_version" name="stse_certificate_parse_X509_version">
+<area shape="rect" id="node1" title="Parse the x509 Version of a certificate." alt="" coords="5,39,169,80"/>
+<area shape="rect" id="node2" href="$d2/d50/a00561.html#gad5a08fb4e091c3316e6f030af2838c1b" title="Reads the value of an INTEGER and returns it as a PLAT_I32." alt="" coords="231,5,381,47"/>
+<area shape="rect" id="node3" href="$d2/d50/a00561.html#gaa88b975c48fd20aca9809945941f7987" title="Identify the ASN.1 TLV." alt="" coords="217,71,395,112"/>
+</map>

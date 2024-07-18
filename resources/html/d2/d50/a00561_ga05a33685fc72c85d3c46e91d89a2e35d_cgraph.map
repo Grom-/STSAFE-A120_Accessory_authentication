@@ -1,0 +1,5 @@
+<map id="stse_certificate_parse_ECDSA_signature" name="stse_certificate_parse_ECDSA_signature">
+<area shape="rect" id="node1" title="Parse an ECDSA signature." alt="" coords="5,5,169,47"/>
+<area shape="rect" id="node2" href="$d2/d50/a00561.html#gaa88b975c48fd20aca9809945941f7987" title="Identify the ASN.1 TLV." alt="" coords="429,5,607,47"/>
+<area shape="rect" id="node3" href="$d2/d50/a00561.html#gad70d0962519b7d9c973c41aed5773920" title="Parse an ASN.1 INTEGER." alt="" coords="217,35,381,76"/>
+</map>
