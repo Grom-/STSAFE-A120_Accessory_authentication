@@ -4,7 +4,7 @@
 
 This project illustrates how to use the STSAFE-A120 SE and the STSELib provided by STMicroelectronics to protect an accessory .
 
-TOTOTOTOTOTO
+Test Doxygen
 
 # Project Architecture 
 
