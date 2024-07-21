@@ -1,13 +1,33 @@
-name: Code review
-on: [pull_request]
+
+name: Lint
+
+on:  # yamllint disable-line rule:truthy
+  push: null
+  pull_request: null
+
+permissions: { }
+
 jobs:
-  code-review:
+  build:
+    name: Lint
     runs-on: ubuntu-latest
+
     permissions:
       contents: read
-      pull-requests: write
+      packages: read
+      # To report GitHub Actions status checks
+      statuses: write
+
     steps:
-      - uses: fxchen/code-review@latest
+      - name: Checkout code
+        uses: actions/checkout@v4
         with:
-          model: 'gpt-3.5-turbo-16k'
-          openai-key: ${{ secrets.OPENAI_API_KEY }}
+          # super-linter needs the full git history to get the
+          # list of files that changed across commits
+          fetch-depth: 0
+
+      - name: Super-linter
+        uses: super-linter/super-linter@v6.7.0  # x-release-please-version
+        env:
+          # To report GitHub Actions status checks
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
