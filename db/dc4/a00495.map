@@ -1,7 +1,0 @@
-<map id="STSecureElement Library" name="STSecureElement Library">
-<area shape="rect" id="node1" href="$d4/d1e/a00497.html" title="STSELib API Layer." alt="" coords="261,5,341,31"/>
-<area shape="rect" id="node2" href="$d8/d67/a00499.html" title="STSELib core Layer." alt="" coords="257,55,346,80"/>
-<area shape="rect" id="node3" title="STMicroelectronics Secure Element host library." alt="" coords="5,80,191,105"/>
-<area shape="rect" id="node4" href="$d8/d57/a00498.html" title="STSELib service Layer." alt="" coords="244,104,359,129"/>
-<area shape="rect" id="node5" href="$d3/dad/a00496.html" title="STSELib Certificate parser." alt="" coords="239,153,364,179"/>
-</map>

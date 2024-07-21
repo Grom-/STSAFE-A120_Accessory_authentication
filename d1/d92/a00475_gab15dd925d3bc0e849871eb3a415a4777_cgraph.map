@@ -1,5 +1,0 @@
-<map id="stse_platform_hmac_sha256_compute" name="stse_platform_hmac_sha256_compute">
-<area shape="rect" id="node1" title="Perform an HMAC Key derivation using HMAC extract then HMAC expand functions (cf. RFC 5869)" alt="" coords="5,39,160,80"/>
-<area shape="rect" id="node2" href="$d1/d92/a00475.html#gae221bac7dece570305cdc24dba670b5e" title="Perform an HMAC expand using SHA256 (cf. RFC 5869)" alt="" coords="208,5,363,47"/>
-<area shape="rect" id="node3" href="$d1/d92/a00475.html#gace97f03c107db3765f3a64ca508507d7" title="Perform an HMAC extract using SHA256 (cf. RFC 5869)" alt="" coords="208,71,363,112"/>
-</map>

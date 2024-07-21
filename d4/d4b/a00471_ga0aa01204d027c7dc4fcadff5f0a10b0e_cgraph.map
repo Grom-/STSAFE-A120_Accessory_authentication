@@ -1,5 +1,0 @@
-<map id="stse_certificate_parse_attribute" name="stse_certificate_parse_attribute">
-<area shape="rect" id="node1" title="Parse a Name Attribute." alt="" coords="5,39,169,80"/>
-<area shape="rect" id="node2" href="$d4/d4b/a00471.html#gaa88b975c48fd20aca9809945941f7987" title="Identify the ASN.1 TLV." alt="" coords="217,5,395,47"/>
-<area shape="rect" id="node3" href="$d4/d4b/a00471.html#ga533a1e9389c3a121c03c8fa1260fc18c" title="Identify the Name Attribute from its OID." alt="" coords="217,71,395,112"/>
-</map>
