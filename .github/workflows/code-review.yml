@@ -31,4 +31,4 @@ jobs:
         env:
           # To report GitHub Actions status checks
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          FILTER_REGEX_INCLUDE: *.c
+          FILTER_REGEX_INCLUDE: \.(md|c|h)$
